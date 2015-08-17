@@ -10,4 +10,6 @@
 #### Planned
 1. SPI Interface
 
+###### All code comes with no warranty. Use at your own risk.
+
 *&copy; Szőke Szabolcs*
