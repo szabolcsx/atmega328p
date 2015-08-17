@@ -1,7 +1,7 @@
 #ifndef __LCD_H__
 #define __LCD_H__
 
-#include <inttypes.h>
+#include <inttypes.h>               // Requiered for uint8_t
 
 typedef struct
 {
