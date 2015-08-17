@@ -1,0 +1,643 @@
+GAS LISTING /tmp/ccLiYNf9.s 			page 1
+
+
+   1               		.file	"test.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/szoke/AVR/adc/",100,0,2,.Ltext0
+   8               		.stabs	"test.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccLiYNf9.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"adc.h",130,0,0,0
+  60               		.stabs	" :T(1,1)=@s8;eADC_PRESCALER2:1,ADC_PRESCALER4:2,ADC_PRESCALER8:3,ADC_PRESCALER16:4,ADC_PRE
+  61               		.stabs	"ADC_PRESCLAER:t(1,2)=(1,1)",128,0,13,0
+  62               		.stabs	" :T(1,3)=@s8;eADC_RIGHT_ADJUSTED:0,ADC_LEFT_ADJUSTED:1,;",128,0,0,0
+  63               		.stabs	"ADC_RESULT_FORMAT:t(1,4)=(1,3)",128,0,19,0
+  64               		.stabs	" :T(1,5)=@s8;eADC_VR_AREF:0,ADC_VR_AVCC:1,ADC_VR_INTERNAL:3,;",128,0,0,0
+  65               		.stabs	"ADC_VOLTAGE_REFERENCE:t(1,6)=(1,5)",128,0,26,0
+  66               		.stabs	" :T(1,7)=@s8;eADC_CHANNEL0:0,ADC_CHANNEL1:1,ADC_CHANNEL2:2,ADC_CHANNEL3:3,ADC_CHANNEL4:4,A
+  67               		.stabs	"ADC_CHANNEL:t(1,8)=(1,7)",128,0,42,0
+  68               		.stabn	162,0,0,0
+  69               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  70               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  71               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  72               		.stabs	"/usr/lib/gcc/avr/4.8.1/include/stdint.h",130,0,0,0
+  73               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  74               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  75               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  76               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  77               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  78               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  79               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  80               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  81               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  82               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  83               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  84               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  85               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  86               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  87               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  88               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  89               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  90               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  91               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  92               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  93               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  94               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  95               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  96               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  97               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  98               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  99               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+ 100               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+ 101               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+ 105               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 109               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 110               		.stabn	162,0,0,0
+ 111               		.stabn	162,0,0,0
+ 112               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 113               	.LC0:
+ 114 0000 5520 00   		.string	"U "
+GAS LISTING /tmp/ccLiYNf9.s 			page 3
+
+
+ 115               	.LC1:
+ 116 0003 6D56 00   		.string	"mV"
+ 117               	.LC2:
+ 118 0006 4920 00   		.string	"I "
+ 119               	.LC3:
+ 120 0009 6D41 00   		.string	"mA"
+ 121               		.section	.text.startup,"ax",@progbits
+ 122               		.stabs	"main:F(0,1)",36,0,11,main
+ 123               	.global	main
+ 124               		.type	main, @function
+ 125               	main:
+ 126               		.stabd	46,0,0
+   1:test.c        **** #define F_CPU   8000000UL
+   2:test.c        **** 
+   3:test.c        **** #include "adc.h"
+   4:test.c        **** #include "lcd.h"
+   5:test.c        **** #include <avr/io.h>
+   6:test.c        **** #include <util/delay.h>
+   7:test.c        **** 
+   8:test.c        **** unsigned long int adcResult = 0;
+   9:test.c        **** unsigned int counter = 0;
+  10:test.c        **** 
+  11:test.c        **** int main()
+  12:test.c        **** {
+ 127               		.stabn	68,0,12,.LM0-.LFBB1
+ 128               	.LM0:
+ 129               	.LFBB1:
+ 130               	/* prologue: function */
+ 131               	/* frame size = 0 */
+ 132               	/* stack size = 0 */
+ 133               	.L__stack_usage = 0
+  13:test.c        ****     DDRB = 0xFF;
+ 134               		.stabn	68,0,13,.LM1-.LFBB1
+ 135               	.LM1:
+ 136 0000 8FEF      		ldi r24,lo8(-1)
+ 137 0002 84B9      		out 0x4,r24
+  14:test.c        ****     DDRD = 0xFF;
+ 138               		.stabn	68,0,14,.LM2-.LFBB1
+ 139               	.LM2:
+ 140 0004 8AB9      		out 0xa,r24
+  15:test.c        ****     DDRC = 0x00;
+ 141               		.stabn	68,0,15,.LM3-.LFBB1
+ 142               	.LM3:
+ 143 0006 17B8      		out 0x7,__zero_reg__
+  16:test.c        **** 
+  17:test.c        ****     lcdInit(LCD_4BIT_BUS | LCD_2LINE_MODE | LCD_5X7_DOTS_FORMAT,
+ 144               		.stabn	68,0,17,.LM4-.LFBB1
+ 145               	.LM4:
+ 146 0008 46E0      		ldi r20,lo8(6)
+ 147 000a 6CE0      		ldi r22,lo8(12)
+ 148 000c 88E2      		ldi r24,lo8(40)
+ 149 000e 0E94 0000 		call lcdInit
+  18:test.c        ****         LCD_DISPLAY_ON,
+  19:test.c        ****         LCD_INCREMENT);
+  20:test.c        **** 
+  21:test.c        ****     lcdInitBargraph();
+ 150               		.stabn	68,0,21,.LM5-.LFBB1
+GAS LISTING /tmp/ccLiYNf9.s 			page 4
+
+
+ 151               	.LM5:
+ 152 0012 0E94 0000 		call lcdInitBargraph
+  22:test.c        **** 
+  23:test.c        ****     adcSetVoltageReference(ADC_VR_AVCC);
+ 153               		.stabn	68,0,23,.LM6-.LFBB1
+ 154               	.LM6:
+ 155 0016 81E0      		ldi r24,lo8(1)
+ 156 0018 0E94 0000 		call adcSetVoltageReference
+  24:test.c        ****     adcSetPrescaler(ADC_PRESCALER128);
+ 157               		.stabn	68,0,24,.LM7-.LFBB1
+ 158               	.LM7:
+ 159 001c 87E0      		ldi r24,lo8(7)
+ 160 001e 0E94 0000 		call adcSetPrescaler
+  25:test.c        ****     adcEnable();
+ 161               		.stabn	68,0,25,.LM8-.LFBB1
+ 162               	.LM8:
+ 163 0022 0E94 0000 		call adcEnable
+  26:test.c        **** 
+  27:test.c        ****     adcStartConvert(ADC_CHANNEL0);
+ 164               		.stabn	68,0,27,.LM9-.LFBB1
+ 165               	.LM9:
+ 166 0026 80E0      		ldi r24,0
+ 167 0028 0E94 0000 		call adcStartConvert
+  28:test.c        **** 
+  29:test.c        ****     PORTB |= (1 << PB0);
+ 168               		.stabn	68,0,29,.LM10-.LFBB1
+ 169               	.LM10:
+ 170 002c 289A      		sbi 0x5,0
+  30:test.c        **** 
+  31:test.c        ****     while(1)
+  32:test.c        ****     {
+  33:test.c        ****         if(((ADCSRA >> ADSC) & 1) == 0)
+  34:test.c        ****         {
+  35:test.c        ****             PORTB ^= 1 << PB0;
+ 171               		.stabn	68,0,35,.LM11-.LFBB1
+ 172               	.LM11:
+ 173 002e C1E0      		ldi r28,lo8(1)
+ 174               	.L4:
+  33:test.c        ****         {
+ 175               		.stabn	68,0,33,.LM12-.LFBB1
+ 176               	.LM12:
+ 177 0030 8091 7A00 		lds r24,122
+ 178 0034 86FD      		sbrc r24,6
+ 179 0036 00C0      		rjmp .L2
+ 180               		.stabn	68,0,35,.LM13-.LFBB1
+ 181               	.LM13:
+ 182 0038 85B1      		in r24,0x5
+ 183 003a 8C27      		eor r24,r28
+ 184 003c 85B9      		out 0x5,r24
+  36:test.c        ****             adcResult = ADC;
+ 185               		.stabn	68,0,36,.LM14-.LFBB1
+ 186               	.LM14:
+ 187 003e 8091 7800 		lds r24,120
+ 188 0042 9091 7900 		lds r25,120+1
+ 189 0046 A0E0      		ldi r26,0
+ 190 0048 B0E0      		ldi r27,0
+ 191 004a 8093 0000 		sts adcResult,r24
+GAS LISTING /tmp/ccLiYNf9.s 			page 5
+
+
+ 192 004e 9093 0000 		sts adcResult+1,r25
+ 193 0052 A093 0000 		sts adcResult+2,r26
+ 194 0056 B093 0000 		sts adcResult+3,r27
+  37:test.c        ****             adcResult = adcRead();
+ 195               		.stabn	68,0,37,.LM15-.LFBB1
+ 196               	.LM15:
+ 197 005a 0E94 0000 		call adcRead
+ 198 005e A0E0      		ldi r26,0
+ 199 0060 B0E0      		ldi r27,0
+ 200 0062 8093 0000 		sts adcResult,r24
+ 201 0066 9093 0000 		sts adcResult+1,r25
+ 202 006a A093 0000 		sts adcResult+2,r26
+ 203 006e B093 0000 		sts adcResult+3,r27
+  38:test.c        ****             adcStartConvert(ADC_CHANNEL0);
+ 204               		.stabn	68,0,38,.LM16-.LFBB1
+ 205               	.LM16:
+ 206 0072 80E0      		ldi r24,0
+ 207 0074 0E94 0000 		call adcStartConvert
+  39:test.c        **** 
+  40:test.c        ****             adcResult = adcResult * 5000 / 1024;
+ 208               		.stabn	68,0,40,.LM17-.LFBB1
+ 209               	.LM17:
+ 210 0078 2091 0000 		lds r18,adcResult
+ 211 007c 3091 0000 		lds r19,adcResult+1
+ 212 0080 4091 0000 		lds r20,adcResult+2
+ 213 0084 5091 0000 		lds r21,adcResult+3
+ 214 0088 A8E8      		ldi r26,lo8(-120)
+ 215 008a B3E1      		ldi r27,lo8(19)
+ 216 008c 0E94 0000 		call __muluhisi3
+ 217 0090 2AE0      		ldi r18,10
+ 218               		1:
+ 219 0092 9695      		lsr r25
+ 220 0094 8795      		ror r24
+ 221 0096 7795      		ror r23
+ 222 0098 6795      		ror r22
+ 223 009a 2A95      		dec r18
+ 224 009c 01F4      		brne 1b
+ 225 009e 6093 0000 		sts adcResult,r22
+ 226 00a2 7093 0000 		sts adcResult+1,r23
+ 227 00a6 8093 0000 		sts adcResult+2,r24
+ 228 00aa 9093 0000 		sts adcResult+3,r25
+ 229               	.L2:
+  41:test.c        ****         }
+  42:test.c        **** 
+  43:test.c        ****         lcdwStringAt(1, 1, "U ");
+ 230               		.stabn	68,0,43,.LM18-.LFBB1
+ 231               	.LM18:
+ 232 00ae 40E0      		ldi r20,lo8(.LC0)
+ 233 00b0 50E0      		ldi r21,hi8(.LC0)
+ 234 00b2 61E0      		ldi r22,lo8(1)
+ 235 00b4 81E0      		ldi r24,lo8(1)
+ 236 00b6 0E94 0000 		call lcdwStringAt
+  44:test.c        ****         lcdPrintBargraphAt(1, 3, adcResult, 5000, 7);
+ 237               		.stabn	68,0,44,.LM19-.LFBB1
+ 238               	.LM19:
+ 239 00ba 2091 0000 		lds r18,adcResult
+ 240 00be 3091 0000 		lds r19,adcResult+1
+GAS LISTING /tmp/ccLiYNf9.s 			page 6
+
+
+ 241 00c2 4091 0000 		lds r20,adcResult+2
+ 242 00c6 5091 0000 		lds r21,adcResult+3
+ 243 00ca 87E0      		ldi r24,lo8(7)
+ 244 00cc C82E      		mov r12,r24
+ 245 00ce 18E8      		ldi r17,lo8(-120)
+ 246 00d0 E12E      		mov r14,r17
+ 247 00d2 13E1      		ldi r17,lo8(19)
+ 248 00d4 F12E      		mov r15,r17
+ 249 00d6 00E0      		ldi r16,0
+ 250 00d8 10E0      		ldi r17,0
+ 251 00da 63E0      		ldi r22,lo8(3)
+ 252 00dc 81E0      		ldi r24,lo8(1)
+ 253 00de 0E94 0000 		call lcdPrintBargraphAt
+  45:test.c        ****         lcdwChar(' ');
+ 254               		.stabn	68,0,45,.LM20-.LFBB1
+ 255               	.LM20:
+ 256 00e2 80E2      		ldi r24,lo8(32)
+ 257 00e4 0E94 0000 		call lcdwChar
+  46:test.c        ****         lcdwInt(adcResult);
+ 258               		.stabn	68,0,46,.LM21-.LFBB1
+ 259               	.LM21:
+ 260 00e8 8091 0000 		lds r24,adcResult
+ 261 00ec 9091 0000 		lds r25,adcResult+1
+ 262 00f0 0E94 0000 		call lcdwInt
+  47:test.c        ****         lcdwStringNFill("mV", 5);
+ 263               		.stabn	68,0,47,.LM22-.LFBB1
+ 264               	.LM22:
+ 265 00f4 65E0      		ldi r22,lo8(5)
+ 266 00f6 80E0      		ldi r24,lo8(.LC1)
+ 267 00f8 90E0      		ldi r25,hi8(.LC1)
+ 268 00fa 0E94 0000 		call lcdwStringNFill
+  48:test.c        **** 
+  49:test.c        ****         lcdwStringAt(2, 1, "I ");
+ 269               		.stabn	68,0,49,.LM23-.LFBB1
+ 270               	.LM23:
+ 271 00fe 40E0      		ldi r20,lo8(.LC2)
+ 272 0100 50E0      		ldi r21,hi8(.LC2)
+ 273 0102 61E0      		ldi r22,lo8(1)
+ 274 0104 82E0      		ldi r24,lo8(2)
+ 275 0106 0E94 0000 		call lcdwStringAt
+  50:test.c        ****         lcdPrintBargraphAt(2, 3, adcResult, 5000, 7);
+ 276               		.stabn	68,0,50,.LM24-.LFBB1
+ 277               	.LM24:
+ 278 010a 2091 0000 		lds r18,adcResult
+ 279 010e 3091 0000 		lds r19,adcResult+1
+ 280 0112 4091 0000 		lds r20,adcResult+2
+ 281 0116 5091 0000 		lds r21,adcResult+3
+ 282 011a 63E0      		ldi r22,lo8(3)
+ 283 011c 82E0      		ldi r24,lo8(2)
+ 284 011e 0E94 0000 		call lcdPrintBargraphAt
+  51:test.c        ****         lcdwChar(' ');
+ 285               		.stabn	68,0,51,.LM25-.LFBB1
+ 286               	.LM25:
+ 287 0122 80E2      		ldi r24,lo8(32)
+ 288 0124 0E94 0000 		call lcdwChar
+  52:test.c        ****         lcdwInt(adcResult);
+ 289               		.stabn	68,0,52,.LM26-.LFBB1
+GAS LISTING /tmp/ccLiYNf9.s 			page 7
+
+
+ 290               	.LM26:
+ 291 0128 8091 0000 		lds r24,adcResult
+ 292 012c 9091 0000 		lds r25,adcResult+1
+ 293 0130 0E94 0000 		call lcdwInt
+  53:test.c        ****         lcdwStringNFill("mA", 5);
+ 294               		.stabn	68,0,53,.LM27-.LFBB1
+ 295               	.LM27:
+ 296 0134 65E0      		ldi r22,lo8(5)
+ 297 0136 80E0      		ldi r24,lo8(.LC3)
+ 298 0138 90E0      		ldi r25,hi8(.LC3)
+ 299 013a 0E94 0000 		call lcdwStringNFill
+ 300               	.LBB4:
+ 301               	.LBB5:
+ 302               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext1
+ 303               	.Ltext1:
+   1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   4:/usr/lib/avr/include/util/delay.h ****    All rights reserved.
+   5:/usr/lib/avr/include/util/delay.h **** 
+   6:/usr/lib/avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   7:/usr/lib/avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+   8:/usr/lib/avr/include/util/delay.h **** 
+   9:/usr/lib/avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+  10:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  11:/usr/lib/avr/include/util/delay.h **** 
+  12:/usr/lib/avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  13:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  14:/usr/lib/avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  15:/usr/lib/avr/include/util/delay.h ****      distribution.
+  16:/usr/lib/avr/include/util/delay.h **** 
+  17:/usr/lib/avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  18:/usr/lib/avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+  19:/usr/lib/avr/include/util/delay.h ****      from this software without specific prior written permission.
+  20:/usr/lib/avr/include/util/delay.h **** 
+  21:/usr/lib/avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/usr/lib/avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/usr/lib/avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/usr/lib/avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  25:/usr/lib/avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/usr/lib/avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/usr/lib/avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/usr/lib/avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/usr/lib/avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/usr/lib/avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/usr/lib/avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  32:/usr/lib/avr/include/util/delay.h **** 
+  33:/usr/lib/avr/include/util/delay.h **** /* $Id$ */
+  34:/usr/lib/avr/include/util/delay.h **** 
+  35:/usr/lib/avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  36:/usr/lib/avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  37:/usr/lib/avr/include/util/delay.h **** 
+  38:/usr/lib/avr/include/util/delay.h **** #ifndef __HAS_DELAY_CYCLES
+  39:/usr/lib/avr/include/util/delay.h **** #define __HAS_DELAY_CYCLES 1
+  40:/usr/lib/avr/include/util/delay.h **** #endif
+  41:/usr/lib/avr/include/util/delay.h **** 
+  42:/usr/lib/avr/include/util/delay.h **** #include <inttypes.h>
+GAS LISTING /tmp/ccLiYNf9.s 			page 8
+
+
+  43:/usr/lib/avr/include/util/delay.h **** #include <util/delay_basic.h>
+  44:/usr/lib/avr/include/util/delay.h **** #include <math.h>
+  45:/usr/lib/avr/include/util/delay.h **** 
+  46:/usr/lib/avr/include/util/delay.h **** /** \file */
+  47:/usr/lib/avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  48:/usr/lib/avr/include/util/delay.h ****     \code
+  49:/usr/lib/avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  50:/usr/lib/avr/include/util/delay.h ****     //#define F_CPU 14.7456E6
+  51:/usr/lib/avr/include/util/delay.h ****     #include <util/delay.h>
+  52:/usr/lib/avr/include/util/delay.h ****     \endcode
+  53:/usr/lib/avr/include/util/delay.h **** 
+  54:/usr/lib/avr/include/util/delay.h ****     \note As an alternative method, it is possible to pass the
+  55:/usr/lib/avr/include/util/delay.h ****     F_CPU macro down to the compiler from the Makefile.
+  56:/usr/lib/avr/include/util/delay.h ****     Obviously, in that case, no \c \#define statement should be
+  57:/usr/lib/avr/include/util/delay.h ****     used.
+  58:/usr/lib/avr/include/util/delay.h **** 
+  59:/usr/lib/avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  60:/usr/lib/avr/include/util/delay.h ****     busy-wait functions from <util/delay_basic.h>.  They are meant as
+  61:/usr/lib/avr/include/util/delay.h ****     convenience functions where actual time values can be specified
+  62:/usr/lib/avr/include/util/delay.h ****     rather than a number of cycles to wait for.  The idea behind is
+  63:/usr/lib/avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  64:/usr/lib/avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  65:/usr/lib/avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  66:/usr/lib/avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  67:/usr/lib/avr/include/util/delay.h **** 
+  68:/usr/lib/avr/include/util/delay.h ****     \note In order for these functions to work as intended, compiler
+  69:/usr/lib/avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  70:/usr/lib/avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  71:/usr/lib/avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  72:/usr/lib/avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  73:/usr/lib/avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  74:/usr/lib/avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  75:/usr/lib/avr/include/util/delay.h ****     routines linked into the application.
+  76:/usr/lib/avr/include/util/delay.h **** 
+  77:/usr/lib/avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  78:/usr/lib/avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  79:/usr/lib/avr/include/util/delay.h ****     F_CPU as the CPU clock frequency (in Hertz).
+  80:/usr/lib/avr/include/util/delay.h **** 
+  81:/usr/lib/avr/include/util/delay.h **** */
+  82:/usr/lib/avr/include/util/delay.h **** 
+  83:/usr/lib/avr/include/util/delay.h **** #if !defined(__DOXYGEN__)
+  84:/usr/lib/avr/include/util/delay.h **** static inline void _delay_us(double __us) __attribute__((always_inline));
+  85:/usr/lib/avr/include/util/delay.h **** static inline void _delay_ms(double __ms) __attribute__((always_inline));
+  86:/usr/lib/avr/include/util/delay.h **** #endif
+  87:/usr/lib/avr/include/util/delay.h **** 
+  88:/usr/lib/avr/include/util/delay.h **** #ifndef F_CPU
+  89:/usr/lib/avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  90:/usr/lib/avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+  91:/usr/lib/avr/include/util/delay.h **** # define F_CPU 1000000UL
+  92:/usr/lib/avr/include/util/delay.h **** #endif
+  93:/usr/lib/avr/include/util/delay.h **** 
+  94:/usr/lib/avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+  95:/usr/lib/avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+  96:/usr/lib/avr/include/util/delay.h **** #endif
+  97:/usr/lib/avr/include/util/delay.h **** 
+  98:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+  99:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+GAS LISTING /tmp/ccLiYNf9.s 			page 9
+
+
+ 100:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 101:/usr/lib/avr/include/util/delay.h **** #  include <math.h>
+ 102:/usr/lib/avr/include/util/delay.h **** #endif
+ 103:/usr/lib/avr/include/util/delay.h **** 
+ 104:/usr/lib/avr/include/util/delay.h **** /**
+ 105:/usr/lib/avr/include/util/delay.h ****    \ingroup util_delay
+ 106:/usr/lib/avr/include/util/delay.h **** 
+ 107:/usr/lib/avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds, using _delay_loop_2().
+ 108:/usr/lib/avr/include/util/delay.h **** 
+ 109:/usr/lib/avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+ 110:/usr/lib/avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+ 111:/usr/lib/avr/include/util/delay.h **** 
+ 112:/usr/lib/avr/include/util/delay.h ****    The maximal possible delay is 262.14 ms / F_CPU in MHz.
+ 113:/usr/lib/avr/include/util/delay.h **** 
+ 114:/usr/lib/avr/include/util/delay.h ****    When the user request delay which exceed the maximum possible one,
+ 115:/usr/lib/avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 116:/usr/lib/avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10 ms, providing
+ 117:/usr/lib/avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 118:/usr/lib/avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 119:/usr/lib/avr/include/util/delay.h **** 
+ 120:/usr/lib/avr/include/util/delay.h ****    If the avr-gcc toolchain has __builtin_avr_delay_cycles(unsigned long)
+ 121:/usr/lib/avr/include/util/delay.h ****    support, maximal possible delay is 4294967.295 ms/ F_CPU in MHz. For
+ 122:/usr/lib/avr/include/util/delay.h ****    values greater than the maximal possible delay, overflows results in
+ 123:/usr/lib/avr/include/util/delay.h ****    no delay i.e., 0ms.
+ 124:/usr/lib/avr/include/util/delay.h **** 
+ 125:/usr/lib/avr/include/util/delay.h ****    Conversion of __us into clock cycles may not always result in integer.
+ 126:/usr/lib/avr/include/util/delay.h ****    By default, the clock cycles rounded up to next integer. This ensures that
+ 127:/usr/lib/avr/include/util/delay.h ****    the user gets atleast __us microseconds of delay.
+ 128:/usr/lib/avr/include/util/delay.h **** 
+ 129:/usr/lib/avr/include/util/delay.h ****    Alternatively, user can define __DELAY_ROUND_DOWN__ and __DELAY_ROUND_CLOSEST__
+ 130:/usr/lib/avr/include/util/delay.h ****    to round down and round to closest integer.
+ 131:/usr/lib/avr/include/util/delay.h **** 
+ 132:/usr/lib/avr/include/util/delay.h ****    Note: The new implementation of _delay_ms(double __ms) with 
+ 133:/usr/lib/avr/include/util/delay.h ****     __builtin_avr_delay_cycles(unsigned long) support is not backward compatible. 
+ 134:/usr/lib/avr/include/util/delay.h ****    User can define __DELAY_BACKWARD_COMPATIBLE__ to get a backward compatible delay.
+ 135:/usr/lib/avr/include/util/delay.h ****    Also, the backward compatible
+ 136:/usr/lib/avr/include/util/delay.h ****    algorithm will be chosen if the code is compiled in a <em>freestanding
+ 137:/usr/lib/avr/include/util/delay.h ****    environment</em> (GCC option \c -ffreestanding), as the math functions
+ 138:/usr/lib/avr/include/util/delay.h ****    required for rounding are not available to the compiler then.
+ 139:/usr/lib/avr/include/util/delay.h **** 
+ 140:/usr/lib/avr/include/util/delay.h ****  */
+ 141:/usr/lib/avr/include/util/delay.h **** void
+ 142:/usr/lib/avr/include/util/delay.h **** _delay_ms(double __ms)
+ 143:/usr/lib/avr/include/util/delay.h **** {
+ 144:/usr/lib/avr/include/util/delay.h **** 	double __tmp ; 
+ 145:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 146:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 147:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 148:/usr/lib/avr/include/util/delay.h **** 	uint32_t __ticks_dc;
+ 149:/usr/lib/avr/include/util/delay.h **** 	extern void __builtin_avr_delay_cycles(unsigned long);
+ 150:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 1e3) * __ms;
+ 151:/usr/lib/avr/include/util/delay.h **** 
+ 152:/usr/lib/avr/include/util/delay.h **** 	#if defined(__DELAY_ROUND_DOWN__)
+ 153:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)fabs(__tmp);
+ 154:/usr/lib/avr/include/util/delay.h **** 
+ 155:/usr/lib/avr/include/util/delay.h **** 	#elif defined(__DELAY_ROUND_CLOSEST__)
+ 156:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(fabs(__tmp)+0.5);
+GAS LISTING /tmp/ccLiYNf9.s 			page 10
+
+
+ 157:/usr/lib/avr/include/util/delay.h **** 
+ 158:/usr/lib/avr/include/util/delay.h **** 	#else
+ 159:/usr/lib/avr/include/util/delay.h **** 		//round up by default
+ 160:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+ 161:/usr/lib/avr/include/util/delay.h **** 	#endif
+ 162:/usr/lib/avr/include/util/delay.h **** 
+ 163:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
+ 304               		.stabn	68,0,163,.LM28-.LFBB1
+ 305               	.LM28:
+ 306 013e 8FEC      		ldi r24,lo8(1999)
+ 307 0140 97E0      		ldi r25,hi8(1999)
+ 308 0142 0197      		1: sbiw r24,1
+ 309 0144 01F4      		brne 1b
+ 310 0146 00C0      		rjmp .
+ 311 0148 0000      		nop
+ 312               	.LBE5:
+ 313               	.LBE4:
+ 314               		.stabs	"test.c",132,0,0,.Ltext2
+ 315               	.Ltext2:
+  54:test.c        **** 
+  55:test.c        ****         _delay_ms(1);
+  56:test.c        **** 
+  57:test.c        ****         counter++;
+ 316               		.stabn	68,0,57,.LM29-.LFBB1
+ 317               	.LM29:
+ 318 014a 8091 0000 		lds r24,counter
+ 319 014e 9091 0000 		lds r25,counter+1
+ 320 0152 0196      		adiw r24,1
+ 321 0154 9093 0000 		sts counter+1,r25
+ 322 0158 8093 0000 		sts counter,r24
+  58:test.c        **** 
+  59:test.c        ****         if(counter >= 5)
+ 323               		.stabn	68,0,59,.LM30-.LFBB1
+ 324               	.LM30:
+ 325 015c 0597      		sbiw r24,5
+ 326 015e 00F4      		brsh .+2
+ 327 0160 00C0      		rjmp .L4
+  60:test.c        ****         {
+  61:test.c        ****             counter = 0;
+ 328               		.stabn	68,0,61,.LM31-.LFBB1
+ 329               	.LM31:
+ 330 0162 1092 0000 		sts counter+1,__zero_reg__
+ 331 0166 1092 0000 		sts counter,__zero_reg__
+ 332 016a 00C0      		rjmp .L4
+ 333               		.size	main, .-main
+ 334               	.Lscope1:
+ 335               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 336               		.stabd	78,0,0
+ 337               	.global	counter
+ 338               		.section .bss
+ 339               		.type	counter, @object
+ 340               		.size	counter, 2
+ 341               	counter:
+ 342 0000 0000      		.zero	2
+ 343               	.global	adcResult
+ 344               		.type	adcResult, @object
+ 345               		.size	adcResult, 4
+GAS LISTING /tmp/ccLiYNf9.s 			page 11
+
+
+ 346               	adcResult:
+ 347 0002 0000 0000 		.zero	4
+ 348               		.stabs	"adcResult:G(0,5)",32,0,8,0
+ 349               		.stabs	"counter:G(0,4)",32,0,9,0
+ 350               		.text
+ 351               		.stabs	"",100,0,0,.Letext0
+ 352               	.Letext0:
+ 353               		.ident	"GCC: (GNU) 4.8.1"
+ 354               	.global __do_copy_data
+ 355               	.global __do_clear_bss
+GAS LISTING /tmp/ccLiYNf9.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 test.c
+     /tmp/ccLiYNf9.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccLiYNf9.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccLiYNf9.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccLiYNf9.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccLiYNf9.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccLiYNf9.s:125    .text.startup:0000000000000000 main
+     /tmp/ccLiYNf9.s:346    .bss:0000000000000002 adcResult
+     /tmp/ccLiYNf9.s:341    .bss:0000000000000000 counter
+
+UNDEFINED SYMBOLS
+lcdInit
+lcdInitBargraph
+adcSetVoltageReference
+adcSetPrescaler
+adcEnable
+adcStartConvert
+adcRead
+__muluhisi3
+lcdwStringAt
+lcdPrintBargraphAt
+lcdwChar
+lcdwInt
+lcdwStringNFill
+__do_copy_data
+__do_clear_bss

@@ -1,0 +1,1037 @@
+GAS LISTING /tmp/cc1hCS5j.s 			page 1
+
+
+   1               		.file	"tets.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/szoke/AVR/lcd/",100,0,2,.Ltext0
+   8               		.stabs	"tets.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/cc1hCS5j.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.8.1/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"interruptFlags_t:t(0,48)=(0,49)=s1handlePinChange0:(0,4),0,1;;",128,0,14,0
+ 103               		.stabs	"buttonPressFlags_t:t(0,50)=(0,51)=s1handleShortButtonPress:(0,4),0,1;handleLongButtonPress
+ 104               		.stabs	"counterFlags_t:t(0,52)=(0,53)=s1counterShortButtonPressTick:(0,4),0,1;counterLongButtonPre
+ 105               		.section	.text.startup,"ax",@progbits
+ 106               		.stabs	"main:F(0,1)",36,0,42,main
+ 107               	.global	main
+ 108               		.type	main, @function
+ 109               	main:
+ 110               		.stabd	46,0,0
+   1:tets.c        **** #include "lcd.h"
+   2:tets.c        **** #include "global.h"
+   3:tets.c        **** 
+   4:tets.c        **** #include <avr/io.h>
+GAS LISTING /tmp/cc1hCS5j.s 			page 3
+
+
+   5:tets.c        **** #include <avr/interrupt.h>
+   6:tets.c        **** #include <util/delay.h>
+   7:tets.c        **** 
+   8:tets.c        **** char counter = 0;
+   9:tets.c        **** unsigned long int counter2 = 0;
+  10:tets.c        **** 
+  11:tets.c        **** typedef struct
+  12:tets.c        **** {
+  13:tets.c        ****     unsigned handlePinChange0:1;
+  14:tets.c        **** } interruptFlags_t;
+  15:tets.c        **** 
+  16:tets.c        **** typedef struct
+  17:tets.c        **** {
+  18:tets.c        ****     unsigned handleShortButtonPress:1;
+  19:tets.c        ****     unsigned handleLongButtonPress:1;
+  20:tets.c        **** } buttonPressFlags_t;
+  21:tets.c        **** 
+  22:tets.c        **** typedef struct
+  23:tets.c        **** {
+  24:tets.c        ****     unsigned counterShortButtonPressTick:1;
+  25:tets.c        ****     unsigned counterLongButtonPressTick:1;
+  26:tets.c        ****     unsigned counterLongButtonPressSampleTick:1;
+  27:tets.c        **** } counterFlags_t;
+  28:tets.c        **** 
+  29:tets.c        **** volatile interruptFlags_t interruptFlags;
+  30:tets.c        **** volatile buttonPressFlags_t buttonPressFlags;
+  31:tets.c        **** volatile counterFlags_t counterFlags;
+  32:tets.c        **** 
+  33:tets.c        **** volatile unsigned int counterShortButtonPress = 0;
+  34:tets.c        **** volatile unsigned int counterLongButtonPress = 0;
+  35:tets.c        **** volatile unsigned int counterLongButtonPressSample = 0;
+  36:tets.c        **** 
+  37:tets.c        **** volatile unsigned int counterOneSec = 0;
+  38:tets.c        **** 
+  39:tets.c        **** char lastPhase = 0;
+  40:tets.c        **** char currentPhase = 0;
+  41:tets.c        **** 
+  42:tets.c        **** int main(void)
+  43:tets.c        **** {
+ 111               		.stabn	68,0,43,.LM0-.LFBB1
+ 112               	.LM0:
+ 113               	.LFBB1:
+ 114               	/* prologue: function */
+ 115               	/* frame size = 0 */
+ 116               	/* stack size = 0 */
+ 117               	.L__stack_usage = 0
+  44:tets.c        ****     DDRB = 0x00;
+ 118               		.stabn	68,0,44,.LM1-.LFBB1
+ 119               	.LM1:
+ 120 0000 14B8      		out 0x4,__zero_reg__
+  45:tets.c        ****     PORTC = 0x00;
+ 121               		.stabn	68,0,45,.LM2-.LFBB1
+ 122               	.LM2:
+ 123 0002 18B8      		out 0x8,__zero_reg__
+  46:tets.c        ****     DDRD = 0xFF;
+ 124               		.stabn	68,0,46,.LM3-.LFBB1
+ 125               	.LM3:
+GAS LISTING /tmp/cc1hCS5j.s 			page 4
+
+
+ 126 0004 8FEF      		ldi r24,lo8(-1)
+ 127 0006 8AB9      		out 0xa,r24
+  47:tets.c        ****     lcdInit(LCD_4BIT_BUS | LCD_2LINE_MODE | LCD_5X7_DOTS_FORMAT,
+ 128               		.stabn	68,0,47,.LM4-.LFBB1
+ 129               	.LM4:
+ 130 0008 46E0      		ldi r20,lo8(6)
+ 131 000a 6CE0      		ldi r22,lo8(12)
+ 132 000c 88E2      		ldi r24,lo8(40)
+ 133 000e 0E94 0000 		call lcdInit
+  48:tets.c        ****         LCD_DISPLAY_ON,
+  49:tets.c        ****         LCD_INCREMENT);
+  50:tets.c        **** 
+  51:tets.c        ****     lcdInitBargraph();
+ 134               		.stabn	68,0,51,.LM5-.LFBB1
+ 135               	.LM5:
+ 136 0012 0E94 0000 		call lcdInitBargraph
+  52:tets.c        **** 
+  53:tets.c        ****     PCICR |= 1 << PCIE0;
+ 137               		.stabn	68,0,53,.LM6-.LFBB1
+ 138               	.LM6:
+ 139 0016 8091 6800 		lds r24,104
+ 140 001a 8160      		ori r24,lo8(1)
+ 141 001c 8093 6800 		sts 104,r24
+  54:tets.c        ****     PCMSK0 |= 1 << PCINT0;
+ 142               		.stabn	68,0,54,.LM7-.LFBB1
+ 143               	.LM7:
+ 144 0020 8091 6B00 		lds r24,107
+ 145 0024 8160      		ori r24,lo8(1)
+ 146 0026 8093 6B00 		sts 107,r24
+  55:tets.c        **** 
+  56:tets.c        ****     TCCR0A |= 1 << WGM01;
+ 147               		.stabn	68,0,56,.LM8-.LFBB1
+ 148               	.LM8:
+ 149 002a 84B5      		in r24,0x24
+ 150 002c 8260      		ori r24,lo8(2)
+ 151 002e 84BD      		out 0x24,r24
+  57:tets.c        **** 	OCR0A = 149;
+ 152               		.stabn	68,0,57,.LM9-.LFBB1
+ 153               	.LM9:
+ 154 0030 85E9      		ldi r24,lo8(-107)
+ 155 0032 87BD      		out 0x27,r24
+  58:tets.c        ****     TIMSK0 |= (1 << OCIE0A);
+ 156               		.stabn	68,0,58,.LM10-.LFBB1
+ 157               	.LM10:
+ 158 0034 8091 6E00 		lds r24,110
+ 159 0038 8260      		ori r24,lo8(2)
+ 160 003a 8093 6E00 		sts 110,r24
+  59:tets.c        **** 
+  60:tets.c        **** 	TCCR0B |= (1 << CS01) | (1 << CS00); // 1:64 prescaler
+ 161               		.stabn	68,0,60,.LM11-.LFBB1
+ 162               	.LM11:
+ 163 003e 85B5      		in r24,0x25
+ 164 0040 8360      		ori r24,lo8(3)
+ 165 0042 85BD      		out 0x25,r24
+  61:tets.c        **** 
+  62:tets.c        ****     sei();
+ 166               		.stabn	68,0,62,.LM12-.LFBB1
+GAS LISTING /tmp/cc1hCS5j.s 			page 5
+
+
+ 167               	.LM12:
+ 168               	/* #APP */
+ 169               	 ;  62 "tets.c" 1
+ 170 0044 7894      		sei
+ 171               	 ;  0 "" 2
+ 172               	/* #NOAPP */
+ 173               	.L10:
+  63:tets.c        **** 
+  64:tets.c        ****     while(1)
+  65:tets.c        ****     {
+  66:tets.c        ****         if(counter2 > 10000000)
+ 174               		.stabn	68,0,66,.LM13-.LFBB1
+ 175               	.LM13:
+ 176 0046 8091 0000 		lds r24,counter2
+ 177 004a 9091 0000 		lds r25,counter2+1
+ 178 004e A091 0000 		lds r26,counter2+2
+ 179 0052 B091 0000 		lds r27,counter2+3
+ 180 0056 8138      		cpi r24,-127
+ 181 0058 9649      		sbci r25,-106
+ 182 005a A849      		sbci r26,-104
+ 183 005c B105      		cpc r27,__zero_reg__
+ 184 005e 00F0      		brlo .L3
+  67:tets.c        ****         {
+  68:tets.c        ****             counter2 = 0;
+ 185               		.stabn	68,0,68,.LM14-.LFBB1
+ 186               	.LM14:
+ 187 0060 1092 0000 		sts counter2,__zero_reg__
+ 188 0064 1092 0000 		sts counter2+1,__zero_reg__
+ 189 0068 1092 0000 		sts counter2+2,__zero_reg__
+ 190 006c 1092 0000 		sts counter2+3,__zero_reg__
+ 191               	.L3:
+  69:tets.c        ****         }
+  70:tets.c        **** 
+  71:tets.c        ****         //lcdPrintBargraphAt(1, 1, counter, 100, 16);
+  72:tets.c        ****         lcdAdvance(1, 1);
+ 192               		.stabn	68,0,72,.LM15-.LFBB1
+ 193               	.LM15:
+ 194 0070 61E0      		ldi r22,lo8(1)
+ 195 0072 81E0      		ldi r24,lo8(1)
+ 196 0074 0E94 0000 		call lcdAdvance
+  73:tets.c        ****         lcdwULong(counter2);
+ 197               		.stabn	68,0,73,.LM16-.LFBB1
+ 198               	.LM16:
+ 199 0078 6091 0000 		lds r22,counter2
+ 200 007c 7091 0000 		lds r23,counter2+1
+ 201 0080 8091 0000 		lds r24,counter2+2
+ 202 0084 9091 0000 		lds r25,counter2+3
+ 203 0088 0E94 0000 		call lcdwULong
+  74:tets.c        ****         lcdPrintBargraphAt(2, 1, counter2, 10000000, 16);
+ 204               		.stabn	68,0,74,.LM17-.LFBB1
+ 205               	.LM17:
+ 206 008c 2091 0000 		lds r18,counter2
+ 207 0090 3091 0000 		lds r19,counter2+1
+ 208 0094 4091 0000 		lds r20,counter2+2
+ 209 0098 5091 0000 		lds r21,counter2+3
+ 210 009c 80E1      		ldi r24,lo8(16)
+ 211 009e C82E      		mov r12,r24
+GAS LISTING /tmp/cc1hCS5j.s 			page 6
+
+
+ 212 00a0 10E8      		ldi r17,lo8(-128)
+ 213 00a2 E12E      		mov r14,r17
+ 214 00a4 16E9      		ldi r17,lo8(-106)
+ 215 00a6 F12E      		mov r15,r17
+ 216 00a8 08E9      		ldi r16,lo8(-104)
+ 217 00aa 10E0      		ldi r17,0
+ 218 00ac 61E0      		ldi r22,lo8(1)
+ 219 00ae 82E0      		ldi r24,lo8(2)
+ 220 00b0 0E94 0000 		call lcdPrintBargraphAt
+  75:tets.c        ****         lcdFill(' ', 10);
+ 221               		.stabn	68,0,75,.LM18-.LFBB1
+ 222               	.LM18:
+ 223 00b4 6AE0      		ldi r22,lo8(10)
+ 224 00b6 80E2      		ldi r24,lo8(32)
+ 225 00b8 0E94 0000 		call lcdFill
+  76:tets.c        **** 
+  77:tets.c        ****         if(interruptFlags.handlePinChange0)
+ 226               		.stabn	68,0,77,.LM19-.LFBB1
+ 227               	.LM19:
+ 228 00bc 8091 0000 		lds r24,interruptFlags
+ 229 00c0 80FF      		sbrs r24,0
+ 230 00c2 00C0      		rjmp .L5
+  78:tets.c        ****         {
+  79:tets.c        ****             interruptFlags.handlePinChange0 = 0;
+ 231               		.stabn	68,0,79,.LM20-.LFBB1
+ 232               	.LM20:
+ 233 00c4 8091 0000 		lds r24,interruptFlags
+ 234 00c8 8E7F      		andi r24,lo8(~(1<<0))
+ 235 00ca 8093 0000 		sts interruptFlags,r24
+  80:tets.c        **** 
+  81:tets.c        ****             if(PINB & 1)
+ 236               		.stabn	68,0,81,.LM21-.LFBB1
+ 237               	.LM21:
+ 238 00ce 189B      		sbis 0x3,0
+ 239 00d0 00C0      		rjmp .L5
+ 240               	.LBB4:
+ 241               	.LBB5:
+ 242               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext1
+ 243               	.Ltext1:
+   1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   4:/usr/lib/avr/include/util/delay.h ****    All rights reserved.
+   5:/usr/lib/avr/include/util/delay.h **** 
+   6:/usr/lib/avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   7:/usr/lib/avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+   8:/usr/lib/avr/include/util/delay.h **** 
+   9:/usr/lib/avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+  10:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  11:/usr/lib/avr/include/util/delay.h **** 
+  12:/usr/lib/avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  13:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  14:/usr/lib/avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  15:/usr/lib/avr/include/util/delay.h ****      distribution.
+  16:/usr/lib/avr/include/util/delay.h **** 
+  17:/usr/lib/avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  18:/usr/lib/avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+GAS LISTING /tmp/cc1hCS5j.s 			page 7
+
+
+  19:/usr/lib/avr/include/util/delay.h ****      from this software without specific prior written permission.
+  20:/usr/lib/avr/include/util/delay.h **** 
+  21:/usr/lib/avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/usr/lib/avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/usr/lib/avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/usr/lib/avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  25:/usr/lib/avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/usr/lib/avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/usr/lib/avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/usr/lib/avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/usr/lib/avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/usr/lib/avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/usr/lib/avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  32:/usr/lib/avr/include/util/delay.h **** 
+  33:/usr/lib/avr/include/util/delay.h **** /* $Id$ */
+  34:/usr/lib/avr/include/util/delay.h **** 
+  35:/usr/lib/avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  36:/usr/lib/avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  37:/usr/lib/avr/include/util/delay.h **** 
+  38:/usr/lib/avr/include/util/delay.h **** #ifndef __HAS_DELAY_CYCLES
+  39:/usr/lib/avr/include/util/delay.h **** #define __HAS_DELAY_CYCLES 1
+  40:/usr/lib/avr/include/util/delay.h **** #endif
+  41:/usr/lib/avr/include/util/delay.h **** 
+  42:/usr/lib/avr/include/util/delay.h **** #include <inttypes.h>
+  43:/usr/lib/avr/include/util/delay.h **** #include <util/delay_basic.h>
+  44:/usr/lib/avr/include/util/delay.h **** #include <math.h>
+  45:/usr/lib/avr/include/util/delay.h **** 
+  46:/usr/lib/avr/include/util/delay.h **** /** \file */
+  47:/usr/lib/avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  48:/usr/lib/avr/include/util/delay.h ****     \code
+  49:/usr/lib/avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  50:/usr/lib/avr/include/util/delay.h ****     //#define F_CPU 14.7456E6
+  51:/usr/lib/avr/include/util/delay.h ****     #include <util/delay.h>
+  52:/usr/lib/avr/include/util/delay.h ****     \endcode
+  53:/usr/lib/avr/include/util/delay.h **** 
+  54:/usr/lib/avr/include/util/delay.h ****     \note As an alternative method, it is possible to pass the
+  55:/usr/lib/avr/include/util/delay.h ****     F_CPU macro down to the compiler from the Makefile.
+  56:/usr/lib/avr/include/util/delay.h ****     Obviously, in that case, no \c \#define statement should be
+  57:/usr/lib/avr/include/util/delay.h ****     used.
+  58:/usr/lib/avr/include/util/delay.h **** 
+  59:/usr/lib/avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  60:/usr/lib/avr/include/util/delay.h ****     busy-wait functions from <util/delay_basic.h>.  They are meant as
+  61:/usr/lib/avr/include/util/delay.h ****     convenience functions where actual time values can be specified
+  62:/usr/lib/avr/include/util/delay.h ****     rather than a number of cycles to wait for.  The idea behind is
+  63:/usr/lib/avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  64:/usr/lib/avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  65:/usr/lib/avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  66:/usr/lib/avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  67:/usr/lib/avr/include/util/delay.h **** 
+  68:/usr/lib/avr/include/util/delay.h ****     \note In order for these functions to work as intended, compiler
+  69:/usr/lib/avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  70:/usr/lib/avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  71:/usr/lib/avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  72:/usr/lib/avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  73:/usr/lib/avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  74:/usr/lib/avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  75:/usr/lib/avr/include/util/delay.h ****     routines linked into the application.
+GAS LISTING /tmp/cc1hCS5j.s 			page 8
+
+
+  76:/usr/lib/avr/include/util/delay.h **** 
+  77:/usr/lib/avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  78:/usr/lib/avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  79:/usr/lib/avr/include/util/delay.h ****     F_CPU as the CPU clock frequency (in Hertz).
+  80:/usr/lib/avr/include/util/delay.h **** 
+  81:/usr/lib/avr/include/util/delay.h **** */
+  82:/usr/lib/avr/include/util/delay.h **** 
+  83:/usr/lib/avr/include/util/delay.h **** #if !defined(__DOXYGEN__)
+  84:/usr/lib/avr/include/util/delay.h **** static inline void _delay_us(double __us) __attribute__((always_inline));
+  85:/usr/lib/avr/include/util/delay.h **** static inline void _delay_ms(double __ms) __attribute__((always_inline));
+  86:/usr/lib/avr/include/util/delay.h **** #endif
+  87:/usr/lib/avr/include/util/delay.h **** 
+  88:/usr/lib/avr/include/util/delay.h **** #ifndef F_CPU
+  89:/usr/lib/avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  90:/usr/lib/avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+  91:/usr/lib/avr/include/util/delay.h **** # define F_CPU 1000000UL
+  92:/usr/lib/avr/include/util/delay.h **** #endif
+  93:/usr/lib/avr/include/util/delay.h **** 
+  94:/usr/lib/avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+  95:/usr/lib/avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+  96:/usr/lib/avr/include/util/delay.h **** #endif
+  97:/usr/lib/avr/include/util/delay.h **** 
+  98:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+  99:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 100:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 101:/usr/lib/avr/include/util/delay.h **** #  include <math.h>
+ 102:/usr/lib/avr/include/util/delay.h **** #endif
+ 103:/usr/lib/avr/include/util/delay.h **** 
+ 104:/usr/lib/avr/include/util/delay.h **** /**
+ 105:/usr/lib/avr/include/util/delay.h ****    \ingroup util_delay
+ 106:/usr/lib/avr/include/util/delay.h **** 
+ 107:/usr/lib/avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds, using _delay_loop_2().
+ 108:/usr/lib/avr/include/util/delay.h **** 
+ 109:/usr/lib/avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+ 110:/usr/lib/avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+ 111:/usr/lib/avr/include/util/delay.h **** 
+ 112:/usr/lib/avr/include/util/delay.h ****    The maximal possible delay is 262.14 ms / F_CPU in MHz.
+ 113:/usr/lib/avr/include/util/delay.h **** 
+ 114:/usr/lib/avr/include/util/delay.h ****    When the user request delay which exceed the maximum possible one,
+ 115:/usr/lib/avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 116:/usr/lib/avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10 ms, providing
+ 117:/usr/lib/avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 118:/usr/lib/avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 119:/usr/lib/avr/include/util/delay.h **** 
+ 120:/usr/lib/avr/include/util/delay.h ****    If the avr-gcc toolchain has __builtin_avr_delay_cycles(unsigned long)
+ 121:/usr/lib/avr/include/util/delay.h ****    support, maximal possible delay is 4294967.295 ms/ F_CPU in MHz. For
+ 122:/usr/lib/avr/include/util/delay.h ****    values greater than the maximal possible delay, overflows results in
+ 123:/usr/lib/avr/include/util/delay.h ****    no delay i.e., 0ms.
+ 124:/usr/lib/avr/include/util/delay.h **** 
+ 125:/usr/lib/avr/include/util/delay.h ****    Conversion of __us into clock cycles may not always result in integer.
+ 126:/usr/lib/avr/include/util/delay.h ****    By default, the clock cycles rounded up to next integer. This ensures that
+ 127:/usr/lib/avr/include/util/delay.h ****    the user gets atleast __us microseconds of delay.
+ 128:/usr/lib/avr/include/util/delay.h **** 
+ 129:/usr/lib/avr/include/util/delay.h ****    Alternatively, user can define __DELAY_ROUND_DOWN__ and __DELAY_ROUND_CLOSEST__
+ 130:/usr/lib/avr/include/util/delay.h ****    to round down and round to closest integer.
+ 131:/usr/lib/avr/include/util/delay.h **** 
+ 132:/usr/lib/avr/include/util/delay.h ****    Note: The new implementation of _delay_ms(double __ms) with 
+GAS LISTING /tmp/cc1hCS5j.s 			page 9
+
+
+ 133:/usr/lib/avr/include/util/delay.h ****     __builtin_avr_delay_cycles(unsigned long) support is not backward compatible. 
+ 134:/usr/lib/avr/include/util/delay.h ****    User can define __DELAY_BACKWARD_COMPATIBLE__ to get a backward compatible delay.
+ 135:/usr/lib/avr/include/util/delay.h ****    Also, the backward compatible
+ 136:/usr/lib/avr/include/util/delay.h ****    algorithm will be chosen if the code is compiled in a <em>freestanding
+ 137:/usr/lib/avr/include/util/delay.h ****    environment</em> (GCC option \c -ffreestanding), as the math functions
+ 138:/usr/lib/avr/include/util/delay.h ****    required for rounding are not available to the compiler then.
+ 139:/usr/lib/avr/include/util/delay.h **** 
+ 140:/usr/lib/avr/include/util/delay.h ****  */
+ 141:/usr/lib/avr/include/util/delay.h **** void
+ 142:/usr/lib/avr/include/util/delay.h **** _delay_ms(double __ms)
+ 143:/usr/lib/avr/include/util/delay.h **** {
+ 144:/usr/lib/avr/include/util/delay.h **** 	double __tmp ; 
+ 145:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 146:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 147:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 148:/usr/lib/avr/include/util/delay.h **** 	uint32_t __ticks_dc;
+ 149:/usr/lib/avr/include/util/delay.h **** 	extern void __builtin_avr_delay_cycles(unsigned long);
+ 150:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 1e3) * __ms;
+ 151:/usr/lib/avr/include/util/delay.h **** 
+ 152:/usr/lib/avr/include/util/delay.h **** 	#if defined(__DELAY_ROUND_DOWN__)
+ 153:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)fabs(__tmp);
+ 154:/usr/lib/avr/include/util/delay.h **** 
+ 155:/usr/lib/avr/include/util/delay.h **** 	#elif defined(__DELAY_ROUND_CLOSEST__)
+ 156:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(fabs(__tmp)+0.5);
+ 157:/usr/lib/avr/include/util/delay.h **** 
+ 158:/usr/lib/avr/include/util/delay.h **** 	#else
+ 159:/usr/lib/avr/include/util/delay.h **** 		//round up by default
+ 160:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+ 161:/usr/lib/avr/include/util/delay.h **** 	#endif
+ 162:/usr/lib/avr/include/util/delay.h **** 
+ 163:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
+ 244               		.stabn	68,0,163,.LM22-.LFBB1
+ 245               	.LM22:
+ 246 00d2 8FE5      		ldi r24,lo8(-5537)
+ 247 00d4 9AEE      		ldi r25,hi8(-5537)
+ 248 00d6 0197      		1: sbiw r24,1
+ 249 00d8 01F4      		brne 1b
+ 250 00da 00C0      		rjmp .
+ 251 00dc 0000      		nop
+ 252               	.LBE5:
+ 253               	.LBE4:
+ 254               		.stabs	"tets.c",132,0,0,.Ltext2
+ 255               	.Ltext2:
+  82:tets.c        ****             {
+  83:tets.c        ****                 _delay_ms(30);
+  84:tets.c        ****                 if(PINB & 1)
+ 256               		.stabn	68,0,84,.LM23-.LFBB1
+ 257               	.LM23:
+ 258 00de 189B      		sbis 0x3,0
+ 259 00e0 00C0      		rjmp .L5
+  85:tets.c        ****                 {
+  86:tets.c        ****                     counter = 0;
+ 260               		.stabn	68,0,86,.LM24-.LFBB1
+ 261               	.LM24:
+ 262 00e2 1092 0000 		sts counter,__zero_reg__
+  87:tets.c        ****                     counterFlags.counterShortButtonPressTick = 1;
+ 263               		.stabn	68,0,87,.LM25-.LFBB1
+GAS LISTING /tmp/cc1hCS5j.s 			page 10
+
+
+ 264               	.LM25:
+ 265 00e6 8091 0000 		lds r24,counterFlags
+ 266 00ea 8160      		ori r24,lo8(1<<0)
+ 267 00ec 8093 0000 		sts counterFlags,r24
+ 268               	.L5:
+  88:tets.c        ****                 }
+  89:tets.c        ****             }
+  90:tets.c        ****         }
+  91:tets.c        **** 
+  92:tets.c        ****         if(buttonPressFlags.handleShortButtonPress)
+ 269               		.stabn	68,0,92,.LM26-.LFBB1
+ 270               	.LM26:
+ 271 00f0 8091 0000 		lds r24,buttonPressFlags
+ 272 00f4 80FF      		sbrs r24,0
+ 273 00f6 00C0      		rjmp .L7
+  93:tets.c        ****         {
+  94:tets.c        ****             buttonPressFlags.handleShortButtonPress = 0;
+ 274               		.stabn	68,0,94,.LM27-.LFBB1
+ 275               	.LM27:
+ 276 00f8 8091 0000 		lds r24,buttonPressFlags
+ 277 00fc 8E7F      		andi r24,lo8(~(1<<0))
+ 278 00fe 8093 0000 		sts buttonPressFlags,r24
+  95:tets.c        **** 
+  96:tets.c        ****             if((PINB & 1) == 0)
+ 279               		.stabn	68,0,96,.LM28-.LFBB1
+ 280               	.LM28:
+ 281 0102 1899      		sbic 0x3,0
+ 282 0104 00C0      		rjmp .L8
+  97:tets.c        ****             {
+  98:tets.c        ****                 counter2 += 50000;
+ 283               		.stabn	68,0,98,.LM29-.LFBB1
+ 284               	.LM29:
+ 285 0106 8091 0000 		lds r24,counter2
+ 286 010a 9091 0000 		lds r25,counter2+1
+ 287 010e A091 0000 		lds r26,counter2+2
+ 288 0112 B091 0000 		lds r27,counter2+3
+ 289 0116 805B      		subi r24,-80
+ 290 0118 9C43      		sbci r25,60
+ 291 011a AF4F      		sbci r26,-1
+ 292 011c BF4F      		sbci r27,-1
+ 293 011e 8093 0000 		sts counter2,r24
+ 294 0122 9093 0000 		sts counter2+1,r25
+ 295 0126 A093 0000 		sts counter2+2,r26
+ 296 012a B093 0000 		sts counter2+3,r27
+  99:tets.c        ****                 counterFlags.counterShortButtonPressTick = 0;
+ 297               		.stabn	68,0,99,.LM30-.LFBB1
+ 298               	.LM30:
+ 299 012e 8091 0000 		lds r24,counterFlags
+ 300 0132 8E7F      		andi r24,lo8(~(1<<0))
+ 301 0134 8093 0000 		sts counterFlags,r24
+ 100:tets.c        ****                 counterShortButtonPress = 0;
+ 302               		.stabn	68,0,100,.LM31-.LFBB1
+ 303               	.LM31:
+ 304 0138 1092 0000 		sts counterShortButtonPress+1,__zero_reg__
+ 305 013c 1092 0000 		sts counterShortButtonPress,__zero_reg__
+ 101:tets.c        ****                 counterLongButtonPress = 0;
+ 306               		.stabn	68,0,101,.LM32-.LFBB1
+GAS LISTING /tmp/cc1hCS5j.s 			page 11
+
+
+ 307               	.LM32:
+ 308 0140 1092 0000 		sts counterLongButtonPress+1,__zero_reg__
+ 309 0144 1092 0000 		sts counterLongButtonPress,__zero_reg__
+ 102:tets.c        ****                 counterLongButtonPressSample = 0;
+ 310               		.stabn	68,0,102,.LM33-.LFBB1
+ 311               	.LM33:
+ 312 0148 1092 0000 		sts counterLongButtonPressSample+1,__zero_reg__
+ 313 014c 1092 0000 		sts counterLongButtonPressSample,__zero_reg__
+ 314 0150 00C0      		rjmp .L7
+ 315               	.L8:
+ 103:tets.c        ****             }
+ 104:tets.c        ****             else
+ 105:tets.c        ****             {
+ 106:tets.c        ****                 counterFlags.counterLongButtonPressTick = 1;
+ 316               		.stabn	68,0,106,.LM34-.LFBB1
+ 317               	.LM34:
+ 318 0152 8091 0000 		lds r24,counterFlags
+ 319 0156 8260      		ori r24,lo8(1<<1)
+ 320 0158 8093 0000 		sts counterFlags,r24
+ 321               	.L7:
+ 107:tets.c        ****             }
+ 108:tets.c        ****         }
+ 109:tets.c        **** 
+ 110:tets.c        ****         if(buttonPressFlags.handleLongButtonPress)
+ 322               		.stabn	68,0,110,.LM35-.LFBB1
+ 323               	.LM35:
+ 324 015c 8091 0000 		lds r24,buttonPressFlags
+ 325 0160 81FF      		sbrs r24,1
+ 326 0162 00C0      		rjmp .L10
+ 111:tets.c        ****         {
+ 112:tets.c        ****             buttonPressFlags.handleLongButtonPress = 0;
+ 327               		.stabn	68,0,112,.LM36-.LFBB1
+ 328               	.LM36:
+ 329 0164 8091 0000 		lds r24,buttonPressFlags
+ 330 0168 8D7F      		andi r24,lo8(~(1<<1))
+ 331 016a 8093 0000 		sts buttonPressFlags,r24
+ 113:tets.c        **** 
+ 114:tets.c        ****             if((PINB & 1))
+ 332               		.stabn	68,0,114,.LM37-.LFBB1
+ 333               	.LM37:
+ 334 016e 189B      		sbis 0x3,0
+ 335 0170 00C0      		rjmp .L11
+ 115:tets.c        ****             {;
+ 116:tets.c        ****                 counter2 += 100000;
+ 336               		.stabn	68,0,116,.LM38-.LFBB1
+ 337               	.LM38:
+ 338 0172 8091 0000 		lds r24,counter2
+ 339 0176 9091 0000 		lds r25,counter2+1
+ 340 017a A091 0000 		lds r26,counter2+2
+ 341 017e B091 0000 		lds r27,counter2+3
+ 342 0182 8056      		subi r24,96
+ 343 0184 9947      		sbci r25,121
+ 344 0186 AE4F      		sbci r26,-2
+ 345 0188 BF4F      		sbci r27,-1
+ 346 018a 8093 0000 		sts counter2,r24
+ 347 018e 9093 0000 		sts counter2+1,r25
+ 348 0192 A093 0000 		sts counter2+2,r26
+GAS LISTING /tmp/cc1hCS5j.s 			page 12
+
+
+ 349 0196 B093 0000 		sts counter2+3,r27
+ 350 019a 00C0      		rjmp .L10
+ 351               	.L11:
+ 117:tets.c        ****             }
+ 118:tets.c        ****             else
+ 119:tets.c        ****             {
+ 120:tets.c        ****                 counterFlags.counterLongButtonPressSampleTick = 0;
+ 352               		.stabn	68,0,120,.LM39-.LFBB1
+ 353               	.LM39:
+ 354 019c 8091 0000 		lds r24,counterFlags
+ 355 01a0 8B7F      		andi r24,lo8(~(1<<2))
+ 356 01a2 8093 0000 		sts counterFlags,r24
+ 121:tets.c        ****                 counterLongButtonPressSample = 0;
+ 357               		.stabn	68,0,121,.LM40-.LFBB1
+ 358               	.LM40:
+ 359 01a6 1092 0000 		sts counterLongButtonPressSample+1,__zero_reg__
+ 360 01aa 1092 0000 		sts counterLongButtonPressSample,__zero_reg__
+ 361 01ae 00C0      		rjmp .L10
+ 362               		.size	main, .-main
+ 363               	.Lscope1:
+ 364               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 365               		.stabd	78,0,0
+ 366               		.text
+ 367               		.stabs	"__vector_14:F(0,47)",36,0,129,__vector_14
+ 368               	.global	__vector_14
+ 369               		.type	__vector_14, @function
+ 370               	__vector_14:
+ 371               		.stabd	46,0,0
+ 122:tets.c        ****             }
+ 123:tets.c        ****         }
+ 124:tets.c        ****     }
+ 125:tets.c        **** 
+ 126:tets.c        ****     return 0;
+ 127:tets.c        **** }
+ 128:tets.c        **** 
+ 129:tets.c        **** ISR(TIMER0_COMPA_vect)
+ 130:tets.c        **** {
+ 372               		.stabn	68,0,130,.LM41-.LFBB2
+ 373               	.LM41:
+ 374               	.LFBB2:
+ 375 0000 1F92      		push r1
+ 376 0002 0F92      		push r0
+ 377 0004 0FB6      		in r0,__SREG__
+ 378 0006 0F92      		push r0
+ 379 0008 1124      		clr __zero_reg__
+ 380 000a 2F93      		push r18
+ 381 000c 3F93      		push r19
+ 382 000e 4F93      		push r20
+ 383 0010 5F93      		push r21
+ 384 0012 6F93      		push r22
+ 385 0014 7F93      		push r23
+ 386 0016 8F93      		push r24
+ 387 0018 9F93      		push r25
+ 388 001a EF93      		push r30
+ 389               	/* prologue: Signal */
+ 390               	/* frame size = 0 */
+ 391               	/* stack size = 12 */
+GAS LISTING /tmp/cc1hCS5j.s 			page 13
+
+
+ 392               	.L__stack_usage = 12
+ 131:tets.c        ****     counterShortButtonPress += counterFlags.counterShortButtonPressTick;
+ 393               		.stabn	68,0,131,.LM42-.LFBB2
+ 394               	.LM42:
+ 395 001c 6091 0000 		lds r22,counterShortButtonPress
+ 396 0020 7091 0000 		lds r23,counterShortButtonPress+1
+ 397 0024 E091 0000 		lds r30,counterFlags
+ 398 0028 4E2F      		mov r20,r30
+ 399 002a 4170      		andi r20,1
+ 400 002c 50E0      		ldi r21,0
+ 401 002e 460F      		add r20,r22
+ 402 0030 571F      		adc r21,r23
+ 403 0032 5093 0000 		sts counterShortButtonPress+1,r21
+ 404 0036 4093 0000 		sts counterShortButtonPress,r20
+ 132:tets.c        ****     counterLongButtonPress += counterFlags.counterLongButtonPressTick;
+ 405               		.stabn	68,0,132,.LM43-.LFBB2
+ 406               	.LM43:
+ 407 003a 4091 0000 		lds r20,counterLongButtonPress
+ 408 003e 5091 0000 		lds r21,counterLongButtonPress+1
+ 409 0042 6091 0000 		lds r22,counterFlags
+ 410 0046 61FB      		bst r22,1
+ 411 0048 2227      		clr r18
+ 412 004a 20F9      		bld r18,0
+ 413 004c 30E0      		ldi r19,0
+ 414 004e 240F      		add r18,r20
+ 415 0050 351F      		adc r19,r21
+ 416 0052 3093 0000 		sts counterLongButtonPress+1,r19
+ 417 0056 2093 0000 		sts counterLongButtonPress,r18
+ 133:tets.c        ****     counterLongButtonPressSample += counterFlags.counterLongButtonPressSampleTick;
+ 418               		.stabn	68,0,133,.LM44-.LFBB2
+ 419               	.LM44:
+ 420 005a 2091 0000 		lds r18,counterLongButtonPressSample
+ 421 005e 3091 0000 		lds r19,counterLongButtonPressSample+1
+ 422 0062 4091 0000 		lds r20,counterFlags
+ 423 0066 42FB      		bst r20,2
+ 424 0068 8827      		clr r24
+ 425 006a 80F9      		bld r24,0
+ 426 006c 90E0      		ldi r25,0
+ 427 006e 820F      		add r24,r18
+ 428 0070 931F      		adc r25,r19
+ 429 0072 9093 0000 		sts counterLongButtonPressSample+1,r25
+ 430 0076 8093 0000 		sts counterLongButtonPressSample,r24
+ 134:tets.c        ****     counterOneSec++;
+ 431               		.stabn	68,0,134,.LM45-.LFBB2
+ 432               	.LM45:
+ 433 007a 8091 0000 		lds r24,counterOneSec
+ 434 007e 9091 0000 		lds r25,counterOneSec+1
+ 435 0082 0196      		adiw r24,1
+ 436 0084 9093 0000 		sts counterOneSec+1,r25
+ 437 0088 8093 0000 		sts counterOneSec,r24
+ 135:tets.c        **** 
+ 136:tets.c        ****     if(counterShortButtonPress >= 10)
+ 438               		.stabn	68,0,136,.LM46-.LFBB2
+ 439               	.LM46:
+ 440 008c 8091 0000 		lds r24,counterShortButtonPress
+ 441 0090 9091 0000 		lds r25,counterShortButtonPress+1
+ 442 0094 0A97      		sbiw r24,10
+GAS LISTING /tmp/cc1hCS5j.s 			page 14
+
+
+ 443 0096 00F0      		brlo .L24
+ 137:tets.c        ****     {
+ 138:tets.c        ****         counterShortButtonPress = 0;
+ 444               		.stabn	68,0,138,.LM47-.LFBB2
+ 445               	.LM47:
+ 446 0098 1092 0000 		sts counterShortButtonPress+1,__zero_reg__
+ 447 009c 1092 0000 		sts counterShortButtonPress,__zero_reg__
+ 139:tets.c        ****         buttonPressFlags.handleShortButtonPress = 1;
+ 448               		.stabn	68,0,139,.LM48-.LFBB2
+ 449               	.LM48:
+ 450 00a0 8091 0000 		lds r24,buttonPressFlags
+ 451 00a4 8160      		ori r24,lo8(1<<0)
+ 452 00a6 8093 0000 		sts buttonPressFlags,r24
+ 453               	.L24:
+ 140:tets.c        ****     }
+ 141:tets.c        **** 
+ 142:tets.c        ****     if(counterLongButtonPress >= 500)
+ 454               		.stabn	68,0,142,.LM49-.LFBB2
+ 455               	.LM49:
+ 456 00aa 8091 0000 		lds r24,counterLongButtonPress
+ 457 00ae 9091 0000 		lds r25,counterLongButtonPress+1
+ 458 00b2 843F      		cpi r24,-12
+ 459 00b4 9140      		sbci r25,1
+ 460 00b6 00F0      		brlo .L25
+ 143:tets.c        ****     {
+ 144:tets.c        ****         counterLongButtonPress = 0;
+ 461               		.stabn	68,0,144,.LM50-.LFBB2
+ 462               	.LM50:
+ 463 00b8 1092 0000 		sts counterLongButtonPress+1,__zero_reg__
+ 464 00bc 1092 0000 		sts counterLongButtonPress,__zero_reg__
+ 145:tets.c        ****         buttonPressFlags.handleLongButtonPress = 1;
+ 465               		.stabn	68,0,145,.LM51-.LFBB2
+ 466               	.LM51:
+ 467 00c0 8091 0000 		lds r24,buttonPressFlags
+ 468 00c4 8260      		ori r24,lo8(1<<1)
+ 469 00c6 8093 0000 		sts buttonPressFlags,r24
+ 146:tets.c        ****         counterFlags.counterLongButtonPressSampleTick = 1;
+ 470               		.stabn	68,0,146,.LM52-.LFBB2
+ 471               	.LM52:
+ 472 00ca 8091 0000 		lds r24,counterFlags
+ 473 00ce 8460      		ori r24,lo8(1<<2)
+ 474 00d0 8093 0000 		sts counterFlags,r24
+ 475               	.L25:
+ 147:tets.c        ****     }
+ 148:tets.c        **** 
+ 149:tets.c        ****     if(counterLongButtonPressSample >= 10)
+ 476               		.stabn	68,0,149,.LM53-.LFBB2
+ 477               	.LM53:
+ 478 00d4 8091 0000 		lds r24,counterLongButtonPressSample
+ 479 00d8 9091 0000 		lds r25,counterLongButtonPressSample+1
+ 480 00dc 0A97      		sbiw r24,10
+ 481 00de 00F0      		brlo .L26
+ 150:tets.c        ****     {
+ 151:tets.c        ****         counterLongButtonPressSample = 0;
+ 482               		.stabn	68,0,151,.LM54-.LFBB2
+ 483               	.LM54:
+ 484 00e0 1092 0000 		sts counterLongButtonPressSample+1,__zero_reg__
+GAS LISTING /tmp/cc1hCS5j.s 			page 15
+
+
+ 485 00e4 1092 0000 		sts counterLongButtonPressSample,__zero_reg__
+ 152:tets.c        ****         buttonPressFlags.handleLongButtonPress = 1;
+ 486               		.stabn	68,0,152,.LM55-.LFBB2
+ 487               	.LM55:
+ 488 00e8 8091 0000 		lds r24,buttonPressFlags
+ 489 00ec 8260      		ori r24,lo8(1<<1)
+ 490 00ee 8093 0000 		sts buttonPressFlags,r24
+ 491               	.L26:
+ 153:tets.c        ****     }
+ 154:tets.c        **** 
+ 155:tets.c        ****     if(counterOneSec >= 1000)
+ 492               		.stabn	68,0,155,.LM56-.LFBB2
+ 493               	.LM56:
+ 494 00f2 8091 0000 		lds r24,counterOneSec
+ 495 00f6 9091 0000 		lds r25,counterOneSec+1
+ 496 00fa 883E      		cpi r24,-24
+ 497 00fc 9340      		sbci r25,3
+ 498 00fe 00F0      		brlo .L23
+ 156:tets.c        ****     {
+ 157:tets.c        ****         counterOneSec = 0;
+ 499               		.stabn	68,0,157,.LM57-.LFBB2
+ 500               	.LM57:
+ 501 0100 1092 0000 		sts counterOneSec+1,__zero_reg__
+ 502 0104 1092 0000 		sts counterOneSec,__zero_reg__
+ 158:tets.c        ****         counter += 10;
+ 503               		.stabn	68,0,158,.LM58-.LFBB2
+ 504               	.LM58:
+ 505 0108 8091 0000 		lds r24,counter
+ 506 010c 865F      		subi r24,lo8(-(10))
+ 507 010e 8093 0000 		sts counter,r24
+ 508               	.L23:
+ 509               	/* epilogue start */
+ 159:tets.c        ****     }
+ 160:tets.c        **** }
+ 510               		.stabn	68,0,160,.LM59-.LFBB2
+ 511               	.LM59:
+ 512 0112 EF91      		pop r30
+ 513 0114 9F91      		pop r25
+ 514 0116 8F91      		pop r24
+ 515 0118 7F91      		pop r23
+ 516 011a 6F91      		pop r22
+ 517 011c 5F91      		pop r21
+ 518 011e 4F91      		pop r20
+ 519 0120 3F91      		pop r19
+ 520 0122 2F91      		pop r18
+ 521 0124 0F90      		pop r0
+ 522 0126 0FBE      		out __SREG__,r0
+ 523 0128 0F90      		pop r0
+ 524 012a 1F90      		pop r1
+ 525 012c 1895      		reti
+ 526               		.size	__vector_14, .-__vector_14
+ 527               	.Lscope2:
+ 528               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 529               		.stabd	78,0,0
+ 530               		.stabs	"__vector_3:F(0,47)",36,0,162,__vector_3
+ 531               	.global	__vector_3
+ 532               		.type	__vector_3, @function
+GAS LISTING /tmp/cc1hCS5j.s 			page 16
+
+
+ 533               	__vector_3:
+ 534               		.stabd	46,0,0
+ 161:tets.c        **** 
+ 162:tets.c        **** ISR(PCINT0_vect)
+ 163:tets.c        **** {
+ 535               		.stabn	68,0,163,.LM60-.LFBB3
+ 536               	.LM60:
+ 537               	.LFBB3:
+ 538 012e 1F92      		push r1
+ 539 0130 0F92      		push r0
+ 540 0132 0FB6      		in r0,__SREG__
+ 541 0134 0F92      		push r0
+ 542 0136 1124      		clr __zero_reg__
+ 543 0138 8F93      		push r24
+ 544               	/* prologue: Signal */
+ 545               	/* frame size = 0 */
+ 546               	/* stack size = 4 */
+ 547               	.L__stack_usage = 4
+ 164:tets.c        ****     interruptFlags.handlePinChange0 = 1;
+ 548               		.stabn	68,0,164,.LM61-.LFBB3
+ 549               	.LM61:
+ 550 013a 8091 0000 		lds r24,interruptFlags
+ 551 013e 8160      		ori r24,lo8(1<<0)
+ 552 0140 8093 0000 		sts interruptFlags,r24
+ 553               	/* epilogue start */
+ 165:tets.c        **** }
+ 554               		.stabn	68,0,165,.LM62-.LFBB3
+ 555               	.LM62:
+ 556 0144 8F91      		pop r24
+ 557 0146 0F90      		pop r0
+ 558 0148 0FBE      		out __SREG__,r0
+ 559 014a 0F90      		pop r0
+ 560 014c 1F90      		pop r1
+ 561 014e 1895      		reti
+ 562               		.size	__vector_3, .-__vector_3
+ 563               	.Lscope3:
+ 564               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 565               		.stabd	78,0,0
+ 566               	.global	currentPhase
+ 567               		.section .bss
+ 568               		.type	currentPhase, @object
+ 569               		.size	currentPhase, 1
+ 570               	currentPhase:
+ 571 0000 00        		.zero	1
+ 572               	.global	lastPhase
+ 573               		.type	lastPhase, @object
+ 574               		.size	lastPhase, 1
+ 575               	lastPhase:
+ 576 0001 00        		.zero	1
+ 577               	.global	counterOneSec
+ 578               		.type	counterOneSec, @object
+ 579               		.size	counterOneSec, 2
+ 580               	counterOneSec:
+ 581 0002 0000      		.zero	2
+ 582               	.global	counterLongButtonPressSample
+ 583               		.type	counterLongButtonPressSample, @object
+ 584               		.size	counterLongButtonPressSample, 2
+GAS LISTING /tmp/cc1hCS5j.s 			page 17
+
+
+ 585               	counterLongButtonPressSample:
+ 586 0004 0000      		.zero	2
+ 587               	.global	counterLongButtonPress
+ 588               		.type	counterLongButtonPress, @object
+ 589               		.size	counterLongButtonPress, 2
+ 590               	counterLongButtonPress:
+ 591 0006 0000      		.zero	2
+ 592               	.global	counterShortButtonPress
+ 593               		.type	counterShortButtonPress, @object
+ 594               		.size	counterShortButtonPress, 2
+ 595               	counterShortButtonPress:
+ 596 0008 0000      		.zero	2
+ 597               		.comm	counterFlags,1,1
+ 598               		.comm	buttonPressFlags,1,1
+ 599               		.comm	interruptFlags,1,1
+ 600               	.global	counter2
+ 601               		.type	counter2, @object
+ 602               		.size	counter2, 4
+ 603               	counter2:
+ 604 000a 0000 0000 		.zero	4
+ 605               	.global	counter
+ 606               		.type	counter, @object
+ 607               		.size	counter, 1
+ 608               	counter:
+ 609 000e 00        		.zero	1
+ 610               		.stabs	"counter:G(0,2)",32,0,8,0
+ 611               		.stabs	"counter2:G(0,5)",32,0,9,0
+ 612               		.stabs	"interruptFlags:G(0,54)=B(0,48)",32,0,29,0
+ 613               		.stabs	"buttonPressFlags:G(0,55)=B(0,50)",32,0,30,0
+ 614               		.stabs	"counterFlags:G(0,56)=B(0,52)",32,0,31,0
+ 615               		.stabs	"counterShortButtonPress:G(0,57)=B(0,4)",32,0,33,0
+ 616               		.stabs	"counterLongButtonPress:G(0,57)",32,0,34,0
+ 617               		.stabs	"counterLongButtonPressSample:G(0,57)",32,0,35,0
+ 618               		.stabs	"counterOneSec:G(0,57)",32,0,37,0
+ 619               		.stabs	"lastPhase:G(0,2)",32,0,39,0
+ 620               		.stabs	"currentPhase:G(0,2)",32,0,40,0
+ 621               		.text
+ 622               		.stabs	"",100,0,0,.Letext0
+ 623               	.Letext0:
+ 624               		.ident	"GCC: (GNU) 4.8.1"
+ 625               	.global __do_clear_bss
+GAS LISTING /tmp/cc1hCS5j.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 tets.c
+     /tmp/cc1hCS5j.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cc1hCS5j.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cc1hCS5j.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cc1hCS5j.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc1hCS5j.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc1hCS5j.s:109    .text.startup:0000000000000000 main
+     /tmp/cc1hCS5j.s:603    .bss:000000000000000a counter2
+                            *COM*:0000000000000001 interruptFlags
+     /tmp/cc1hCS5j.s:608    .bss:000000000000000e counter
+                            *COM*:0000000000000001 counterFlags
+                            *COM*:0000000000000001 buttonPressFlags
+     /tmp/cc1hCS5j.s:595    .bss:0000000000000008 counterShortButtonPress
+     /tmp/cc1hCS5j.s:590    .bss:0000000000000006 counterLongButtonPress
+     /tmp/cc1hCS5j.s:585    .bss:0000000000000004 counterLongButtonPressSample
+     /tmp/cc1hCS5j.s:370    .text:0000000000000000 __vector_14
+     /tmp/cc1hCS5j.s:580    .bss:0000000000000002 counterOneSec
+     /tmp/cc1hCS5j.s:533    .text:000000000000012e __vector_3
+     /tmp/cc1hCS5j.s:570    .bss:0000000000000000 currentPhase
+     /tmp/cc1hCS5j.s:575    .bss:0000000000000001 lastPhase
+
+UNDEFINED SYMBOLS
+lcdInit
+lcdInitBargraph
+lcdAdvance
+lcdwULong
+lcdPrintBargraphAt
+lcdFill
+__do_clear_bss

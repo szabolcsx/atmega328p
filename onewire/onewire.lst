@@ -1,0 +1,2423 @@
+GAS LISTING /tmp/cc9tzOES.s 			page 1
+
+
+   1               		.file	"onewire.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/szoke/AVR/onewire/",100,0,2,.Ltext0
+   8               		.stabs	"onewire.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"long _Fract:t(0,16)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"long long _Fract:t(0,17)=r(0,1);8;0;",128,0,0,0
+  29               		.stabs	"unsigned short _Fract:t(0,18)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"unsigned _Fract:t(0,19)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"unsigned long _Fract:t(0,20)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"unsigned long long _Fract:t(0,21)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"_Sat short _Fract:t(0,22)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"_Sat _Fract:t(0,23)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"_Sat long _Fract:t(0,24)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"_Sat long long _Fract:t(0,25)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat unsigned short _Fract:t(0,26)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned _Fract:t(0,27)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned long _Fract:t(0,28)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long long _Fract:t(0,29)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"short _Accum:t(0,30)=r(0,1);2;0;",128,0,0,0
+  42               		.stabs	"long _Accum:t(0,31)=r(0,1);8;0;",128,0,0,0
+  43               		.stabs	"long long _Accum:t(0,32)=r(0,1);8;0;",128,0,0,0
+  44               		.stabs	"unsigned short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  45               		.stabs	"unsigned _Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  46               		.stabs	"unsigned long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  47               		.stabs	"unsigned long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"_Sat short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  49               		.stabs	"_Sat _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  50               		.stabs	"_Sat long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  51               		.stabs	"_Sat long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"_Sat unsigned short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  53               		.stabs	"_Sat unsigned _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"void:t(0,45)=(0,45)",128,0,0,0
+  57               		.stabs	"onewire.h",130,0,0,0
+GAS LISTING /tmp/cc9tzOES.s 			page 2
+
+
+  58               		.stabs	"/usr/lib/gcc/avr/4.8.1/include/stdint.h",130,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  60               		.stabs	"int8_t:t(3,1)=(0,10)",128,0,121,0
+  61               		.stabs	"uint8_t:t(3,2)=(0,11)",128,0,122,0
+  62               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,123,0
+  63               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,124,0
+  64               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,125,0
+  65               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,126,0
+  66               		.stabs	"int64_t:t(3,7)=(0,6)",128,0,128,0
+  67               		.stabs	"uint64_t:t(3,8)=(0,7)",128,0,129,0
+  68               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,142,0
+  69               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,147,0
+  70               		.stabs	"int_least8_t:t(3,11)=(3,1)",128,0,159,0
+  71               		.stabs	"uint_least8_t:t(3,12)=(3,2)",128,0,164,0
+  72               		.stabs	"int_least16_t:t(3,13)=(3,3)",128,0,169,0
+  73               		.stabs	"uint_least16_t:t(3,14)=(3,4)",128,0,174,0
+  74               		.stabs	"int_least32_t:t(3,15)=(3,5)",128,0,179,0
+  75               		.stabs	"uint_least32_t:t(3,16)=(3,6)",128,0,184,0
+  76               		.stabs	"int_least64_t:t(3,17)=(3,7)",128,0,192,0
+  77               		.stabs	"uint_least64_t:t(3,18)=(3,8)",128,0,199,0
+  78               		.stabs	"int_fast8_t:t(3,19)=(3,1)",128,0,213,0
+  79               		.stabs	"uint_fast8_t:t(3,20)=(3,2)",128,0,218,0
+  80               		.stabs	"int_fast16_t:t(3,21)=(3,3)",128,0,223,0
+  81               		.stabs	"uint_fast16_t:t(3,22)=(3,4)",128,0,228,0
+  82               		.stabs	"int_fast32_t:t(3,23)=(3,5)",128,0,233,0
+  83               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,238,0
+  84               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,246,0
+  85               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,253,0
+  86               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,273,0
+  87               		.stabs	"uintmax_t:t(3,28)=(3,8)",128,0,278,0
+  88               		.stabn	162,0,0,0
+  89               		.stabn	162,0,0,0
+  90               		.stabs	"owConnection_t:t(1,1)=(1,2)=s7port:(1,3)=*(1,4)=B(3,2),0,16;ddr:(1,3),16,16;pin:(1,3),32,1
+  91               		.stabn	162,0,0,0
+  92               		.stabs	"/usr/lib/avr/include/util/delay.h",130,0,0,0
+  93               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  94               		.stabs	"int_farptr_t:t(5,1)=(3,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(5,2)=(3,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	" :T(0,46)=@s8;eOWI_RSCRATCHPAD:190,OWI_WSCRATCHPAD:78,OWI_CPYSCRATCHPAD:72,OWI_RECEEPROM:1
+  99               		.stabs	"ds_op:t(0,47)=(0,46)",128,0,23,0
+ 100               		.stabs	"owReset:F(3,2)",36,0,29,owReset
+ 101               		.stabs	"conn:P(0,48)=*(1,1)",64,0,29,30
+ 102               	.global	owReset
+ 103               		.type	owReset, @function
+ 104               	owReset:
+ 105               		.stabd	46,0,0
+   1:onewire.c     **** #include "onewire.h"
+   2:onewire.c     **** #include <util/delay.h>
+   3:onewire.c     **** 
+   4:onewire.c     **** #define OWI_SET_INPUT(conn) (*(conn->ddr) &= ~(1 << conn->n))
+   5:onewire.c     **** #define OWI_SET_OUTPUT(conn) (*(conn->ddr) |= (1 << conn->n))
+   6:onewire.c     **** 
+   7:onewire.c     **** #define OWI_LOW(conn) (*(conn->port) &= ~(1 << conn->n))
+   8:onewire.c     **** #define OWI_HIGH(conn) (*(conn->port) |= (1 << conn->n))
+   9:onewire.c     **** 
+GAS LISTING /tmp/cc9tzOES.s 			page 3
+
+
+  10:onewire.c     **** #define OWI_READ(conn) (*(conn->pin) & (1 << conn->n))
+  11:onewire.c     **** 
+  12:onewire.c     **** typedef enum {
+  13:onewire.c     ****     OWI_RSCRATCHPAD = 0xBE,
+  14:onewire.c     ****     OWI_WSCRATCHPAD = 0x4E,
+  15:onewire.c     ****     OWI_CPYSCRATCHPAD = 0x48,
+  16:onewire.c     ****     OWI_RECEEPROM = 0xB8,
+  17:onewire.c     ****     OWI_RPWRSUPPLY = 0xB4,
+  18:onewire.c     ****     OWI_SEARCHROM = 0xF0,
+  19:onewire.c     ****     OWI_READROM = 0x33,
+  20:onewire.c     ****     OWI_MATCHROM = 0x55,
+  21:onewire.c     ****     OWI_SKIPROM = 0xCC,
+  22:onewire.c     ****     OWI_ALARMSEARCH = 0xEC
+  23:onewire.c     **** } ds_op;
+  24:onewire.c     **** 
+  25:onewire.c     **** uint8_t owrBit(owConnection_t* conn);
+  26:onewire.c     **** void owwBit(owConnection_t* conn,
+  27:onewire.c     ****     uint8_t bit);
+  28:onewire.c     **** 
+  29:onewire.c     **** uint8_t owReset(owConnection_t* conn)
+  30:onewire.c     **** {
+ 106               		.stabn	68,0,30,.LM0-.LFBB1
+ 107               	.LM0:
+ 108               	.LFBB1:
+ 109               	/* prologue: function */
+ 110               	/* frame size = 0 */
+ 111               	/* stack size = 0 */
+ 112               	.L__stack_usage = 0
+ 113 0000 FC01      		movw r30,r24
+  31:onewire.c     **** 	uint8_t val = 0xFF;
+  32:onewire.c     **** 
+  33:onewire.c     **** 	// The master pulls the line low for a minimum of 480uS and then releases the line
+  34:onewire.c     **** 	OWI_LOW(conn);
+ 114               		.stabn	68,0,34,.LM1-.LFBB1
+ 115               	.LM1:
+ 116 0002 A081      		ld r26,Z
+ 117 0004 B181      		ldd r27,Z+1
+ 118 0006 4C91      		ld r20,X
+ 119 0008 81E0      		ldi r24,lo8(1)
+ 120 000a 90E0      		ldi r25,0
+ 121 000c 9C01      		movw r18,r24
+ 122 000e 0680      		ldd r0,Z+6
+ 123 0010 00C0      		rjmp 2f
+ 124               		1:
+ 125 0012 220F      		lsl r18
+ 126 0014 331F      		rol r19
+ 127               		2:
+ 128 0016 0A94      		dec r0
+ 129 0018 02F4      		brpl 1b
+ 130 001a 2095      		com r18
+ 131 001c 2423      		and r18,r20
+ 132 001e 2C93      		st X,r18
+  35:onewire.c     **** 	OWI_SET_OUTPUT(conn);
+ 133               		.stabn	68,0,35,.LM2-.LFBB1
+ 134               	.LM2:
+ 135 0020 A281      		ldd r26,Z+2
+ 136 0022 B381      		ldd r27,Z+3
+GAS LISTING /tmp/cc9tzOES.s 			page 4
+
+
+ 137 0024 2C91      		ld r18,X
+ 138 0026 0680      		ldd r0,Z+6
+ 139 0028 00C0      		rjmp 2f
+ 140               		1:
+ 141 002a 880F      		lsl r24
+ 142 002c 991F      		rol r25
+ 143               		2:
+ 144 002e 0A94      		dec r0
+ 145 0030 02F4      		brpl 1b
+ 146 0032 282B      		or r18,r24
+ 147 0034 2C93      		st X,r18
+ 148               	.LBB18:
+ 149               	.LBB19:
+ 150               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext1
+ 151               	.Ltext1:
+   1:/usr/lib/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   3:/usr/lib/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   4:/usr/lib/avr/include/util/delay.h ****    All rights reserved.
+   5:/usr/lib/avr/include/util/delay.h **** 
+   6:/usr/lib/avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   7:/usr/lib/avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+   8:/usr/lib/avr/include/util/delay.h **** 
+   9:/usr/lib/avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+  10:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  11:/usr/lib/avr/include/util/delay.h **** 
+  12:/usr/lib/avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  13:/usr/lib/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  14:/usr/lib/avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  15:/usr/lib/avr/include/util/delay.h ****      distribution.
+  16:/usr/lib/avr/include/util/delay.h **** 
+  17:/usr/lib/avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  18:/usr/lib/avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+  19:/usr/lib/avr/include/util/delay.h ****      from this software without specific prior written permission.
+  20:/usr/lib/avr/include/util/delay.h **** 
+  21:/usr/lib/avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/usr/lib/avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/usr/lib/avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/usr/lib/avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  25:/usr/lib/avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/usr/lib/avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/usr/lib/avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/usr/lib/avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/usr/lib/avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/usr/lib/avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/usr/lib/avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  32:/usr/lib/avr/include/util/delay.h **** 
+  33:/usr/lib/avr/include/util/delay.h **** /* $Id$ */
+  34:/usr/lib/avr/include/util/delay.h **** 
+  35:/usr/lib/avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  36:/usr/lib/avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  37:/usr/lib/avr/include/util/delay.h **** 
+  38:/usr/lib/avr/include/util/delay.h **** #ifndef __HAS_DELAY_CYCLES
+  39:/usr/lib/avr/include/util/delay.h **** #define __HAS_DELAY_CYCLES 1
+  40:/usr/lib/avr/include/util/delay.h **** #endif
+  41:/usr/lib/avr/include/util/delay.h **** 
+  42:/usr/lib/avr/include/util/delay.h **** #include <inttypes.h>
+GAS LISTING /tmp/cc9tzOES.s 			page 5
+
+
+  43:/usr/lib/avr/include/util/delay.h **** #include <util/delay_basic.h>
+  44:/usr/lib/avr/include/util/delay.h **** #include <math.h>
+  45:/usr/lib/avr/include/util/delay.h **** 
+  46:/usr/lib/avr/include/util/delay.h **** /** \file */
+  47:/usr/lib/avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  48:/usr/lib/avr/include/util/delay.h ****     \code
+  49:/usr/lib/avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  50:/usr/lib/avr/include/util/delay.h ****     //#define F_CPU 14.7456E6
+  51:/usr/lib/avr/include/util/delay.h ****     #include <util/delay.h>
+  52:/usr/lib/avr/include/util/delay.h ****     \endcode
+  53:/usr/lib/avr/include/util/delay.h **** 
+  54:/usr/lib/avr/include/util/delay.h ****     \note As an alternative method, it is possible to pass the
+  55:/usr/lib/avr/include/util/delay.h ****     F_CPU macro down to the compiler from the Makefile.
+  56:/usr/lib/avr/include/util/delay.h ****     Obviously, in that case, no \c \#define statement should be
+  57:/usr/lib/avr/include/util/delay.h ****     used.
+  58:/usr/lib/avr/include/util/delay.h **** 
+  59:/usr/lib/avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  60:/usr/lib/avr/include/util/delay.h ****     busy-wait functions from <util/delay_basic.h>.  They are meant as
+  61:/usr/lib/avr/include/util/delay.h ****     convenience functions where actual time values can be specified
+  62:/usr/lib/avr/include/util/delay.h ****     rather than a number of cycles to wait for.  The idea behind is
+  63:/usr/lib/avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  64:/usr/lib/avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  65:/usr/lib/avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  66:/usr/lib/avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  67:/usr/lib/avr/include/util/delay.h **** 
+  68:/usr/lib/avr/include/util/delay.h ****     \note In order for these functions to work as intended, compiler
+  69:/usr/lib/avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  70:/usr/lib/avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  71:/usr/lib/avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  72:/usr/lib/avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  73:/usr/lib/avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  74:/usr/lib/avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  75:/usr/lib/avr/include/util/delay.h ****     routines linked into the application.
+  76:/usr/lib/avr/include/util/delay.h **** 
+  77:/usr/lib/avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  78:/usr/lib/avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  79:/usr/lib/avr/include/util/delay.h ****     F_CPU as the CPU clock frequency (in Hertz).
+  80:/usr/lib/avr/include/util/delay.h **** 
+  81:/usr/lib/avr/include/util/delay.h **** */
+  82:/usr/lib/avr/include/util/delay.h **** 
+  83:/usr/lib/avr/include/util/delay.h **** #if !defined(__DOXYGEN__)
+  84:/usr/lib/avr/include/util/delay.h **** static inline void _delay_us(double __us) __attribute__((always_inline));
+  85:/usr/lib/avr/include/util/delay.h **** static inline void _delay_ms(double __ms) __attribute__((always_inline));
+  86:/usr/lib/avr/include/util/delay.h **** #endif
+  87:/usr/lib/avr/include/util/delay.h **** 
+  88:/usr/lib/avr/include/util/delay.h **** #ifndef F_CPU
+  89:/usr/lib/avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  90:/usr/lib/avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+  91:/usr/lib/avr/include/util/delay.h **** # define F_CPU 1000000UL
+  92:/usr/lib/avr/include/util/delay.h **** #endif
+  93:/usr/lib/avr/include/util/delay.h **** 
+  94:/usr/lib/avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+  95:/usr/lib/avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+  96:/usr/lib/avr/include/util/delay.h **** #endif
+  97:/usr/lib/avr/include/util/delay.h **** 
+  98:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+  99:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+GAS LISTING /tmp/cc9tzOES.s 			page 6
+
+
+ 100:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 101:/usr/lib/avr/include/util/delay.h **** #  include <math.h>
+ 102:/usr/lib/avr/include/util/delay.h **** #endif
+ 103:/usr/lib/avr/include/util/delay.h **** 
+ 104:/usr/lib/avr/include/util/delay.h **** /**
+ 105:/usr/lib/avr/include/util/delay.h ****    \ingroup util_delay
+ 106:/usr/lib/avr/include/util/delay.h **** 
+ 107:/usr/lib/avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds, using _delay_loop_2().
+ 108:/usr/lib/avr/include/util/delay.h **** 
+ 109:/usr/lib/avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+ 110:/usr/lib/avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+ 111:/usr/lib/avr/include/util/delay.h **** 
+ 112:/usr/lib/avr/include/util/delay.h ****    The maximal possible delay is 262.14 ms / F_CPU in MHz.
+ 113:/usr/lib/avr/include/util/delay.h **** 
+ 114:/usr/lib/avr/include/util/delay.h ****    When the user request delay which exceed the maximum possible one,
+ 115:/usr/lib/avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 116:/usr/lib/avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10 ms, providing
+ 117:/usr/lib/avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 118:/usr/lib/avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 119:/usr/lib/avr/include/util/delay.h **** 
+ 120:/usr/lib/avr/include/util/delay.h ****    If the avr-gcc toolchain has __builtin_avr_delay_cycles(unsigned long)
+ 121:/usr/lib/avr/include/util/delay.h ****    support, maximal possible delay is 4294967.295 ms/ F_CPU in MHz. For
+ 122:/usr/lib/avr/include/util/delay.h ****    values greater than the maximal possible delay, overflows results in
+ 123:/usr/lib/avr/include/util/delay.h ****    no delay i.e., 0ms.
+ 124:/usr/lib/avr/include/util/delay.h **** 
+ 125:/usr/lib/avr/include/util/delay.h ****    Conversion of __us into clock cycles may not always result in integer.
+ 126:/usr/lib/avr/include/util/delay.h ****    By default, the clock cycles rounded up to next integer. This ensures that
+ 127:/usr/lib/avr/include/util/delay.h ****    the user gets atleast __us microseconds of delay.
+ 128:/usr/lib/avr/include/util/delay.h **** 
+ 129:/usr/lib/avr/include/util/delay.h ****    Alternatively, user can define __DELAY_ROUND_DOWN__ and __DELAY_ROUND_CLOSEST__
+ 130:/usr/lib/avr/include/util/delay.h ****    to round down and round to closest integer.
+ 131:/usr/lib/avr/include/util/delay.h **** 
+ 132:/usr/lib/avr/include/util/delay.h ****    Note: The new implementation of _delay_ms(double __ms) with 
+ 133:/usr/lib/avr/include/util/delay.h ****     __builtin_avr_delay_cycles(unsigned long) support is not backward compatible. 
+ 134:/usr/lib/avr/include/util/delay.h ****    User can define __DELAY_BACKWARD_COMPATIBLE__ to get a backward compatible delay.
+ 135:/usr/lib/avr/include/util/delay.h ****    Also, the backward compatible
+ 136:/usr/lib/avr/include/util/delay.h ****    algorithm will be chosen if the code is compiled in a <em>freestanding
+ 137:/usr/lib/avr/include/util/delay.h ****    environment</em> (GCC option \c -ffreestanding), as the math functions
+ 138:/usr/lib/avr/include/util/delay.h ****    required for rounding are not available to the compiler then.
+ 139:/usr/lib/avr/include/util/delay.h **** 
+ 140:/usr/lib/avr/include/util/delay.h ****  */
+ 141:/usr/lib/avr/include/util/delay.h **** void
+ 142:/usr/lib/avr/include/util/delay.h **** _delay_ms(double __ms)
+ 143:/usr/lib/avr/include/util/delay.h **** {
+ 144:/usr/lib/avr/include/util/delay.h **** 	double __tmp ; 
+ 145:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 146:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 147:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 148:/usr/lib/avr/include/util/delay.h **** 	uint32_t __ticks_dc;
+ 149:/usr/lib/avr/include/util/delay.h **** 	extern void __builtin_avr_delay_cycles(unsigned long);
+ 150:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 1e3) * __ms;
+ 151:/usr/lib/avr/include/util/delay.h **** 
+ 152:/usr/lib/avr/include/util/delay.h **** 	#if defined(__DELAY_ROUND_DOWN__)
+ 153:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)fabs(__tmp);
+ 154:/usr/lib/avr/include/util/delay.h **** 
+ 155:/usr/lib/avr/include/util/delay.h **** 	#elif defined(__DELAY_ROUND_CLOSEST__)
+ 156:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(fabs(__tmp)+0.5);
+GAS LISTING /tmp/cc9tzOES.s 			page 7
+
+
+ 157:/usr/lib/avr/include/util/delay.h **** 
+ 158:/usr/lib/avr/include/util/delay.h **** 	#else
+ 159:/usr/lib/avr/include/util/delay.h **** 		//round up by default
+ 160:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+ 161:/usr/lib/avr/include/util/delay.h **** 	#endif
+ 162:/usr/lib/avr/include/util/delay.h **** 
+ 163:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
+ 164:/usr/lib/avr/include/util/delay.h **** 
+ 165:/usr/lib/avr/include/util/delay.h **** #else
+ 166:/usr/lib/avr/include/util/delay.h **** 	uint16_t __ticks;
+ 167:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 4e3) * __ms;
+ 168:/usr/lib/avr/include/util/delay.h **** 	if (__tmp < 1.0)
+ 169:/usr/lib/avr/include/util/delay.h **** 		__ticks = 1;
+ 170:/usr/lib/avr/include/util/delay.h **** 	else if (__tmp > 65535)
+ 171:/usr/lib/avr/include/util/delay.h **** 	{
+ 172:/usr/lib/avr/include/util/delay.h **** 		//	__ticks = requested delay in 1/10 ms
+ 173:/usr/lib/avr/include/util/delay.h **** 		__ticks = (uint16_t) (__ms * 10.0);
+ 174:/usr/lib/avr/include/util/delay.h **** 		while(__ticks)
+ 175:/usr/lib/avr/include/util/delay.h **** 		{
+ 176:/usr/lib/avr/include/util/delay.h **** 			// wait 1/10 ms
+ 177:/usr/lib/avr/include/util/delay.h **** 			_delay_loop_2(((F_CPU) / 4e3) / 10);
+ 178:/usr/lib/avr/include/util/delay.h **** 			__ticks --;
+ 179:/usr/lib/avr/include/util/delay.h **** 		}
+ 180:/usr/lib/avr/include/util/delay.h **** 		return;
+ 181:/usr/lib/avr/include/util/delay.h **** 	}
+ 182:/usr/lib/avr/include/util/delay.h **** 	else
+ 183:/usr/lib/avr/include/util/delay.h **** 		__ticks = (uint16_t)__tmp;
+ 184:/usr/lib/avr/include/util/delay.h **** 	_delay_loop_2(__ticks);
+ 185:/usr/lib/avr/include/util/delay.h **** #endif
+ 186:/usr/lib/avr/include/util/delay.h **** }
+ 187:/usr/lib/avr/include/util/delay.h **** 
+ 188:/usr/lib/avr/include/util/delay.h **** /**
+ 189:/usr/lib/avr/include/util/delay.h ****    \ingroup util_delay
+ 190:/usr/lib/avr/include/util/delay.h **** 
+ 191:/usr/lib/avr/include/util/delay.h ****    Perform a delay of \c __us microseconds, using _delay_loop_1().
+ 192:/usr/lib/avr/include/util/delay.h **** 
+ 193:/usr/lib/avr/include/util/delay.h ****    The macro F_CPU is supposed to be defined to a
+ 194:/usr/lib/avr/include/util/delay.h ****    constant defining the CPU clock frequency (in Hertz).
+ 195:/usr/lib/avr/include/util/delay.h **** 
+ 196:/usr/lib/avr/include/util/delay.h ****    The maximal possible delay is 768 us / F_CPU in MHz.
+ 197:/usr/lib/avr/include/util/delay.h **** 
+ 198:/usr/lib/avr/include/util/delay.h ****    If the user requests a delay greater than the maximal possible one,
+ 199:/usr/lib/avr/include/util/delay.h ****    _delay_us() will automatically call _delay_ms() instead.  The user
+ 200:/usr/lib/avr/include/util/delay.h ****    will not be informed about this case.
+ 201:/usr/lib/avr/include/util/delay.h **** 
+ 202:/usr/lib/avr/include/util/delay.h ****    If the avr-gcc toolchain has __builtin_avr_delay_cycles(unsigned long)
+ 203:/usr/lib/avr/include/util/delay.h ****    support, maximal possible delay is 4294967.295 us/ F_CPU in MHz. For
+ 204:/usr/lib/avr/include/util/delay.h ****    values greater than the maximal possible delay, overflow results in
+ 205:/usr/lib/avr/include/util/delay.h ****    no delay i.e., 0us.
+ 206:/usr/lib/avr/include/util/delay.h ****   
+ 207:/usr/lib/avr/include/util/delay.h ****    Conversion of __us into clock cycles may not always result in integer.
+ 208:/usr/lib/avr/include/util/delay.h ****    By default, the clock cycles rounded up to next integer. This ensures that
+ 209:/usr/lib/avr/include/util/delay.h ****    the user gets atleast __us microseconds of delay.
+ 210:/usr/lib/avr/include/util/delay.h **** 
+ 211:/usr/lib/avr/include/util/delay.h ****    Alternatively, user can define __DELAY_ROUND_DOWN__ and __DELAY_ROUND_CLOSEST__
+ 212:/usr/lib/avr/include/util/delay.h ****    to round down and round to closest integer.
+ 213:/usr/lib/avr/include/util/delay.h ****  
+GAS LISTING /tmp/cc9tzOES.s 			page 8
+
+
+ 214:/usr/lib/avr/include/util/delay.h ****    Note: The new implementation of _delay_us(double __us) with 
+ 215:/usr/lib/avr/include/util/delay.h ****     __builtin_avr_delay_cycles(unsigned long) support is not backward compatible.
+ 216:/usr/lib/avr/include/util/delay.h ****    User can define __DELAY_BACKWARD_COMPATIBLE__ to get a backward compatible delay.
+ 217:/usr/lib/avr/include/util/delay.h ****    Also, the backward compatible
+ 218:/usr/lib/avr/include/util/delay.h ****    algorithm will be chosen if the code is compiled in a <em>freestanding
+ 219:/usr/lib/avr/include/util/delay.h ****    environment</em> (GCC option \c -ffreestanding), as the math functions
+ 220:/usr/lib/avr/include/util/delay.h ****    required for rounding are not available to the compiler then.
+ 221:/usr/lib/avr/include/util/delay.h **** 
+ 222:/usr/lib/avr/include/util/delay.h ****  */
+ 223:/usr/lib/avr/include/util/delay.h **** void
+ 224:/usr/lib/avr/include/util/delay.h **** _delay_us(double __us)
+ 225:/usr/lib/avr/include/util/delay.h **** {
+ 226:/usr/lib/avr/include/util/delay.h **** 	double __tmp ; 
+ 227:/usr/lib/avr/include/util/delay.h **** #if __HAS_DELAY_CYCLES && defined(__OPTIMIZE__) && \
+ 228:/usr/lib/avr/include/util/delay.h ****   !defined(__DELAY_BACKWARD_COMPATIBLE__) &&	   \
+ 229:/usr/lib/avr/include/util/delay.h ****   __STDC_HOSTED__
+ 230:/usr/lib/avr/include/util/delay.h **** 	uint32_t __ticks_dc;
+ 231:/usr/lib/avr/include/util/delay.h **** 	extern void __builtin_avr_delay_cycles(unsigned long);
+ 232:/usr/lib/avr/include/util/delay.h **** 	__tmp = ((F_CPU) / 1e6) * __us;
+ 233:/usr/lib/avr/include/util/delay.h **** 
+ 234:/usr/lib/avr/include/util/delay.h **** 	#if defined(__DELAY_ROUND_DOWN__)
+ 235:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)fabs(__tmp);
+ 236:/usr/lib/avr/include/util/delay.h **** 
+ 237:/usr/lib/avr/include/util/delay.h **** 	#elif defined(__DELAY_ROUND_CLOSEST__)
+ 238:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(fabs(__tmp)+0.5);
+ 239:/usr/lib/avr/include/util/delay.h **** 
+ 240:/usr/lib/avr/include/util/delay.h **** 	#else
+ 241:/usr/lib/avr/include/util/delay.h **** 		//round up by default
+ 242:/usr/lib/avr/include/util/delay.h **** 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+ 243:/usr/lib/avr/include/util/delay.h **** 	#endif
+ 244:/usr/lib/avr/include/util/delay.h **** 
+ 245:/usr/lib/avr/include/util/delay.h **** 	__builtin_avr_delay_cycles(__ticks_dc);
+ 152               		.stabn	68,0,245,.LM3-.LFBB1
+ 153               	.LM3:
+ 154 0036 8FEB      		ldi r24,lo8(959)
+ 155 0038 93E0      		ldi r25,hi8(959)
+ 156 003a 0197      		1: sbiw r24,1
+ 157 003c 01F4      		brne 1b
+ 158 003e 00C0      		rjmp .
+ 159 0040 0000      		nop
+ 160               	.LBE19:
+ 161               	.LBE18:
+ 162               		.stabs	"onewire.c",132,0,0,.Ltext2
+ 163               	.Ltext2:
+  36:onewire.c     **** 	_delay_us(480);
+  37:onewire.c     **** 
+  38:onewire.c     **** 	// Wait for 60uS for the sensor to receive the rising edge (given by pull-up resistor)
+  39:onewire.c     **** 	OWI_SET_INPUT(conn);
+ 164               		.stabn	68,0,39,.LM4-.LFBB1
+ 165               	.LM4:
+ 166 0042 A281      		ldd r26,Z+2
+ 167 0044 B381      		ldd r27,Z+3
+ 168 0046 2C91      		ld r18,X
+ 169 0048 81E0      		ldi r24,lo8(1)
+ 170 004a 90E0      		ldi r25,0
+ 171 004c 0680      		ldd r0,Z+6
+ 172 004e 00C0      		rjmp 2f
+GAS LISTING /tmp/cc9tzOES.s 			page 9
+
+
+ 173               		1:
+ 174 0050 880F      		lsl r24
+ 175 0052 991F      		rol r25
+ 176               		2:
+ 177 0054 0A94      		dec r0
+ 178 0056 02F4      		brpl 1b
+ 179 0058 8095      		com r24
+ 180 005a 8223      		and r24,r18
+ 181 005c 8C93      		st X,r24
+ 182               	.LBB20:
+ 183               	.LBB21:
+ 184               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext3
+ 185               	.Ltext3:
+ 186               		.stabn	68,0,245,.LM5-.LFBB1
+ 187               	.LM5:
+ 188 005e 90EA      		ldi r25,lo8(-96)
+ 189 0060 9A95      		1: dec r25
+ 190 0062 01F4      		brne 1b
+ 191               	.LBE21:
+ 192               	.LBE20:
+ 193               		.stabs	"onewire.c",132,0,0,.Ltext4
+ 194               	.Ltext4:
+  40:onewire.c     **** 	_delay_us(60);
+  41:onewire.c     **** 
+  42:onewire.c     **** 	// Get line value and end the waiting
+  43:onewire.c     **** 	val = OWI_READ(conn);
+ 195               		.stabn	68,0,43,.LM6-.LFBB1
+ 196               	.LM6:
+ 197 0064 A481      		ldd r26,Z+4
+ 198 0066 B581      		ldd r27,Z+5
+ 199 0068 8C91      		ld r24,X
+ 200 006a 21E0      		ldi r18,lo8(1)
+ 201 006c 30E0      		ldi r19,0
+ 202 006e 0680      		ldd r0,Z+6
+ 203 0070 00C0      		rjmp 2f
+ 204               		1:
+ 205 0072 220F      		lsl r18
+ 206 0074 331F      		rol r19
+ 207               		2:
+ 208 0076 0A94      		dec r0
+ 209 0078 02F4      		brpl 1b
+ 210 007a 8223      		and r24,r18
+ 211               	.LBB22:
+ 212               	.LBB23:
+ 213               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext5
+ 214               	.Ltext5:
+ 215               		.stabn	68,0,245,.LM7-.LFBB1
+ 216               	.LM7:
+ 217 007c E7E4      		ldi r30,lo8(839)
+ 218 007e F3E0      		ldi r31,hi8(839)
+ 219 0080 3197      		1: sbiw r30,1
+ 220 0082 01F4      		brne 1b
+ 221 0084 00C0      		rjmp .
+ 222 0086 0000      		nop
+ 223               	.LBE23:
+ 224               	.LBE22:
+ 225               		.stabs	"onewire.c",132,0,0,.Ltext6
+GAS LISTING /tmp/cc9tzOES.s 			page 10
+
+
+ 226               	.Ltext6:
+  44:onewire.c     **** 	_delay_us(420);
+  45:onewire.c     **** 
+  46:onewire.c     **** 	return val;
+  47:onewire.c     **** }
+ 227               		.stabn	68,0,47,.LM8-.LFBB1
+ 228               	.LM8:
+ 229 0088 0895      		ret
+ 230               		.size	owReset, .-owReset
+ 231               		.stabs	"val:r(3,2)",64,0,31,24
+ 232               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 233               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 234               	.Lscope1:
+ 235               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 236               		.stabd	78,0,0
+ 237               		.stabs	"owCalcCRC:F(3,2)",36,0,252,owCalcCRC
+ 238               		.stabs	"data:P(0,49)=*(3,2)",64,0,252,24
+ 239               		.stabs	"len:P(3,4)",64,0,253,22
+ 240               	.global	owCalcCRC
+ 241               		.type	owCalcCRC, @function
+ 242               	owCalcCRC:
+ 243               		.stabd	46,0,0
+  48:onewire.c     **** 
+  49:onewire.c     **** void owReadROM(owConnection_t* conn,
+  50:onewire.c     ****     uint8_t buf[8])
+  51:onewire.c     **** {
+  52:onewire.c     **** 	owReset(conn);
+  53:onewire.c     **** 	owWrite(conn, OWI_READROM);
+  54:onewire.c     **** 
+  55:onewire.c     **** 	for (uint8_t counter = 0; counter < 8; counter++)
+  56:onewire.c     **** 		buf[counter] = owRead(conn);
+  57:onewire.c     **** 
+  58:onewire.c     **** 	owReset(conn);
+  59:onewire.c     **** }
+  60:onewire.c     **** 
+  61:onewire.c     **** void owMatchROM(owConnection_t* conn,
+  62:onewire.c     ****     uint8_t rom[8])
+  63:onewire.c     **** {
+  64:onewire.c     **** 	owReset(conn);
+  65:onewire.c     **** 	owWrite(conn, OWI_MATCHROM);
+  66:onewire.c     **** 
+  67:onewire.c     **** 	for (uint8_t counter = 0; counter < 8; counter++)
+  68:onewire.c     **** 		owWrite(conn, rom[counter]);
+  69:onewire.c     **** 
+  70:onewire.c     **** 	// Now only the matching device should answer to commands
+  71:onewire.c     **** }
+  72:onewire.c     **** 
+  73:onewire.c     **** void owSkipROM(owConnection_t* conn)
+  74:onewire.c     **** {
+  75:onewire.c     **** 	owReset(conn);
+  76:onewire.c     **** 	owWrite(conn, OWI_SKIPROM);
+  77:onewire.c     **** }
+  78:onewire.c     **** 
+  79:onewire.c     **** void owReadScratchpad(owConnection_t* conn,
+  80:onewire.c     ****     uint8_t* buf,
+  81:onewire.c     ****     uint16_t len)
+  82:onewire.c     **** {
+GAS LISTING /tmp/cc9tzOES.s 			page 11
+
+
+  83:onewire.c     **** 	owWrite(conn, OWI_RSCRATCHPAD);
+  84:onewire.c     **** 
+  85:onewire.c     **** 	uint16_t cnt = 0;
+  86:onewire.c     **** 	while (len--) {
+  87:onewire.c     **** 		buf[cnt] = owRead(conn);
+  88:onewire.c     **** 		cnt++;
+  89:onewire.c     **** 	}
+  90:onewire.c     **** 
+  91:onewire.c     **** 	owReset(conn);
+  92:onewire.c     **** }
+  93:onewire.c     **** 
+  94:onewire.c     **** void owWriteScratchpad(owConnection_t* conn,
+  95:onewire.c     ****     uint8_t* buf,
+  96:onewire.c     ****     uint16_t len)
+  97:onewire.c     **** {
+  98:onewire.c     **** 	owWrite(conn, OWI_WSCRATCHPAD);
+  99:onewire.c     **** 
+ 100:onewire.c     **** 	uint16_t cnt = 0;
+ 101:onewire.c     **** 	while (len--) {
+ 102:onewire.c     **** 		owWrite(conn, buf[cnt]);
+ 103:onewire.c     **** 		cnt++;
+ 104:onewire.c     **** 	}
+ 105:onewire.c     **** 
+ 106:onewire.c     **** 	owReset(conn);
+ 107:onewire.c     **** }
+ 108:onewire.c     **** 
+ 109:onewire.c     **** void owCopyScratchpad(owConnection_t* conn)
+ 110:onewire.c     **** {
+ 111:onewire.c     **** 	owWrite(conn, OWI_CPYSCRATCHPAD);
+ 112:onewire.c     **** 	owReset(conn);
+ 113:onewire.c     **** }
+ 114:onewire.c     **** 
+ 115:onewire.c     **** void owSearchROM(owConnection_t* conn,
+ 116:onewire.c     ****     uint8_t* buf,
+ 117:onewire.c     ****     uint8_t* count,
+ 118:onewire.c     ****     uint8_t alarm)
+ 119:onewire.c     **** {
+ 120:onewire.c     **** 	uint8_t temp_address[8];
+ 121:onewire.c     **** 
+ 122:onewire.c     **** 	uint8_t discrepancy = 0, lastDiscrepancy = 0;
+ 123:onewire.c     **** 	uint8_t romBitIdx;
+ 124:onewire.c     **** 	uint8_t done = 0;
+ 125:onewire.c     **** 
+ 126:onewire.c     **** 	uint8_t bitA, bitB;
+ 127:onewire.c     **** 
+ 128:onewire.c     **** 	uint8_t presence = !owReset(conn);
+ 129:onewire.c     **** 	if (!presence) {
+ 130:onewire.c     **** 		*count = 0;
+ 131:onewire.c     **** 
+ 132:onewire.c     **** 		return;
+ 133:onewire.c     **** 	}
+ 134:onewire.c     **** 
+ 135:onewire.c     **** 	*count = 0;
+ 136:onewire.c     **** 
+ 137:onewire.c     **** 
+ 138:onewire.c     **** 	uint8_t anotherROMAvailable;
+ 139:onewire.c     **** 	do {
+GAS LISTING /tmp/cc9tzOES.s 			page 12
+
+
+ 140:onewire.c     **** 		for (uint8_t idx = 0; idx < 8; idx++) {
+ 141:onewire.c     **** 			temp_address[idx] = 0;
+ 142:onewire.c     **** 		}
+ 143:onewire.c     **** 
+ 144:onewire.c     **** 		anotherROMAvailable = 0;
+ 145:onewire.c     **** 
+ 146:onewire.c     **** 		if (done) {
+ 147:onewire.c     **** 			done = 0;
+ 148:onewire.c     **** 			continue;
+ 149:onewire.c     **** 		}
+ 150:onewire.c     **** 
+ 151:onewire.c     **** 		presence = !owReset(conn);
+ 152:onewire.c     **** 		if (!presence) {
+ 153:onewire.c     **** 			lastDiscrepancy = 0;
+ 154:onewire.c     **** 			continue;
+ 155:onewire.c     **** 		}
+ 156:onewire.c     **** 
+ 157:onewire.c     **** 		romBitIdx = 1;
+ 158:onewire.c     **** 		discrepancy = 0;
+ 159:onewire.c     **** 
+ 160:onewire.c     **** 		owWrite(conn, alarm ? OWI_ALARMSEARCH : OWI_SEARCHROM);
+ 161:onewire.c     **** 
+ 162:onewire.c     **** 		while (1) {
+ 163:onewire.c     **** 			bitA = owrBit(conn);
+ 164:onewire.c     **** 			bitB = owrBit(conn);
+ 165:onewire.c     **** 
+ 166:onewire.c     **** 			if (bitB && bitA) {
+ 167:onewire.c     **** 				lastDiscrepancy = 0;
+ 168:onewire.c     **** 				break;
+ 169:onewire.c     **** 			}
+ 170:onewire.c     **** 
+ 171:onewire.c     **** 			if (!bitB && !bitA) {
+ 172:onewire.c     **** 				if (romBitIdx == lastDiscrepancy) {
+ 173:onewire.c     **** 					temp_address[((romBitIdx - 1) / 8)] |= (1 << ((romBitIdx - 1) % 8));
+ 174:onewire.c     **** 
+ 175:onewire.c     **** 					owwBit(conn, 1);
+ 176:onewire.c     **** 					romBitIdx++;
+ 177:onewire.c     **** 
+ 178:onewire.c     **** 					if (romBitIdx > 64) {
+ 179:onewire.c     **** 						lastDiscrepancy = discrepancy;
+ 180:onewire.c     **** 						if (!lastDiscrepancy) done = 1;
+ 181:onewire.c     **** 						anotherROMAvailable = 1;
+ 182:onewire.c     **** 						break;
+ 183:onewire.c     **** 					} else {
+ 184:onewire.c     **** 						continue;
+ 185:onewire.c     **** 					}
+ 186:onewire.c     **** 				} else if (romBitIdx > lastDiscrepancy) {
+ 187:onewire.c     **** 					temp_address[((romBitIdx - 1) / 8)] &= ~(1 << ((romBitIdx - 1) % 8));
+ 188:onewire.c     **** 
+ 189:onewire.c     **** 					discrepancy = romBitIdx;
+ 190:onewire.c     **** 					owwBit(conn, 0);
+ 191:onewire.c     **** 					romBitIdx++;
+ 192:onewire.c     **** 
+ 193:onewire.c     **** 					if (romBitIdx > 64) {
+ 194:onewire.c     **** 						lastDiscrepancy = discrepancy;
+ 195:onewire.c     **** 						if (!lastDiscrepancy) done = 1;
+ 196:onewire.c     **** 						anotherROMAvailable = 1;
+GAS LISTING /tmp/cc9tzOES.s 			page 13
+
+
+ 197:onewire.c     **** 						break;
+ 198:onewire.c     **** 					} else {
+ 199:onewire.c     **** 						continue;
+ 200:onewire.c     **** 					}
+ 201:onewire.c     **** 				} else {
+ 202:onewire.c     **** 					uint8_t curRomBit = (temp_address[((romBitIdx - 1) / 8)] >> ((romBitIdx - 1) % 8)) & 1;
+ 203:onewire.c     **** 
+ 204:onewire.c     **** 					if (!curRomBit)
+ 205:onewire.c     **** 						discrepancy = romBitIdx;
+ 206:onewire.c     **** 
+ 207:onewire.c     **** 					owwBit(conn, curRomBit);
+ 208:onewire.c     **** 					romBitIdx++;
+ 209:onewire.c     **** 
+ 210:onewire.c     **** 					if (romBitIdx > 64) {
+ 211:onewire.c     **** 						lastDiscrepancy = discrepancy;
+ 212:onewire.c     **** 						if (!lastDiscrepancy) done = 1;
+ 213:onewire.c     **** 						anotherROMAvailable = 1;
+ 214:onewire.c     **** 						break;
+ 215:onewire.c     **** 					} else {
+ 216:onewire.c     **** 						continue;
+ 217:onewire.c     **** 					}
+ 218:onewire.c     **** 				}
+ 219:onewire.c     **** 			} else {
+ 220:onewire.c     **** 				if (bitA)
+ 221:onewire.c     **** 					temp_address[((romBitIdx - 1) / 8)] |= (1 << ((romBitIdx - 1) % 8));
+ 222:onewire.c     **** 				else
+ 223:onewire.c     **** 					temp_address[((romBitIdx - 1) / 8)] &= ~(1 << ((romBitIdx - 1) % 8));
+ 224:onewire.c     **** 
+ 225:onewire.c     **** 				owwBit(conn, bitA);
+ 226:onewire.c     **** 				romBitIdx++;
+ 227:onewire.c     **** 
+ 228:onewire.c     **** 				if (romBitIdx > 64) {
+ 229:onewire.c     **** 					lastDiscrepancy = discrepancy;
+ 230:onewire.c     **** 					if (!lastDiscrepancy) done = 1;
+ 231:onewire.c     **** 					anotherROMAvailable = 1;
+ 232:onewire.c     **** 					break;
+ 233:onewire.c     **** 				} else {
+ 234:onewire.c     **** 					continue;
+ 235:onewire.c     **** 				}
+ 236:onewire.c     **** 			}
+ 237:onewire.c     **** 
+ 238:onewire.c     **** 		}
+ 239:onewire.c     **** 
+ 240:onewire.c     **** 		if (bitA && bitB) continue;
+ 241:onewire.c     **** 
+ 242:onewire.c     **** 		if (buf) {
+ 243:onewire.c     **** 			for (uint8_t idx = 0; idx < 8; idx++) {
+ 244:onewire.c     **** 				buf[idx + (*count) * 8] = temp_address[idx];
+ 245:onewire.c     **** 			}
+ 246:onewire.c     **** 		}
+ 247:onewire.c     **** 		(*count)++;
+ 248:onewire.c     **** 
+ 249:onewire.c     **** 	} while (anotherROMAvailable);
+ 250:onewire.c     **** }
+ 251:onewire.c     **** 
+ 252:onewire.c     **** uint8_t owCalcCRC(uint8_t* data,
+ 253:onewire.c     ****     uint16_t len)
+GAS LISTING /tmp/cc9tzOES.s 			page 14
+
+
+ 254:onewire.c     **** {
+ 244               		.stabn	68,0,254,.LM9-.LFBB2
+ 245               	.LM9:
+ 246               	.LFBB2:
+ 247               	/* prologue: function */
+ 248               	/* frame size = 0 */
+ 249               	/* stack size = 0 */
+ 250               	.L__stack_usage = 0
+ 251 008a FC01      		movw r30,r24
+ 252 008c 680F      		add r22,r24
+ 253 008e 791F      		adc r23,r25
+ 255:onewire.c     **** 	uint8_t CRC = 0;
+ 254               		.stabn	68,0,255,.LM10-.LFBB2
+ 255               	.LM10:
+ 256 0090 80E0      		ldi r24,0
+ 257               	.LBB24:
+ 258               	.LBB25:
+ 259               	.LBB26:
+ 256:onewire.c     **** 
+ 257:onewire.c     **** 	for (uint16_t idx = 0; idx < len; idx++) {
+ 258:onewire.c     **** 		uint8_t tmp, sr_lsb, fb_bit, tmpData;
+ 259:onewire.c     **** 		tmpData = data[idx];
+ 260:onewire.c     **** 
+ 261:onewire.c     **** 		for (uint8_t cnt = 0; cnt < 8; cnt++) {
+ 262:onewire.c     **** 			tmp = (tmpData >> cnt) & 0x01;
+ 263:onewire.c     **** 			sr_lsb = CRC & 0x01;
+ 264:onewire.c     **** 			fb_bit = (tmp ^ sr_lsb) & 0x01;
+ 265:onewire.c     **** 			CRC >>= 1;
+ 266:onewire.c     **** 			if (fb_bit)
+ 267:onewire.c     **** 				CRC ^= 0x8C;
+ 260               		.stabn	68,0,267,.LM11-.LFBB2
+ 261               	.LM11:
+ 262 0092 9CE8      		ldi r25,lo8(-116)
+ 263               	.L3:
+ 264               	.LBE26:
+ 265               	.LBE25:
+ 257:onewire.c     **** 		uint8_t tmp, sr_lsb, fb_bit, tmpData;
+ 266               		.stabn	68,0,257,.LM12-.LFBB2
+ 267               	.LM12:
+ 268 0094 E617      		cp r30,r22
+ 269 0096 F707      		cpc r31,r23
+ 270 0098 01F0      		breq .L13
+ 271               	.LBB28:
+ 259:onewire.c     **** 
+ 272               		.stabn	68,0,259,.LM13-.LFBB2
+ 273               	.LM13:
+ 274 009a 4191      		ld r20,Z+
+ 275 009c 20E0      		ldi r18,0
+ 276 009e 30E0      		ldi r19,0
+ 277               	.LBB27:
+ 262:onewire.c     **** 			sr_lsb = CRC & 0x01;
+ 278               		.stabn	68,0,262,.LM14-.LFBB2
+ 279               	.LM14:
+ 280 00a0 50E0      		ldi r21,0
+ 281               	.L6:
+ 282 00a2 DA01      		movw r26,r20
+ 283 00a4 022E      		mov r0,r18
+GAS LISTING /tmp/cc9tzOES.s 			page 15
+
+
+ 284 00a6 00C0      		rjmp 2f
+ 285               		1:
+ 286 00a8 B595      		asr r27
+ 287 00aa A795      		ror r26
+ 288               		2:
+ 289 00ac 0A94      		dec r0
+ 290 00ae 02F4      		brpl 1b
+ 264:onewire.c     **** 			CRC >>= 1;
+ 291               		.stabn	68,0,264,.LM15-.LFBB2
+ 292               	.LM15:
+ 293 00b0 A827      		eor r26,r24
+ 265:onewire.c     **** 			if (fb_bit)
+ 294               		.stabn	68,0,265,.LM16-.LFBB2
+ 295               	.LM16:
+ 296 00b2 8695      		lsr r24
+ 266:onewire.c     **** 				CRC ^= 0x8C;
+ 297               		.stabn	68,0,266,.LM17-.LFBB2
+ 298               	.LM17:
+ 299 00b4 A0FD      		sbrc r26,0
+ 300               		.stabn	68,0,267,.LM18-.LFBB2
+ 301               	.LM18:
+ 302 00b6 8927      		eor r24,r25
+ 303               	.L4:
+ 304 00b8 2F5F      		subi r18,-1
+ 305 00ba 3F4F      		sbci r19,-1
+ 261:onewire.c     **** 			tmp = (tmpData >> cnt) & 0x01;
+ 306               		.stabn	68,0,261,.LM19-.LFBB2
+ 307               	.LM19:
+ 308 00bc 2830      		cpi r18,8
+ 309 00be 3105      		cpc r19,__zero_reg__
+ 310 00c0 01F4      		brne .L6
+ 311 00c2 00C0      		rjmp .L3
+ 312               	.L13:
+ 313               	/* epilogue start */
+ 314               	.LBE27:
+ 315               	.LBE28:
+ 316               	.LBE24:
+ 268:onewire.c     **** 		}
+ 269:onewire.c     **** 	}
+ 270:onewire.c     **** 
+ 271:onewire.c     **** 	return CRC;
+ 272:onewire.c     **** }
+ 317               		.stabn	68,0,272,.LM20-.LFBB2
+ 318               	.LM20:
+ 319 00c4 0895      		ret
+ 320               		.size	owCalcCRC, .-owCalcCRC
+ 321               		.stabs	"CRC:r(3,2)",64,0,255,24
+ 322               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 323               		.stabs	"tmpData:r(3,2)",64,0,258,20
+ 324               		.stabn	192,0,0,.LBB25-.LFBB2
+ 325               		.stabn	224,0,0,.LBE25-.LFBB2
+ 326               		.stabs	"tmpData:r(3,2)",64,0,258,20
+ 327               		.stabn	192,0,0,.LBB28-.LFBB2
+ 328               		.stabn	224,0,0,.LBE28-.LFBB2
+ 329               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 330               	.Lscope2:
+ 331               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+GAS LISTING /tmp/cc9tzOES.s 			page 16
+
+
+ 332               		.stabd	78,0,0
+ 333               		.stabs	"owrBit:F(3,2)",36,0,276,owrBit
+ 334               		.stabs	"conn:P(0,48)",64,0,276,30
+ 335               	.global	owrBit
+ 336               		.type	owrBit, @function
+ 337               	owrBit:
+ 338               		.stabd	46,0,0
+ 273:onewire.c     **** 
+ 274:onewire.c     **** // *************
+ 275:onewire.c     **** 
+ 276:onewire.c     **** uint8_t owrBit(owConnection_t* conn)
+ 277:onewire.c     **** {
+ 339               		.stabn	68,0,277,.LM21-.LFBB3
+ 340               	.LM21:
+ 341               	.LFBB3:
+ 342               	/* prologue: function */
+ 343               	/* frame size = 0 */
+ 344               	/* stack size = 0 */
+ 345               	.L__stack_usage = 0
+ 346 00c6 FC01      		movw r30,r24
+ 278:onewire.c     **** 	uint8_t bit = 0;
+ 279:onewire.c     **** 
+ 280:onewire.c     **** 	// Pull line low for 1uS
+ 281:onewire.c     **** 	OWI_LOW(conn);
+ 347               		.stabn	68,0,281,.LM22-.LFBB3
+ 348               	.LM22:
+ 349 00c8 A081      		ld r26,Z
+ 350 00ca B181      		ldd r27,Z+1
+ 351 00cc 4C91      		ld r20,X
+ 352 00ce 81E0      		ldi r24,lo8(1)
+ 353 00d0 90E0      		ldi r25,0
+ 354 00d2 9C01      		movw r18,r24
+ 355 00d4 0680      		ldd r0,Z+6
+ 356 00d6 00C0      		rjmp 2f
+ 357               		1:
+ 358 00d8 220F      		lsl r18
+ 359 00da 331F      		rol r19
+ 360               		2:
+ 361 00dc 0A94      		dec r0
+ 362 00de 02F4      		brpl 1b
+ 363 00e0 2095      		com r18
+ 364 00e2 2423      		and r18,r20
+ 365 00e4 2C93      		st X,r18
+ 282:onewire.c     **** 	OWI_SET_OUTPUT(conn);
+ 366               		.stabn	68,0,282,.LM23-.LFBB3
+ 367               	.LM23:
+ 368 00e6 A281      		ldd r26,Z+2
+ 369 00e8 B381      		ldd r27,Z+3
+ 370 00ea 2C91      		ld r18,X
+ 371 00ec 0680      		ldd r0,Z+6
+ 372 00ee 00C0      		rjmp 2f
+ 373               		1:
+ 374 00f0 880F      		lsl r24
+ 375 00f2 991F      		rol r25
+ 376               		2:
+ 377 00f4 0A94      		dec r0
+ 378 00f6 02F4      		brpl 1b
+GAS LISTING /tmp/cc9tzOES.s 			page 17
+
+
+ 379 00f8 282B      		or r18,r24
+ 380 00fa 2C93      		st X,r18
+ 381               	.LBB29:
+ 382               	.LBB30:
+ 383               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext7
+ 384               	.Ltext7:
+ 385               		.stabn	68,0,245,.LM24-.LFBB3
+ 386               	.LM24:
+ 387 00fc 22E0      		ldi r18,lo8(2)
+ 388 00fe 2A95      		1: dec r18
+ 389 0100 01F4      		brne 1b
+ 390 0102 00C0      		rjmp .
+ 391               	.LBE30:
+ 392               	.LBE29:
+ 393               		.stabs	"onewire.c",132,0,0,.Ltext8
+ 394               	.Ltext8:
+ 283:onewire.c     **** 	_delay_us(1);
+ 284:onewire.c     **** 
+ 285:onewire.c     **** 	// Release and wait for 14uS
+ 286:onewire.c     **** 	OWI_SET_INPUT(conn);
+ 395               		.stabn	68,0,286,.LM25-.LFBB3
+ 396               	.LM25:
+ 397 0104 A281      		ldd r26,Z+2
+ 398 0106 B381      		ldd r27,Z+3
+ 399 0108 2C91      		ld r18,X
+ 400 010a 81E0      		ldi r24,lo8(1)
+ 401 010c 90E0      		ldi r25,0
+ 402 010e 0680      		ldd r0,Z+6
+ 403 0110 00C0      		rjmp 2f
+ 404               		1:
+ 405 0112 880F      		lsl r24
+ 406 0114 991F      		rol r25
+ 407               		2:
+ 408 0116 0A94      		dec r0
+ 409 0118 02F4      		brpl 1b
+ 410 011a 8095      		com r24
+ 411 011c 8223      		and r24,r18
+ 412 011e 8C93      		st X,r24
+ 413               	.LBB31:
+ 414               	.LBB32:
+ 415               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext9
+ 416               	.Ltext9:
+ 417               		.stabn	68,0,245,.LM26-.LFBB3
+ 418               	.LM26:
+ 419 0120 85E2      		ldi r24,lo8(37)
+ 420 0122 8A95      		1: dec r24
+ 421 0124 01F4      		brne 1b
+ 422 0126 0000      		nop
+ 423               	.LBE32:
+ 424               	.LBE31:
+ 425               		.stabs	"onewire.c",132,0,0,.Ltext10
+ 426               	.Ltext10:
+ 287:onewire.c     **** 	_delay_us(14);
+ 288:onewire.c     **** 
+ 289:onewire.c     **** 	bit = OWI_READ(conn) ? 1 : 0;
+ 427               		.stabn	68,0,289,.LM27-.LFBB3
+ 428               	.LM27:
+GAS LISTING /tmp/cc9tzOES.s 			page 18
+
+
+ 429 0128 A481      		ldd r26,Z+4
+ 430 012a B581      		ldd r27,Z+5
+ 431 012c 8C91      		ld r24,X
+ 432 012e 90E0      		ldi r25,0
+ 433 0130 0680      		ldd r0,Z+6
+ 434 0132 00C0      		rjmp 2f
+ 435               		1:
+ 436 0134 9595      		asr r25
+ 437 0136 8795      		ror r24
+ 438               		2:
+ 439 0138 0A94      		dec r0
+ 440 013a 02F4      		brpl 1b
+ 441 013c 8170      		andi r24,1
+ 442 013e 9927      		clr r25
+ 443               	.LBB33:
+ 444               	.LBB34:
+ 445               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext11
+ 446               	.Ltext11:
+ 447               		.stabn	68,0,245,.LM28-.LFBB3
+ 448               	.LM28:
+ 449 0140 28E7      		ldi r18,lo8(120)
+ 450 0142 2A95      		1: dec r18
+ 451 0144 01F4      		brne 1b
+ 452               	.LBE34:
+ 453               	.LBE33:
+ 454               		.stabs	"onewire.c",132,0,0,.Ltext12
+ 455               	.Ltext12:
+ 290:onewire.c     **** 
+ 291:onewire.c     **** 	// Wait 45uS to end the procedure and return
+ 292:onewire.c     **** 	_delay_us(45);
+ 293:onewire.c     **** 
+ 294:onewire.c     **** 	return bit;
+ 295:onewire.c     **** }
+ 456               		.stabn	68,0,295,.LM29-.LFBB3
+ 457               	.LM29:
+ 458 0146 0895      		ret
+ 459               		.size	owrBit, .-owrBit
+ 460               	.Lscope3:
+ 461               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 462               		.stabd	78,0,0
+ 463               		.stabs	"owwBit:F(0,45)",36,0,297,owwBit
+ 464               		.stabs	"conn:P(0,48)",64,0,297,30
+ 465               		.stabs	"bit:P(3,2)",64,0,298,22
+ 466               	.global	owwBit
+ 467               		.type	owwBit, @function
+ 468               	owwBit:
+ 469               		.stabd	46,0,0
+ 296:onewire.c     **** 
+ 297:onewire.c     **** void owwBit(owConnection_t* conn,
+ 298:onewire.c     ****     uint8_t bit)
+ 299:onewire.c     **** {
+ 470               		.stabn	68,0,299,.LM30-.LFBB4
+ 471               	.LM30:
+ 472               	.LFBB4:
+ 473               	/* prologue: function */
+ 474               	/* frame size = 0 */
+ 475               	/* stack size = 0 */
+GAS LISTING /tmp/cc9tzOES.s 			page 19
+
+
+ 476               	.L__stack_usage = 0
+ 477 0148 FC01      		movw r30,r24
+ 300:onewire.c     **** 	// Pull line to low for 1uS
+ 301:onewire.c     **** 	OWI_LOW(conn);
+ 478               		.stabn	68,0,301,.LM31-.LFBB4
+ 479               	.LM31:
+ 480 014a A081      		ld r26,Z
+ 481 014c B181      		ldd r27,Z+1
+ 482 014e 4C91      		ld r20,X
+ 483 0150 81E0      		ldi r24,lo8(1)
+ 484 0152 90E0      		ldi r25,0
+ 485 0154 9C01      		movw r18,r24
+ 486 0156 0680      		ldd r0,Z+6
+ 487 0158 00C0      		rjmp 2f
+ 488               		1:
+ 489 015a 220F      		lsl r18
+ 490 015c 331F      		rol r19
+ 491               		2:
+ 492 015e 0A94      		dec r0
+ 493 0160 02F4      		brpl 1b
+ 494 0162 2095      		com r18
+ 495 0164 2423      		and r18,r20
+ 496 0166 2C93      		st X,r18
+ 302:onewire.c     **** 	OWI_SET_OUTPUT(conn);
+ 497               		.stabn	68,0,302,.LM32-.LFBB4
+ 498               	.LM32:
+ 499 0168 A281      		ldd r26,Z+2
+ 500 016a B381      		ldd r27,Z+3
+ 501 016c 2C91      		ld r18,X
+ 502 016e 0680      		ldd r0,Z+6
+ 503 0170 00C0      		rjmp 2f
+ 504               		1:
+ 505 0172 880F      		lsl r24
+ 506 0174 991F      		rol r25
+ 507               		2:
+ 508 0176 0A94      		dec r0
+ 509 0178 02F4      		brpl 1b
+ 510 017a 282B      		or r18,r24
+ 511 017c 2C93      		st X,r18
+ 512               	.LBB35:
+ 513               	.LBB36:
+ 514               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext13
+ 515               	.Ltext13:
+ 516               		.stabn	68,0,245,.LM33-.LFBB4
+ 517               	.LM33:
+ 518 017e 82E0      		ldi r24,lo8(2)
+ 519 0180 8A95      		1: dec r24
+ 520 0182 01F4      		brne 1b
+ 521 0184 00C0      		rjmp .
+ 522               	.LBE36:
+ 523               	.LBE35:
+ 524               		.stabs	"onewire.c",132,0,0,.Ltext14
+ 525               	.Ltext14:
+ 303:onewire.c     **** 	_delay_us(1);
+ 304:onewire.c     **** 
+ 305:onewire.c     **** 	// When we want to write 1, we release the line
+ 306:onewire.c     **** 	if (bit) OWI_SET_INPUT(conn);
+GAS LISTING /tmp/cc9tzOES.s 			page 20
+
+
+ 526               		.stabn	68,0,306,.LM34-.LFBB4
+ 527               	.LM34:
+ 528 0186 6623      		tst r22
+ 529 0188 01F0      		breq .L16
+ 530               		.stabn	68,0,306,.LM35-.LFBB4
+ 531               	.LM35:
+ 532 018a A281      		ldd r26,Z+2
+ 533 018c B381      		ldd r27,Z+3
+ 534 018e 2C91      		ld r18,X
+ 535 0190 81E0      		ldi r24,lo8(1)
+ 536 0192 90E0      		ldi r25,0
+ 537 0194 0680      		ldd r0,Z+6
+ 538 0196 00C0      		rjmp 2f
+ 539               		1:
+ 540 0198 880F      		lsl r24
+ 541 019a 991F      		rol r25
+ 542               		2:
+ 543 019c 0A94      		dec r0
+ 544 019e 02F4      		brpl 1b
+ 545 01a0 8095      		com r24
+ 546 01a2 8223      		and r24,r18
+ 547 01a4 8C93      		st X,r24
+ 548               	.L16:
+ 549               	.LBB37:
+ 550               	.LBB38:
+ 551               		.stabs	"/usr/lib/avr/include/util/delay.h",132,0,0,.Ltext15
+ 552               	.Ltext15:
+ 553               		.stabn	68,0,245,.LM36-.LFBB4
+ 554               	.LM36:
+ 555 01a6 88E7      		ldi r24,lo8(120)
+ 556 01a8 8A95      		1: dec r24
+ 557 01aa 01F4      		brne 1b
+ 558               	.LBE38:
+ 559               	.LBE37:
+ 560               		.stabs	"onewire.c",132,0,0,.Ltext16
+ 561               	.Ltext16:
+ 307:onewire.c     **** 
+ 308:onewire.c     **** 	// Wait 60uS and release
+ 309:onewire.c     **** 	_delay_us(45);
+ 310:onewire.c     **** 	OWI_SET_INPUT(conn);
+ 562               		.stabn	68,0,310,.LM37-.LFBB4
+ 563               	.LM37:
+ 564 01ac A281      		ldd r26,Z+2
+ 565 01ae B381      		ldd r27,Z+3
+ 566 01b0 2C91      		ld r18,X
+ 567 01b2 81E0      		ldi r24,lo8(1)
+ 568 01b4 90E0      		ldi r25,0
+ 569 01b6 0680      		ldd r0,Z+6
+ 570 01b8 00C0      		rjmp 2f
+ 571               		1:
+ 572 01ba 880F      		lsl r24
+ 573 01bc 991F      		rol r25
+ 574               		2:
+ 575 01be 0A94      		dec r0
+ 576 01c0 02F4      		brpl 1b
+ 577 01c2 8095      		com r24
+ 578 01c4 8223      		and r24,r18
+GAS LISTING /tmp/cc9tzOES.s 			page 21
+
+
+ 579 01c6 8C93      		st X,r24
+ 580 01c8 0895      		ret
+ 581               		.size	owwBit, .-owwBit
+ 582               	.Lscope4:
+ 583               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 584               		.stabd	78,0,0
+ 585               		.stabs	"owRead:F(3,2)",36,0,313,owRead
+ 586               		.stabs	"conn:P(0,48)",64,0,313,28
+ 587               	.global	owRead
+ 588               		.type	owRead, @function
+ 589               	owRead:
+ 590               		.stabd	46,0,0
+ 311:onewire.c     **** }
+ 312:onewire.c     **** 
+ 313:onewire.c     **** uint8_t owRead(owConnection_t* conn)
+ 314:onewire.c     **** {
+ 591               		.stabn	68,0,314,.LM38-.LFBB5
+ 592               	.LM38:
+ 593               	.LFBB5:
+ 594 01ca 0F93      		push r16
+ 595 01cc 1F93      		push r17
+ 596 01ce CF93      		push r28
+ 597 01d0 DF93      		push r29
+ 598               	/* prologue: function */
+ 599               	/* frame size = 0 */
+ 600               	/* stack size = 4 */
+ 601               	.L__stack_usage = 4
+ 602 01d2 EC01      		movw r28,r24
+ 603               		.stabn	68,0,314,.LM39-.LFBB5
+ 604               	.LM39:
+ 605 01d4 08E0      		ldi r16,lo8(8)
+ 315:onewire.c     **** 	uint8_t byte = 0;
+ 606               		.stabn	68,0,315,.LM40-.LFBB5
+ 607               	.LM40:
+ 608 01d6 10E0      		ldi r17,0
+ 609               	.L22:
+ 610               	.LBB39:
+ 316:onewire.c     **** 
+ 317:onewire.c     **** 	for (uint8_t counter = 0; counter < 8; counter++) {
+ 318:onewire.c     **** 		byte >>= 1;
+ 319:onewire.c     **** 		byte |= owrBit(conn) << 7;
+ 611               		.stabn	68,0,319,.LM41-.LFBB5
+ 612               	.LM41:
+ 613 01d8 CE01      		movw r24,r28
+ 614 01da 0E94 0000 		call owrBit
+ 615 01de 20E8      		ldi r18,lo8(-128)
+ 616 01e0 829F      		mul r24,r18
+ 617 01e2 C001      		movw r24,r0
+ 618 01e4 1124      		clr __zero_reg__
+ 318:onewire.c     **** 		byte |= owrBit(conn) << 7;
+ 619               		.stabn	68,0,318,.LM42-.LFBB5
+ 620               	.LM42:
+ 621 01e6 1695      		lsr r17
+ 622               		.stabn	68,0,319,.LM43-.LFBB5
+ 623               	.LM43:
+ 624 01e8 182B      		or r17,r24
+ 625 01ea 0150      		subi r16,lo8(-(-1))
+GAS LISTING /tmp/cc9tzOES.s 			page 22
+
+
+ 317:onewire.c     **** 		byte >>= 1;
+ 626               		.stabn	68,0,317,.LM44-.LFBB5
+ 627               	.LM44:
+ 628 01ec 01F4      		brne .L22
+ 629               	.LBE39:
+ 320:onewire.c     **** 	}
+ 321:onewire.c     **** 
+ 322:onewire.c     **** 	return byte;
+ 323:onewire.c     **** }
+ 630               		.stabn	68,0,323,.LM45-.LFBB5
+ 631               	.LM45:
+ 632 01ee 812F      		mov r24,r17
+ 633               	/* epilogue start */
+ 634 01f0 DF91      		pop r29
+ 635 01f2 CF91      		pop r28
+ 636 01f4 1F91      		pop r17
+ 637 01f6 0F91      		pop r16
+ 638 01f8 0895      		ret
+ 639               		.size	owRead, .-owRead
+ 640               	.Lscope5:
+ 641               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 642               		.stabd	78,0,0
+ 643               		.stabs	"owWrite:F(0,45)",36,0,325,owWrite
+ 644               		.stabs	"conn:P(0,48)",64,0,325,28
+ 645               		.stabs	"data:P(3,2)",64,0,326,16
+ 646               	.global	owWrite
+ 647               		.type	owWrite, @function
+ 648               	owWrite:
+ 649               		.stabd	46,0,0
+ 324:onewire.c     **** 
+ 325:onewire.c     **** void owWrite(owConnection_t* conn,
+ 326:onewire.c     ****     uint8_t data)
+ 327:onewire.c     **** {
+ 650               		.stabn	68,0,327,.LM46-.LFBB6
+ 651               	.LM46:
+ 652               	.LFBB6:
+ 653 01fa 0F93      		push r16
+ 654 01fc 1F93      		push r17
+ 655 01fe CF93      		push r28
+ 656 0200 DF93      		push r29
+ 657               	/* prologue: function */
+ 658               	/* frame size = 0 */
+ 659               	/* stack size = 4 */
+ 660               	.L__stack_usage = 4
+ 661 0202 EC01      		movw r28,r24
+ 662 0204 062F      		mov r16,r22
+ 663               		.stabn	68,0,327,.LM47-.LFBB6
+ 664               	.LM47:
+ 665 0206 18E0      		ldi r17,lo8(8)
+ 666               	.L25:
+ 667               	.LBB40:
+ 328:onewire.c     **** 	for (uint8_t counter = 0; counter < 8; counter++) {
+ 329:onewire.c     **** 		owwBit(conn, data & 1);
+ 668               		.stabn	68,0,329,.LM48-.LFBB6
+ 669               	.LM48:
+ 670 0208 602F      		mov r22,r16
+ 671 020a 6170      		andi r22,lo8(1)
+GAS LISTING /tmp/cc9tzOES.s 			page 23
+
+
+ 672 020c CE01      		movw r24,r28
+ 673 020e 0E94 0000 		call owwBit
+ 330:onewire.c     **** 		data >>= 1;
+ 674               		.stabn	68,0,330,.LM49-.LFBB6
+ 675               	.LM49:
+ 676 0212 0695      		lsr r16
+ 677 0214 1150      		subi r17,lo8(-(-1))
+ 328:onewire.c     **** 	for (uint8_t counter = 0; counter < 8; counter++) {
+ 678               		.stabn	68,0,328,.LM50-.LFBB6
+ 679               	.LM50:
+ 680 0216 01F4      		brne .L25
+ 681               	/* epilogue start */
+ 682               	.LBE40:
+ 331:onewire.c     **** 	}
+ 332:onewire.c     **** }
+ 683               		.stabn	68,0,332,.LM51-.LFBB6
+ 684               	.LM51:
+ 685 0218 DF91      		pop r29
+ 686 021a CF91      		pop r28
+ 687 021c 1F91      		pop r17
+ 688 021e 0F91      		pop r16
+ 689 0220 0895      		ret
+ 690               		.size	owWrite, .-owWrite
+ 691               	.Lscope6:
+ 692               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 693               		.stabd	78,0,0
+ 694               		.stabs	"owReadROM:F(0,45)",36,0,49,owReadROM
+ 695               		.stabs	"conn:P(0,48)",64,0,49,12
+ 696               	.global	owReadROM
+ 697               		.type	owReadROM, @function
+ 698               	owReadROM:
+ 699               		.stabd	46,0,0
+  51:onewire.c     **** 	owReset(conn);
+ 700               		.stabn	68,0,51,.LM52-.LFBB7
+ 701               	.LM52:
+ 702               	.LFBB7:
+ 703 0222 CF92      		push r12
+ 704 0224 DF92      		push r13
+ 705 0226 FF92      		push r15
+ 706 0228 0F93      		push r16
+ 707 022a 1F93      		push r17
+ 708 022c CF93      		push r28
+ 709 022e DF93      		push r29
+ 710 0230 1F92      		push __zero_reg__
+ 711 0232 CDB7      		in r28,__SP_L__
+ 712 0234 DEB7      		in r29,__SP_H__
+ 713               	/* prologue: function */
+ 714               	/* frame size = 1 */
+ 715               	/* stack size = 8 */
+ 716               	.L__stack_usage = 8
+ 717 0236 6C01      		movw r12,r24
+ 718 0238 F62E      		mov r15,r22
+  52:onewire.c     **** 	owWrite(conn, OWI_READROM);
+ 719               		.stabn	68,0,52,.LM53-.LFBB7
+ 720               	.LM53:
+ 721 023a 7983      		std Y+1,r23
+ 722 023c 0E94 0000 		call owReset
+GAS LISTING /tmp/cc9tzOES.s 			page 24
+
+
+  53:onewire.c     **** 
+ 723               		.stabn	68,0,53,.LM54-.LFBB7
+ 724               	.LM54:
+ 725 0240 63E3      		ldi r22,lo8(51)
+ 726 0242 C601      		movw r24,r12
+ 727 0244 0E94 0000 		call owWrite
+ 728 0248 0F2D      		mov r16,r15
+ 729 024a 7981      		ldd r23,Y+1
+ 730 024c 172F      		mov r17,r23
+ 731 024e 88E0      		ldi r24,lo8(8)
+ 732 0250 F82E      		mov r15,r24
+ 733               	.L28:
+ 734               	.LBB41:
+  56:onewire.c     **** 
+ 735               		.stabn	68,0,56,.LM55-.LFBB7
+ 736               	.LM55:
+ 737 0252 C601      		movw r24,r12
+ 738 0254 0E94 0000 		call owRead
+ 739 0258 F801      		movw r30,r16
+ 740 025a 8193      		st Z+,r24
+ 741 025c 8F01      		movw r16,r30
+ 742 025e FA94      		dec r15
+  55:onewire.c     **** 		buf[counter] = owRead(conn);
+ 743               		.stabn	68,0,55,.LM56-.LFBB7
+ 744               	.LM56:
+ 745 0260 01F4      		brne .L28
+ 746               	.LBE41:
+  58:onewire.c     **** }
+ 747               		.stabn	68,0,58,.LM57-.LFBB7
+ 748               	.LM57:
+ 749 0262 C601      		movw r24,r12
+ 750               	/* epilogue start */
+  59:onewire.c     **** 
+ 751               		.stabn	68,0,59,.LM58-.LFBB7
+ 752               	.LM58:
+ 753 0264 0F90      		pop __tmp_reg__
+ 754 0266 DF91      		pop r29
+ 755 0268 CF91      		pop r28
+ 756 026a 1F91      		pop r17
+ 757 026c 0F91      		pop r16
+ 758 026e FF90      		pop r15
+ 759 0270 DF90      		pop r13
+ 760 0272 CF90      		pop r12
+  58:onewire.c     **** }
+ 761               		.stabn	68,0,58,.LM59-.LFBB7
+ 762               	.LM59:
+ 763 0274 0C94 0000 		jmp owReset
+ 764               		.size	owReadROM, .-owReadROM
+ 765               	.Lscope7:
+ 766               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 767               		.stabd	78,0,0
+ 768               		.stabs	"owMatchROM:F(0,45)",36,0,61,owMatchROM
+ 769               		.stabs	"conn:P(0,48)",64,0,61,16
+ 770               	.global	owMatchROM
+ 771               		.type	owMatchROM, @function
+ 772               	owMatchROM:
+ 773               		.stabd	46,0,0
+GAS LISTING /tmp/cc9tzOES.s 			page 25
+
+
+  63:onewire.c     **** 	owReset(conn);
+ 774               		.stabn	68,0,63,.LM60-.LFBB8
+ 775               	.LM60:
+ 776               	.LFBB8:
+ 777 0278 CF92      		push r12
+ 778 027a DF92      		push r13
+ 779 027c FF92      		push r15
+ 780 027e 0F93      		push r16
+ 781 0280 1F93      		push r17
+ 782 0282 CF93      		push r28
+ 783 0284 DF93      		push r29
+ 784 0286 1F92      		push __zero_reg__
+ 785 0288 CDB7      		in r28,__SP_L__
+ 786 028a DEB7      		in r29,__SP_H__
+ 787               	/* prologue: function */
+ 788               	/* frame size = 1 */
+ 789               	/* stack size = 8 */
+ 790               	.L__stack_usage = 8
+ 791 028c 8C01      		movw r16,r24
+ 792 028e F62E      		mov r15,r22
+  64:onewire.c     **** 	owWrite(conn, OWI_MATCHROM);
+ 793               		.stabn	68,0,64,.LM61-.LFBB8
+ 794               	.LM61:
+ 795 0290 7983      		std Y+1,r23
+ 796 0292 0E94 0000 		call owReset
+  65:onewire.c     **** 
+ 797               		.stabn	68,0,65,.LM62-.LFBB8
+ 798               	.LM62:
+ 799 0296 65E5      		ldi r22,lo8(85)
+ 800 0298 C801      		movw r24,r16
+ 801 029a 0E94 0000 		call owWrite
+ 802 029e CF2C      		mov r12,r15
+ 803 02a0 7981      		ldd r23,Y+1
+ 804 02a2 D72E      		mov r13,r23
+ 805 02a4 98E0      		ldi r25,lo8(8)
+ 806 02a6 F92E      		mov r15,r25
+ 807               	.L31:
+ 808               	.LBB42:
+  68:onewire.c     **** 
+ 809               		.stabn	68,0,68,.LM63-.LFBB8
+ 810               	.LM63:
+ 811 02a8 F601      		movw r30,r12
+ 812 02aa 6191      		ld r22,Z+
+ 813 02ac 6F01      		movw r12,r30
+ 814 02ae C801      		movw r24,r16
+ 815 02b0 0E94 0000 		call owWrite
+ 816 02b4 FA94      		dec r15
+  67:onewire.c     **** 		owWrite(conn, rom[counter]);
+ 817               		.stabn	68,0,67,.LM64-.LFBB8
+ 818               	.LM64:
+ 819 02b6 01F4      		brne .L31
+ 820               	/* epilogue start */
+ 821               	.LBE42:
+  71:onewire.c     **** 
+ 822               		.stabn	68,0,71,.LM65-.LFBB8
+ 823               	.LM65:
+ 824 02b8 0F90      		pop __tmp_reg__
+GAS LISTING /tmp/cc9tzOES.s 			page 26
+
+
+ 825 02ba DF91      		pop r29
+ 826 02bc CF91      		pop r28
+ 827 02be 1F91      		pop r17
+ 828 02c0 0F91      		pop r16
+ 829 02c2 FF90      		pop r15
+ 830 02c4 DF90      		pop r13
+ 831 02c6 CF90      		pop r12
+ 832 02c8 0895      		ret
+ 833               		.size	owMatchROM, .-owMatchROM
+ 834               	.Lscope8:
+ 835               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 836               		.stabd	78,0,0
+ 837               		.stabs	"owSkipROM:F(0,45)",36,0,73,owSkipROM
+ 838               		.stabs	"conn:P(0,48)",64,0,73,28
+ 839               	.global	owSkipROM
+ 840               		.type	owSkipROM, @function
+ 841               	owSkipROM:
+ 842               		.stabd	46,0,0
+  74:onewire.c     **** 	owReset(conn);
+ 843               		.stabn	68,0,74,.LM66-.LFBB9
+ 844               	.LM66:
+ 845               	.LFBB9:
+ 846 02ca CF93      		push r28
+ 847 02cc DF93      		push r29
+ 848               	/* prologue: function */
+ 849               	/* frame size = 0 */
+ 850               	/* stack size = 2 */
+ 851               	.L__stack_usage = 2
+ 852 02ce EC01      		movw r28,r24
+  75:onewire.c     **** 	owWrite(conn, OWI_SKIPROM);
+ 853               		.stabn	68,0,75,.LM67-.LFBB9
+ 854               	.LM67:
+ 855 02d0 0E94 0000 		call owReset
+  76:onewire.c     **** }
+ 856               		.stabn	68,0,76,.LM68-.LFBB9
+ 857               	.LM68:
+ 858 02d4 6CEC      		ldi r22,lo8(-52)
+ 859 02d6 CE01      		movw r24,r28
+ 860               	/* epilogue start */
+  77:onewire.c     **** 
+ 861               		.stabn	68,0,77,.LM69-.LFBB9
+ 862               	.LM69:
+ 863 02d8 DF91      		pop r29
+ 864 02da CF91      		pop r28
+  76:onewire.c     **** }
+ 865               		.stabn	68,0,76,.LM70-.LFBB9
+ 866               	.LM70:
+ 867 02dc 0C94 0000 		jmp owWrite
+ 868               		.size	owSkipROM, .-owSkipROM
+ 869               	.Lscope9:
+ 870               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 871               		.stabd	78,0,0
+ 872               		.stabs	"owReadScratchpad:F(0,45)",36,0,79,owReadScratchpad
+ 873               		.stabs	"conn:P(0,48)",64,0,79,16
+ 874               		.stabs	"len:P(3,4)",64,0,81,20
+ 875               	.global	owReadScratchpad
+ 876               		.type	owReadScratchpad, @function
+GAS LISTING /tmp/cc9tzOES.s 			page 27
+
+
+ 877               	owReadScratchpad:
+ 878               		.stabd	46,0,0
+  82:onewire.c     **** 	owWrite(conn, OWI_RSCRATCHPAD);
+ 879               		.stabn	68,0,82,.LM71-.LFBB10
+ 880               	.LM71:
+ 881               	.LFBB10:
+ 882 02e0 AF92      		push r10
+ 883 02e2 BF92      		push r11
+ 884 02e4 DF92      		push r13
+ 885 02e6 EF92      		push r14
+ 886 02e8 FF92      		push r15
+ 887 02ea 0F93      		push r16
+ 888 02ec 1F93      		push r17
+ 889 02ee CF93      		push r28
+ 890 02f0 DF93      		push r29
+ 891 02f2 1F92      		push __zero_reg__
+ 892 02f4 CDB7      		in r28,__SP_L__
+ 893 02f6 DEB7      		in r29,__SP_H__
+ 894               	/* prologue: function */
+ 895               	/* frame size = 1 */
+ 896               	/* stack size = 10 */
+ 897               	.L__stack_usage = 10
+ 898 02f8 8C01      		movw r16,r24
+ 899 02fa D62E      		mov r13,r22
+ 900 02fc 7A01      		movw r14,r20
+  83:onewire.c     **** 
+ 901               		.stabn	68,0,83,.LM72-.LFBB10
+ 902               	.LM72:
+ 903 02fe 6EEB      		ldi r22,lo8(-66)
+ 904 0300 7983      		std Y+1,r23
+ 905 0302 0E94 0000 		call owWrite
+ 906 0306 AD2C      		mov r10,r13
+ 907 0308 7981      		ldd r23,Y+1
+ 908 030a B72E      		mov r11,r23
+ 909 030c EA0C      		add r14,r10
+ 910 030e FB1C      		adc r15,r11
+ 911               	.L34:
+  87:onewire.c     **** 		cnt++;
+ 912               		.stabn	68,0,87,.LM73-.LFBB10
+ 913               	.LM73:
+ 914 0310 C801      		movw r24,r16
+  86:onewire.c     **** 		buf[cnt] = owRead(conn);
+ 915               		.stabn	68,0,86,.LM74-.LFBB10
+ 916               	.LM74:
+ 917 0312 AE14      		cp r10,r14
+ 918 0314 BF04      		cpc r11,r15
+ 919 0316 01F0      		breq .L36
+  87:onewire.c     **** 		cnt++;
+ 920               		.stabn	68,0,87,.LM75-.LFBB10
+ 921               	.LM75:
+ 922 0318 0E94 0000 		call owRead
+ 923 031c F501      		movw r30,r10
+ 924 031e 8193      		st Z+,r24
+ 925 0320 5F01      		movw r10,r30
+ 926 0322 00C0      		rjmp .L34
+ 927               	.L36:
+ 928               	/* epilogue start */
+GAS LISTING /tmp/cc9tzOES.s 			page 28
+
+
+  92:onewire.c     **** 
+ 929               		.stabn	68,0,92,.LM76-.LFBB10
+ 930               	.LM76:
+ 931 0324 0F90      		pop __tmp_reg__
+ 932 0326 DF91      		pop r29
+ 933 0328 CF91      		pop r28
+ 934 032a 1F91      		pop r17
+ 935 032c 0F91      		pop r16
+ 936 032e FF90      		pop r15
+ 937 0330 EF90      		pop r14
+ 938 0332 DF90      		pop r13
+ 939 0334 BF90      		pop r11
+ 940 0336 AF90      		pop r10
+  91:onewire.c     **** }
+ 941               		.stabn	68,0,91,.LM77-.LFBB10
+ 942               	.LM77:
+ 943 0338 0C94 0000 		jmp owReset
+ 944               		.size	owReadScratchpad, .-owReadScratchpad
+ 945               	.Lscope10:
+ 946               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 947               		.stabd	78,0,0
+ 948               		.stabs	"owWriteScratchpad:F(0,45)",36,0,94,owWriteScratchpad
+ 949               		.stabs	"conn:P(0,48)",64,0,94,16
+ 950               		.stabs	"len:P(3,4)",64,0,96,20
+ 951               	.global	owWriteScratchpad
+ 952               		.type	owWriteScratchpad, @function
+ 953               	owWriteScratchpad:
+ 954               		.stabd	46,0,0
+  97:onewire.c     **** 	owWrite(conn, OWI_WSCRATCHPAD);
+ 955               		.stabn	68,0,97,.LM78-.LFBB11
+ 956               	.LM78:
+ 957               	.LFBB11:
+ 958 033c AF92      		push r10
+ 959 033e BF92      		push r11
+ 960 0340 DF92      		push r13
+ 961 0342 EF92      		push r14
+ 962 0344 FF92      		push r15
+ 963 0346 0F93      		push r16
+ 964 0348 1F93      		push r17
+ 965 034a CF93      		push r28
+ 966 034c DF93      		push r29
+ 967 034e 1F92      		push __zero_reg__
+ 968 0350 CDB7      		in r28,__SP_L__
+ 969 0352 DEB7      		in r29,__SP_H__
+ 970               	/* prologue: function */
+ 971               	/* frame size = 1 */
+ 972               	/* stack size = 10 */
+ 973               	.L__stack_usage = 10
+ 974 0354 8C01      		movw r16,r24
+ 975 0356 D62E      		mov r13,r22
+ 976 0358 7A01      		movw r14,r20
+  98:onewire.c     **** 
+ 977               		.stabn	68,0,98,.LM79-.LFBB11
+ 978               	.LM79:
+ 979 035a 6EE4      		ldi r22,lo8(78)
+ 980 035c 7983      		std Y+1,r23
+ 981 035e 0E94 0000 		call owWrite
+GAS LISTING /tmp/cc9tzOES.s 			page 29
+
+
+ 982 0362 AD2C      		mov r10,r13
+ 983 0364 7981      		ldd r23,Y+1
+ 984 0366 B72E      		mov r11,r23
+ 985 0368 EA0C      		add r14,r10
+ 986 036a FB1C      		adc r15,r11
+ 987               	.L38:
+ 101:onewire.c     **** 		owWrite(conn, buf[cnt]);
+ 988               		.stabn	68,0,101,.LM80-.LFBB11
+ 989               	.LM80:
+ 990 036c AE14      		cp r10,r14
+ 991 036e BF04      		cpc r11,r15
+ 992 0370 01F0      		breq .L40
+ 102:onewire.c     **** 		cnt++;
+ 993               		.stabn	68,0,102,.LM81-.LFBB11
+ 994               	.LM81:
+ 995 0372 F501      		movw r30,r10
+ 996 0374 6191      		ld r22,Z+
+ 997 0376 5F01      		movw r10,r30
+ 998 0378 C801      		movw r24,r16
+ 999 037a 0E94 0000 		call owWrite
+ 1000 037e 00C0      		rjmp .L38
+ 1001               	.L40:
+ 106:onewire.c     **** }
+ 1002               		.stabn	68,0,106,.LM82-.LFBB11
+ 1003               	.LM82:
+ 1004 0380 C801      		movw r24,r16
+ 1005               	/* epilogue start */
+ 107:onewire.c     **** 
+ 1006               		.stabn	68,0,107,.LM83-.LFBB11
+ 1007               	.LM83:
+ 1008 0382 0F90      		pop __tmp_reg__
+ 1009 0384 DF91      		pop r29
+ 1010 0386 CF91      		pop r28
+ 1011 0388 1F91      		pop r17
+ 1012 038a 0F91      		pop r16
+ 1013 038c FF90      		pop r15
+ 1014 038e EF90      		pop r14
+ 1015 0390 DF90      		pop r13
+ 1016 0392 BF90      		pop r11
+ 1017 0394 AF90      		pop r10
+ 106:onewire.c     **** }
+ 1018               		.stabn	68,0,106,.LM84-.LFBB11
+ 1019               	.LM84:
+ 1020 0396 0C94 0000 		jmp owReset
+ 1021               		.size	owWriteScratchpad, .-owWriteScratchpad
+ 1022               	.Lscope11:
+ 1023               		.stabs	"",36,0,0,.Lscope11-.LFBB11
+ 1024               		.stabd	78,0,0
+ 1025               		.stabs	"owCopyScratchpad:F(0,45)",36,0,109,owCopyScratchpad
+ 1026               		.stabs	"conn:P(0,48)",64,0,109,28
+ 1027               	.global	owCopyScratchpad
+ 1028               		.type	owCopyScratchpad, @function
+ 1029               	owCopyScratchpad:
+ 1030               		.stabd	46,0,0
+ 110:onewire.c     **** 	owWrite(conn, OWI_CPYSCRATCHPAD);
+ 1031               		.stabn	68,0,110,.LM85-.LFBB12
+ 1032               	.LM85:
+GAS LISTING /tmp/cc9tzOES.s 			page 30
+
+
+ 1033               	.LFBB12:
+ 1034 039a CF93      		push r28
+ 1035 039c DF93      		push r29
+ 1036               	/* prologue: function */
+ 1037               	/* frame size = 0 */
+ 1038               	/* stack size = 2 */
+ 1039               	.L__stack_usage = 2
+ 1040 039e EC01      		movw r28,r24
+ 111:onewire.c     **** 	owReset(conn);
+ 1041               		.stabn	68,0,111,.LM86-.LFBB12
+ 1042               	.LM86:
+ 1043 03a0 68E4      		ldi r22,lo8(72)
+ 1044 03a2 0E94 0000 		call owWrite
+ 112:onewire.c     **** }
+ 1045               		.stabn	68,0,112,.LM87-.LFBB12
+ 1046               	.LM87:
+ 1047 03a6 CE01      		movw r24,r28
+ 1048               	/* epilogue start */
+ 113:onewire.c     **** 
+ 1049               		.stabn	68,0,113,.LM88-.LFBB12
+ 1050               	.LM88:
+ 1051 03a8 DF91      		pop r29
+ 1052 03aa CF91      		pop r28
+ 112:onewire.c     **** }
+ 1053               		.stabn	68,0,112,.LM89-.LFBB12
+ 1054               	.LM89:
+ 1055 03ac 0C94 0000 		jmp owReset
+ 1056               		.size	owCopyScratchpad, .-owCopyScratchpad
+ 1057               	.Lscope12:
+ 1058               		.stabs	"",36,0,0,.Lscope12-.LFBB12
+ 1059               		.stabd	78,0,0
+ 1060               		.stabs	"owSearchROM:F(0,45)",36,0,115,owSearchROM
+ 1061               		.stabs	"conn:P(0,48)",64,0,115,16
+ 1062               		.stabs	"buf:P(0,49)",64,0,116,6
+ 1063               		.stabs	"count:P(0,49)",64,0,117,12
+ 1064               		.stabs	"alarm:p(3,2)",160,0,118,12
+ 1065               	.global	owSearchROM
+ 1066               		.type	owSearchROM, @function
+ 1067               	owSearchROM:
+ 1068               		.stabd	46,0,0
+ 119:onewire.c     **** 	uint8_t temp_address[8];
+ 1069               		.stabn	68,0,119,.LM90-.LFBB13
+ 1070               	.LM90:
+ 1071               	.LFBB13:
+ 1072 03b0 2F92      		push r2
+ 1073 03b2 3F92      		push r3
+ 1074 03b4 4F92      		push r4
+ 1075 03b6 5F92      		push r5
+ 1076 03b8 6F92      		push r6
+ 1077 03ba 7F92      		push r7
+ 1078 03bc 8F92      		push r8
+ 1079 03be 9F92      		push r9
+ 1080 03c0 AF92      		push r10
+ 1081 03c2 BF92      		push r11
+ 1082 03c4 CF92      		push r12
+ 1083 03c6 DF92      		push r13
+ 1084 03c8 EF92      		push r14
+GAS LISTING /tmp/cc9tzOES.s 			page 31
+
+
+ 1085 03ca FF92      		push r15
+ 1086 03cc 0F93      		push r16
+ 1087 03ce 1F93      		push r17
+ 1088 03d0 CF93      		push r28
+ 1089 03d2 DF93      		push r29
+ 1090 03d4 CDB7      		in r28,__SP_L__
+ 1091 03d6 DEB7      		in r29,__SP_H__
+ 1092 03d8 2E97      		sbiw r28,14
+ 1093 03da 0FB6      		in __tmp_reg__,__SREG__
+ 1094 03dc F894      		cli
+ 1095 03de DEBF      		out __SP_H__,r29
+ 1096 03e0 0FBE      		out __SREG__,__tmp_reg__
+ 1097 03e2 CDBF      		out __SP_L__,r28
+ 1098               	/* prologue: function */
+ 1099               	/* frame size = 14 */
+ 1100               	/* stack size = 32 */
+ 1101               	.L__stack_usage = 32
+ 1102 03e4 8C01      		movw r16,r24
+ 1103 03e6 3B01      		movw r6,r22
+ 1104 03e8 6A01      		movw r12,r20
+ 1105 03ea 2C87      		std Y+12,r18
+ 128:onewire.c     **** 	if (!presence) {
+ 1106               		.stabn	68,0,128,.LM91-.LFBB13
+ 1107               	.LM91:
+ 1108 03ec 0E94 0000 		call owReset
+ 130:onewire.c     **** 
+ 1109               		.stabn	68,0,130,.LM92-.LFBB13
+ 1110               	.LM92:
+ 1111 03f0 F601      		movw r30,r12
+ 1112 03f2 1082      		st Z,__zero_reg__
+ 129:onewire.c     **** 		*count = 0;
+ 1113               		.stabn	68,0,129,.LM93-.LFBB13
+ 1114               	.LM93:
+ 1115 03f4 8111      		cpse r24,__zero_reg__
+ 1116 03f6 00C0      		rjmp .L42
+ 124:onewire.c     **** 
+ 1117               		.stabn	68,0,124,.LM94-.LFBB13
+ 1118               	.LM94:
+ 1119 03f8 512C      		mov r5,__zero_reg__
+ 122:onewire.c     **** 	uint8_t romBitIdx;
+ 1120               		.stabn	68,0,122,.LM95-.LFBB13
+ 1121               	.LM95:
+ 1122 03fa 412C      		mov r4,__zero_reg__
+ 1123 03fc AE01      		movw r20,r28
+ 1124 03fe 475F      		subi r20,-9
+ 1125 0400 5F4F      		sbci r21,-1
+ 1126 0402 5A87      		std Y+10,r21
+ 1127 0404 4987      		std Y+9,r20
+ 173:onewire.c     **** 
+ 1128               		.stabn	68,0,173,.LM96-.LFBB13
+ 1129               	.LM96:
+ 1130 0406 F8E0      		ldi r31,lo8(8)
+ 1131 0408 EF2E      		mov r14,r31
+ 1132 040a F12C      		mov r15,__zero_reg__
+ 1133 040c AA24      		clr r10
+ 1134 040e A394      		inc r10
+ 1135 0410 B12C      		mov r11,__zero_reg__
+GAS LISTING /tmp/cc9tzOES.s 			page 32
+
+
+ 1136               	.L73:
+ 122:onewire.c     **** 	uint8_t romBitIdx;
+ 1137               		.stabn	68,0,122,.LM97-.LFBB13
+ 1138               	.LM97:
+ 1139 0412 FE01      		movw r30,r28
+ 1140 0414 3196      		adiw r30,1
+ 1141               	.L46:
+ 1142               	.LBB43:
+ 141:onewire.c     **** 		}
+ 1143               		.stabn	68,0,141,.LM98-.LFBB13
+ 1144               	.LM98:
+ 1145 0416 1192      		st Z+,__zero_reg__
+ 140:onewire.c     **** 			temp_address[idx] = 0;
+ 1146               		.stabn	68,0,140,.LM99-.LFBB13
+ 1147               	.LM99:
+ 1148 0418 4985      		ldd r20,Y+9
+ 1149 041a 5A85      		ldd r21,Y+10
+ 1150 041c E417      		cp r30,r20
+ 1151 041e F507      		cpc r31,r21
+ 1152 0420 01F4      		brne .L46
+ 1153               	.LBE43:
+ 146:onewire.c     **** 			done = 0;
+ 1154               		.stabn	68,0,146,.LM100-.LFBB13
+ 1155               	.LM100:
+ 1156 0422 5110      		cpse r5,__zero_reg__
+ 1157 0424 00C0      		rjmp .L42
+ 151:onewire.c     **** 		if (!presence) {
+ 1158               		.stabn	68,0,151,.LM101-.LFBB13
+ 1159               	.LM101:
+ 1160 0426 C801      		movw r24,r16
+ 1161 0428 0E94 0000 		call owReset
+ 152:onewire.c     **** 			lastDiscrepancy = 0;
+ 1162               		.stabn	68,0,152,.LM102-.LFBB13
+ 1163               	.LM102:
+ 1164 042c 8111      		cpse r24,__zero_reg__
+ 1165 042e 00C0      		rjmp .L42
+ 160:onewire.c     **** 
+ 1166               		.stabn	68,0,160,.LM103-.LFBB13
+ 1167               	.LM103:
+ 1168 0430 3C85      		ldd r19,Y+12
+ 1169 0432 3323      		tst r19
+ 1170 0434 01F0      		breq .L74
+ 1171 0436 6CEE      		ldi r22,lo8(-20)
+ 1172 0438 00C0      		rjmp .L48
+ 1173               	.L74:
+ 1174 043a 60EF      		ldi r22,lo8(-16)
+ 1175               	.L48:
+ 160:onewire.c     **** 
+ 1176               		.stabn	68,0,160,.LM104-.LFBB13
+ 1177               	.LM104:
+ 1178 043c C801      		movw r24,r16
+ 1179 043e 0E94 0000 		call owWrite
+ 173:onewire.c     **** 
+ 1180               		.stabn	68,0,173,.LM105-.LFBB13
+ 1181               	.LM105:
+ 1182 0442 242D      		mov r18,r4
+ 1183 0444 30E0      		ldi r19,0
+GAS LISTING /tmp/cc9tzOES.s 			page 33
+
+
+ 1184 0446 C901      		movw r24,r18
+ 1185 0448 0197      		sbiw r24,1
+ 1186 044a 4C01      		movw r8,r24
+ 1187 044c 97FF      		sbrs r25,7
+ 1188 044e 00C0      		rjmp .L49
+ 1189 0450 4901      		movw r8,r18
+ 1190 0452 46E0      		ldi r20,6
+ 1191 0454 840E      		add r8,r20
+ 1192 0456 911C      		adc r9,__zero_reg__
+ 1193               	.L49:
+ 1194 0458 E3E0      		ldi r30,3
+ 1195               		1:
+ 1196 045a 9594      		asr r9
+ 1197 045c 8794      		ror r8
+ 1198 045e EA95      		dec r30
+ 1199 0460 01F4      		brne 1b
+ 1200 0462 B701      		movw r22,r14
+ 1201 0464 0E94 0000 		call __divmodhi4
+ 1202 0468 2A2C      		mov r2,r10
+ 1203 046a 00C0      		rjmp 2f
+ 1204               		1:
+ 1205 046c 220C      		lsl r2
+ 1206               		2:
+ 1207 046e 8A95      		dec r24
+ 1208 0470 02F4      		brpl 1b
+ 1209 0472 2B86      		std Y+11,r2
+ 157:onewire.c     **** 		discrepancy = 0;
+ 1210               		.stabn	68,0,157,.LM106-.LFBB13
+ 1211               	.LM106:
+ 1212 0474 21E0      		ldi r18,lo8(1)
+ 158:onewire.c     **** 
+ 1213               		.stabn	68,0,158,.LM107-.LFBB13
+ 1214               	.LM107:
+ 1215 0476 212C      		mov r2,__zero_reg__
+ 173:onewire.c     **** 
+ 1216               		.stabn	68,0,173,.LM108-.LFBB13
+ 1217               	.LM108:
+ 1218 0478 61E0      		ldi r22,lo8(1)
+ 1219 047a 70E0      		ldi r23,0
+ 1220 047c 6C0F      		add r22,r28
+ 1221 047e 7D1F      		adc r23,r29
+ 1222 0480 860E      		add r8,r22
+ 1223 0482 971E      		adc r9,r23
+ 1224               	.L50:
+ 163:onewire.c     **** 			bitB = owrBit(conn);
+ 1225               		.stabn	68,0,163,.LM109-.LFBB13
+ 1226               	.LM109:
+ 1227 0484 C801      		movw r24,r16
+ 1228 0486 2E87      		std Y+14,r18
+ 1229 0488 0E94 0000 		call owrBit
+ 1230 048c 382E      		mov r3,r24
+ 164:onewire.c     **** 
+ 1231               		.stabn	68,0,164,.LM110-.LFBB13
+ 1232               	.LM110:
+ 1233 048e C801      		movw r24,r16
+ 1234 0490 0E94 0000 		call owrBit
+ 1235 0494 482F      		mov r20,r24
+GAS LISTING /tmp/cc9tzOES.s 			page 34
+
+
+ 166:onewire.c     **** 				lastDiscrepancy = 0;
+ 1236               		.stabn	68,0,166,.LM111-.LFBB13
+ 1237               	.LM111:
+ 1238 0496 2E85      		ldd r18,Y+14
+ 1239 0498 8823      		tst r24
+ 1240 049a 01F0      		breq .L51
+ 166:onewire.c     **** 				lastDiscrepancy = 0;
+ 1241               		.stabn	68,0,166,.LM112-.LFBB13
+ 1242               	.LM112:
+ 1243 049c 3320      		tst r3
+ 1244 049e 01F4      		brne .+2
+ 1245 04a0 00C0      		rjmp .L91
+ 1246 04a2 00C0      		rjmp .L42
+ 1247               	.L51:
+ 171:onewire.c     **** 				if (romBitIdx == lastDiscrepancy) {
+ 1248               		.stabn	68,0,171,.LM113-.LFBB13
+ 1249               	.LM113:
+ 1250 04a4 3110      		cpse r3,__zero_reg__
+ 1251 04a6 00C0      		rjmp .L54
+ 1252 04a8 3324      		clr r3
+ 1253 04aa 3394      		inc r3
+ 1254 04ac 320E      		add r3,r18
+ 172:onewire.c     **** 					temp_address[((romBitIdx - 1) / 8)] |= (1 << ((romBitIdx - 1) % 8));
+ 1255               		.stabn	68,0,172,.LM114-.LFBB13
+ 1256               	.LM114:
+ 1257 04ae 2411      		cpse r18,r4
+ 1258 04b0 00C0      		rjmp .L55
+ 173:onewire.c     **** 
+ 1259               		.stabn	68,0,173,.LM115-.LFBB13
+ 1260               	.LM115:
+ 1261 04b2 F401      		movw r30,r8
+ 1262 04b4 8081      		ld r24,Z
+ 1263 04b6 3B85      		ldd r19,Y+11
+ 1264 04b8 832B      		or r24,r19
+ 1265 04ba 8083      		st Z,r24
+ 175:onewire.c     **** 					romBitIdx++;
+ 1266               		.stabn	68,0,175,.LM116-.LFBB13
+ 1267               	.LM116:
+ 1268 04bc 61E0      		ldi r22,lo8(1)
+ 1269 04be 00C0      		rjmp .L62
+ 1270               	.L55:
+ 1271 04c0 422F      		mov r20,r18
+ 1272 04c2 50E0      		ldi r21,0
+ 187:onewire.c     **** 
+ 1273               		.stabn	68,0,187,.LM117-.LFBB13
+ 1274               	.LM117:
+ 1275 04c4 CA01      		movw r24,r20
+ 1276 04c6 0197      		sbiw r24,1
+ 1277 04c8 FC01      		movw r30,r24
+ 186:onewire.c     **** 					temp_address[((romBitIdx - 1) / 8)] &= ~(1 << ((romBitIdx - 1) % 8));
+ 1278               		.stabn	68,0,186,.LM118-.LFBB13
+ 1279               	.LM118:
+ 1280 04ca 4216      		cp r4,r18
+ 1281 04cc 00F4      		brsh .L59
+ 187:onewire.c     **** 
+ 1282               		.stabn	68,0,187,.LM119-.LFBB13
+ 1283               	.LM119:
+GAS LISTING /tmp/cc9tzOES.s 			page 35
+
+
+ 1284 04ce 97FD      		sbrc r25,7
+ 1285 04d0 3796      		adiw r30,7
+ 1286               	.L60:
+ 1287 04d2 73E0      		ldi r23,3
+ 1288               		1:
+ 1289 04d4 F595      		asr r31
+ 1290 04d6 E795      		ror r30
+ 1291 04d8 7A95      		dec r23
+ 1292 04da 01F4      		brne 1b
+ 1293 04dc 41E0      		ldi r20,lo8(1)
+ 1294 04de 50E0      		ldi r21,0
+ 1295 04e0 4C0F      		add r20,r28
+ 1296 04e2 5D1F      		adc r21,r29
+ 1297 04e4 E40F      		add r30,r20
+ 1298 04e6 F51F      		adc r31,r21
+ 1299 04e8 B701      		movw r22,r14
+ 1300 04ea 0E94 0000 		call __divmodhi4
+ 1301 04ee B501      		movw r22,r10
+ 1302 04f0 00C0      		rjmp 2f
+ 1303               		1:
+ 1304 04f2 660F      		lsl r22
+ 1305 04f4 771F      		rol r23
+ 1306               		2:
+ 1307 04f6 8A95      		dec r24
+ 1308 04f8 02F4      		brpl 1b
+ 1309 04fa CB01      		movw r24,r22
+ 1310 04fc 8095      		com r24
+ 1311 04fe 9081      		ld r25,Z
+ 1312 0500 8923      		and r24,r25
+ 1313 0502 8083      		st Z,r24
+ 190:onewire.c     **** 					romBitIdx++;
+ 1314               		.stabn	68,0,190,.LM120-.LFBB13
+ 1315               	.LM120:
+ 1316 0504 60E0      		ldi r22,0
+ 1317 0506 C801      		movw r24,r16
+ 1318 0508 2E87      		std Y+14,r18
+ 1319 050a 0E94 0000 		call owwBit
+ 191:onewire.c     **** 
+ 1320               		.stabn	68,0,191,.LM121-.LFBB13
+ 1321               	.LM121:
+ 1322 050e 832D      		mov r24,r3
+ 193:onewire.c     **** 						lastDiscrepancy = discrepancy;
+ 1323               		.stabn	68,0,193,.LM122-.LFBB13
+ 1324               	.LM122:
+ 1325 0510 2E85      		ldd r18,Y+14
+ 1326 0512 8134      		cpi r24,lo8(65)
+ 1327 0514 00F0      		brlo .+2
+ 1328 0516 00C0      		rjmp .L58
+ 1329 0518 222E      		mov r2,r18
+ 1330               	.L56:
+ 1331 051a 282F      		mov r18,r24
+ 1332 051c 00C0      		rjmp .L50
+ 1333               	.L59:
+ 1334               	.LBB44:
+ 202:onewire.c     **** 
+ 1335               		.stabn	68,0,202,.LM123-.LFBB13
+ 1336               	.LM123:
+GAS LISTING /tmp/cc9tzOES.s 			page 36
+
+
+ 1337 051e 97FD      		sbrc r25,7
+ 1338 0520 3796      		adiw r30,7
+ 1339               	.L61:
+ 1340 0522 63E0      		ldi r22,3
+ 1341               		1:
+ 1342 0524 F595      		asr r31
+ 1343 0526 E795      		ror r30
+ 1344 0528 6A95      		dec r22
+ 1345 052a 01F4      		brne 1b
+ 1346 052c 41E0      		ldi r20,lo8(1)
+ 1347 052e 50E0      		ldi r21,0
+ 1348 0530 4C0F      		add r20,r28
+ 1349 0532 5D1F      		adc r21,r29
+ 1350 0534 E40F      		add r30,r20
+ 1351 0536 F51F      		adc r31,r21
+ 1352 0538 E081      		ld r30,Z
+ 1353 053a F0E0      		ldi r31,0
+ 1354 053c B701      		movw r22,r14
+ 1355 053e 0E94 0000 		call __divmodhi4
+ 1356 0542 00C0      		rjmp 2f
+ 1357               		1:
+ 1358 0544 F595      		asr r31
+ 1359 0546 E795      		ror r30
+ 1360               		2:
+ 1361 0548 8A95      		dec r24
+ 1362 054a 02F4      		brpl 1b
+ 204:onewire.c     **** 						discrepancy = romBitIdx;
+ 1363               		.stabn	68,0,204,.LM124-.LFBB13
+ 1364               	.LM124:
+ 1365 054c 6E2F      		mov r22,r30
+ 1366 054e 6170      		andi r22,lo8(1)
+ 1367 0550 E0FF      		sbrs r30,0
+ 1368 0552 222E      		mov r2,r18
+ 1369               	.L62:
+ 207:onewire.c     **** 					romBitIdx++;
+ 1370               		.stabn	68,0,207,.LM125-.LFBB13
+ 1371               	.LM125:
+ 1372 0554 C801      		movw r24,r16
+ 1373 0556 0E94 0000 		call owwBit
+ 208:onewire.c     **** 
+ 1374               		.stabn	68,0,208,.LM126-.LFBB13
+ 1375               	.LM126:
+ 1376 055a 832D      		mov r24,r3
+ 210:onewire.c     **** 						lastDiscrepancy = discrepancy;
+ 1377               		.stabn	68,0,210,.LM127-.LFBB13
+ 1378               	.LM127:
+ 1379 055c 8134      		cpi r24,lo8(65)
+ 1380 055e 00F0      		brlo .L56
+ 212:onewire.c     **** 						anotherROMAvailable = 1;
+ 1381               		.stabn	68,0,212,.LM128-.LFBB13
+ 1382               	.LM128:
+ 1383 0560 5524      		clr r5
+ 1384 0562 5394      		inc r5
+ 1385 0564 2110      		cpse r2,__zero_reg__
+ 1386 0566 512C      		mov r5,__zero_reg__
+ 1387               	.L63:
+ 1388 0568 222D      		mov r18,r2
+GAS LISTING /tmp/cc9tzOES.s 			page 37
+
+
+ 1389 056a 00C0      		rjmp .L58
+ 1390               	.L54:
+ 1391               	.LBE44:
+ 221:onewire.c     **** 				else
+ 1392               		.stabn	68,0,221,.LM129-.LFBB13
+ 1393               	.LM129:
+ 1394 056c 622F      		mov r22,r18
+ 1395 056e 70E0      		ldi r23,0
+ 1396 0570 CB01      		movw r24,r22
+ 1397 0572 0197      		sbiw r24,1
+ 1398 0574 FC01      		movw r30,r24
+ 1399 0576 97FD      		sbrc r25,7
+ 1400 0578 3796      		adiw r30,7
+ 1401               	.L64:
+ 1402 057a 53E0      		ldi r21,3
+ 1403               		1:
+ 1404 057c F595      		asr r31
+ 1405 057e E795      		ror r30
+ 1406 0580 5A95      		dec r21
+ 1407 0582 01F4      		brne 1b
+ 1408 0584 61E0      		ldi r22,lo8(1)
+ 1409 0586 70E0      		ldi r23,0
+ 1410 0588 6C0F      		add r22,r28
+ 1411 058a 7D1F      		adc r23,r29
+ 1412 058c E60F      		add r30,r22
+ 1413 058e F71F      		adc r31,r23
+ 1414 0590 B701      		movw r22,r14
+ 1415 0592 0E94 0000 		call __divmodhi4
+ 1416 0596 B501      		movw r22,r10
+ 1417 0598 00C0      		rjmp 2f
+ 1418               		1:
+ 1419 059a 660F      		lsl r22
+ 1420 059c 771F      		rol r23
+ 1421               		2:
+ 1422 059e 8A95      		dec r24
+ 1423 05a0 02F4      		brpl 1b
+ 1424 05a2 CB01      		movw r24,r22
+ 1425 05a4 9081      		ld r25,Z
+ 1426 05a6 982B      		or r25,r24
+ 1427 05a8 9083      		st Z,r25
+ 1428 05aa 00C0      		rjmp .L65
+ 1429               	.L91:
+ 223:onewire.c     **** 
+ 1430               		.stabn	68,0,223,.LM130-.LFBB13
+ 1431               	.LM130:
+ 1432 05ac 622F      		mov r22,r18
+ 1433 05ae 70E0      		ldi r23,0
+ 1434 05b0 CB01      		movw r24,r22
+ 1435 05b2 0197      		sbiw r24,1
+ 1436 05b4 FC01      		movw r30,r24
+ 1437 05b6 97FD      		sbrc r25,7
+ 1438 05b8 3796      		adiw r30,7
+ 1439               	.L66:
+ 1440 05ba 33E0      		ldi r19,3
+ 1441               		1:
+ 1442 05bc F595      		asr r31
+ 1443 05be E795      		ror r30
+GAS LISTING /tmp/cc9tzOES.s 			page 38
+
+
+ 1444 05c0 3A95      		dec r19
+ 1445 05c2 01F4      		brne 1b
+ 1446 05c4 61E0      		ldi r22,lo8(1)
+ 1447 05c6 70E0      		ldi r23,0
+ 1448 05c8 6C0F      		add r22,r28
+ 1449 05ca 7D1F      		adc r23,r29
+ 1450 05cc E60F      		add r30,r22
+ 1451 05ce F71F      		adc r31,r23
+ 1452 05d0 B701      		movw r22,r14
+ 1453 05d2 0E94 0000 		call __divmodhi4
+ 1454 05d6 B501      		movw r22,r10
+ 1455 05d8 00C0      		rjmp 2f
+ 1456               		1:
+ 1457 05da 660F      		lsl r22
+ 1458 05dc 771F      		rol r23
+ 1459               		2:
+ 1460 05de 8A95      		dec r24
+ 1461 05e0 02F4      		brpl 1b
+ 1462 05e2 CB01      		movw r24,r22
+ 1463 05e4 8095      		com r24
+ 1464 05e6 9081      		ld r25,Z
+ 1465 05e8 8923      		and r24,r25
+ 1466 05ea 8083      		st Z,r24
+ 1467               	.L65:
+ 225:onewire.c     **** 				romBitIdx++;
+ 1468               		.stabn	68,0,225,.LM131-.LFBB13
+ 1469               	.LM131:
+ 1470 05ec 632D      		mov r22,r3
+ 1471 05ee C801      		movw r24,r16
+ 1472 05f0 2E87      		std Y+14,r18
+ 1473 05f2 4D87      		std Y+13,r20
+ 1474 05f4 0E94 0000 		call owwBit
+ 226:onewire.c     **** 
+ 1475               		.stabn	68,0,226,.LM132-.LFBB13
+ 1476               	.LM132:
+ 1477 05f8 2E85      		ldd r18,Y+14
+ 1478 05fa 81E0      		ldi r24,lo8(1)
+ 1479 05fc 820F      		add r24,r18
+ 228:onewire.c     **** 					lastDiscrepancy = discrepancy;
+ 1480               		.stabn	68,0,228,.LM133-.LFBB13
+ 1481               	.LM133:
+ 1482 05fe 4D85      		ldd r20,Y+13
+ 1483 0600 8134      		cpi r24,lo8(65)
+ 1484 0602 00F4      		brsh .+2
+ 1485 0604 00C0      		rjmp .L56
+ 230:onewire.c     **** 					anotherROMAvailable = 1;
+ 1486               		.stabn	68,0,230,.LM134-.LFBB13
+ 1487               	.LM134:
+ 1488 0606 5524      		clr r5
+ 1489 0608 5394      		inc r5
+ 1490 060a 2110      		cpse r2,__zero_reg__
+ 1491 060c 512C      		mov r5,__zero_reg__
+ 1492               	.L67:
+ 240:onewire.c     **** 
+ 1493               		.stabn	68,0,240,.LM135-.LFBB13
+ 1494               	.LM135:
+ 1495 060e 3320      		tst r3
+GAS LISTING /tmp/cc9tzOES.s 			page 39
+
+
+ 1496 0610 01F0      		breq .L68
+ 240:onewire.c     **** 
+ 1497               		.stabn	68,0,240,.LM136-.LFBB13
+ 1498               	.LM136:
+ 1499 0612 4111      		cpse r20,__zero_reg__
+ 1500 0614 00C0      		rjmp .L69
+ 1501               	.L68:
+ 242:onewire.c     **** 			for (uint8_t idx = 0; idx < 8; idx++) {
+ 1502               		.stabn	68,0,242,.LM137-.LFBB13
+ 1503               	.LM137:
+ 1504 0616 6114      		cp r6,__zero_reg__
+ 1505 0618 7104      		cpc r7,__zero_reg__
+ 1506 061a 01F4      		brne .L70
+ 1507               	.L71:
+ 247:onewire.c     **** 
+ 1508               		.stabn	68,0,247,.LM138-.LFBB13
+ 1509               	.LM138:
+ 1510 061c F601      		movw r30,r12
+ 1511 061e 8081      		ld r24,Z
+ 1512 0620 8F5F      		subi r24,lo8(-(1))
+ 1513 0622 8083      		st Z,r24
+ 1514 0624 00C0      		rjmp .L69
+ 1515               	.L70:
+ 242:onewire.c     **** 			for (uint8_t idx = 0; idx < 8; idx++) {
+ 1516               		.stabn	68,0,242,.LM139-.LFBB13
+ 1517               	.LM139:
+ 1518 0626 DE01      		movw r26,r28
+ 1519 0628 1196      		adiw r26,1
+ 1520 062a 80E0      		ldi r24,0
+ 1521 062c 90E0      		ldi r25,0
+ 1522               	.L72:
+ 1523               	.LBB45:
+ 244:onewire.c     **** 			}
+ 1524               		.stabn	68,0,244,.LM140-.LFBB13
+ 1525               	.LM140:
+ 1526 062e F601      		movw r30,r12
+ 1527 0630 4081      		ld r20,Z
+ 1528 0632 2D91      		ld r18,X+
+ 1529 0634 F301      		movw r30,r6
+ 1530 0636 E80F      		add r30,r24
+ 1531 0638 F91F      		adc r31,r25
+ 1532 063a 38E0      		ldi r19,lo8(8)
+ 1533 063c 439F      		mul r20,r19
+ 1534 063e E00D      		add r30,r0
+ 1535 0640 F11D      		adc r31,r1
+ 1536 0642 1124      		clr __zero_reg__
+ 1537 0644 2083      		st Z,r18
+ 1538 0646 0196      		adiw r24,1
+ 243:onewire.c     **** 				buf[idx + (*count) * 8] = temp_address[idx];
+ 1539               		.stabn	68,0,243,.LM141-.LFBB13
+ 1540               	.LM141:
+ 1541 0648 8830      		cpi r24,8
+ 1542 064a 9105      		cpc r25,__zero_reg__
+ 1543 064c 01F4      		brne .L72
+ 1544 064e 00C0      		rjmp .L71
+ 1545               	.L58:
+ 1546               	.LBE45:
+GAS LISTING /tmp/cc9tzOES.s 			page 40
+
+
+ 1547 0650 222E      		mov r2,r18
+ 1548 0652 00C0      		rjmp .L68
+ 1549               	.L69:
+ 122:onewire.c     **** 	uint8_t romBitIdx;
+ 1550               		.stabn	68,0,122,.LM142-.LFBB13
+ 1551               	.LM142:
+ 1552 0654 422C      		mov r4,r2
+ 1553 0656 00C0      		rjmp .L73
+ 1554               	.L42:
+ 1555               	/* epilogue start */
+ 250:onewire.c     **** 
+ 1556               		.stabn	68,0,250,.LM143-.LFBB13
+ 1557               	.LM143:
+ 1558 0658 2E96      		adiw r28,14
+ 1559 065a 0FB6      		in __tmp_reg__,__SREG__
+ 1560 065c F894      		cli
+ 1561 065e DEBF      		out __SP_H__,r29
+ 1562 0660 0FBE      		out __SREG__,__tmp_reg__
+ 1563 0662 CDBF      		out __SP_L__,r28
+ 1564 0664 DF91      		pop r29
+ 1565 0666 CF91      		pop r28
+ 1566 0668 1F91      		pop r17
+ 1567 066a 0F91      		pop r16
+ 1568 066c FF90      		pop r15
+ 1569 066e EF90      		pop r14
+ 1570 0670 DF90      		pop r13
+ 1571 0672 CF90      		pop r12
+ 1572 0674 BF90      		pop r11
+ 1573 0676 AF90      		pop r10
+ 1574 0678 9F90      		pop r9
+ 1575 067a 8F90      		pop r8
+ 1576 067c 7F90      		pop r7
+ 1577 067e 6F90      		pop r6
+ 1578 0680 5F90      		pop r5
+ 1579 0682 4F90      		pop r4
+ 1580 0684 3F90      		pop r3
+ 1581 0686 2F90      		pop r2
+ 1582 0688 0895      		ret
+ 1583               		.size	owSearchROM, .-owSearchROM
+ 1584               		.stabs	"temp_address:(0,50)=ar(0,51)=r(0,51);0;0177777;;0;7;(3,2)",128,0,120,1
+ 1585               		.stabs	"done:r(3,2)",64,0,124,5
+ 1586               		.stabs	"bitA:r(3,2)",64,0,126,3
+ 1587               		.stabs	"bitB:r(3,2)",64,0,126,20
+ 1588               		.stabn	192,0,0,.LFBB13-.LFBB13
+ 1589               		.stabs	"curRomBit:r(3,2)",64,0,202,22
+ 1590               		.stabn	192,0,0,.LBB44-.LFBB13
+ 1591               		.stabn	224,0,0,.LBE44-.LFBB13
+ 1592               		.stabn	224,0,0,.Lscope13-.LFBB13
+ 1593               	.Lscope13:
+ 1594               		.stabs	"",36,0,0,.Lscope13-.LFBB13
+ 1595               		.stabd	78,0,0
+ 1596               		.stabs	"",100,0,0,.Letext0
+ 1597               	.Letext0:
+ 1598               		.ident	"GCC: (GNU) 4.8.1"
+GAS LISTING /tmp/cc9tzOES.s 			page 41
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 onewire.c
+     /tmp/cc9tzOES.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cc9tzOES.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cc9tzOES.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cc9tzOES.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc9tzOES.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc9tzOES.s:104    .text:0000000000000000 owReset
+     /tmp/cc9tzOES.s:242    .text:000000000000008a owCalcCRC
+     /tmp/cc9tzOES.s:337    .text:00000000000000c6 owrBit
+     /tmp/cc9tzOES.s:468    .text:0000000000000148 owwBit
+     /tmp/cc9tzOES.s:589    .text:00000000000001ca owRead
+     /tmp/cc9tzOES.s:648    .text:00000000000001fa owWrite
+     /tmp/cc9tzOES.s:698    .text:0000000000000222 owReadROM
+     /tmp/cc9tzOES.s:772    .text:0000000000000278 owMatchROM
+     /tmp/cc9tzOES.s:841    .text:00000000000002ca owSkipROM
+     /tmp/cc9tzOES.s:877    .text:00000000000002e0 owReadScratchpad
+     /tmp/cc9tzOES.s:953    .text:000000000000033c owWriteScratchpad
+     /tmp/cc9tzOES.s:1029   .text:000000000000039a owCopyScratchpad
+     /tmp/cc9tzOES.s:1067   .text:00000000000003b0 owSearchROM
+
+UNDEFINED SYMBOLS
+__divmodhi4
