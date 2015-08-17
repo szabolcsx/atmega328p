@@ -7,4 +7,4 @@
 3. UART helper functions
 4. Onewire Interface implementation
 
-*Copyright Szőke Szabolcs*
+*&copy; Szőke Szabolcs*
