@@ -12,4 +12,4 @@
 
 ###### All code comes with no warranty. Use at your own risk.
 
-*&copy; Szőke Szabolcs*
+*&copy; Szőke Szabolcs - 2015*
