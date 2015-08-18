@@ -44,10 +44,10 @@ void lcdwNibble(lcdHandle_t* handle,
     unsigned char nibble)
 {
     nibble &= 0x0F;
-    _NB(*handle->D4, handle->P4, _BV(nibble, 0));
-    _NB(*handle->D4, handle->P5, _BV(nibble, 1));
-    _NB(*handle->D4, handle->P6, _BV(nibble, 2));
-    _NB(*handle->D4, handle->P7, _BV(nibble, 3));
+    _NB(*handle->D4, handle->P4, _V(nibble, 0));
+    _NB(*handle->D4, handle->P5, _V(nibble, 1));
+    _NB(*handle->D4, handle->P6, _V(nibble, 2));
+    _NB(*handle->D4, handle->P7, _V(nibble, 3));
 
     _SB(*handle->EN, handle->PEN);
 	asm("nop");

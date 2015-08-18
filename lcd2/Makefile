@@ -45,7 +45,7 @@ ASMFLAGS =-I. $(INC) -mmcu=$(MCU)        \
 	-Wa,-gstabs,-ahlms=$(firstword   \
 	$(<:.S=.lst) $(<.s=.lst))
 
-LDFLAGS=-Wl,-Map,$(TRG).map -mmcu=$(MCU) \
+LDFLAGS=-Wl,-Map,$(TARGET).map -mmcu=$(MCU) \
 	-lm $(LIBS)
 
 
@@ -76,7 +76,7 @@ LST=$(filter %.lst, $(OBJDEPS:.o=.lst))
 
 .PHONY: upload clean stats
 
-all: linter $(TARGET)
+all: $(TARGET)
 
 disasm: $(DUMPTRG) stats
 
@@ -84,7 +84,7 @@ stats: $(TARGET)
 	$(OBJDUMP) -h $(TARGET)
 	$(SIZE) -C -d --mcu=$(MCU) $(TARGET)
 
-hex: linter $(HEXTARGET)
+hex: $(HEXTARGET)
 
 $(DUMPTRG): $(TARGET)
 	$(OBJDUMP) -S  $< > $@
@@ -131,7 +131,7 @@ $(TARGET): $(OBJDEPS)
 		-O $(HEXFORMAT) $< $@
 
 clean:
-	$(REMOVE) *.o *.elf *.hex *.eep *.lst *.s
+	$(REMOVE) *.o *.elf *.hex *.eep *.lst *.s *.map *.out
 
 linter:
 	@echo "{" > .gcc-flags.json
