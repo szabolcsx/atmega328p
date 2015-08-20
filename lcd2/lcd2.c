@@ -1,5 +1,9 @@
 #include <util/delay.h>
 
+#include <avr/eeprom.h>
+
+//int EEMEM asd = 0;
+
 #include "lcd2.h"
 #include "sfr_helper.h"
 
