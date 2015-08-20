@@ -63,7 +63,7 @@ int main(void)
 
     while(1)
     {
-        if(counter2 > 10000000)
+        if(counter2 > 80)
         {
             counter2 = 0;
         }
@@ -71,8 +71,8 @@ int main(void)
         //lcdPrintBargraphAt(1, 1, counter, 100, 16);
         lcdAdvance(1, 1);
         lcdwULong(counter2);
-        lcdPrintBargraphAt(2, 1, counter2, 10000000, 16);
         lcdFill(' ', 10);
+        lcdPrintBargraphAt(2, 1, counter2, 80, 16);
 
         if(interruptFlags.handlePinChange0)
         {
@@ -95,7 +95,7 @@ int main(void)
 
             if((PINB & 1) == 0)
             {
-                counter2 += 50000;
+                counter2++;
                 counterFlags.counterShortButtonPressTick = 0;
                 counterShortButtonPress = 0;
                 counterLongButtonPress = 0;
@@ -113,7 +113,7 @@ int main(void)
 
             if((PINB & 1))
             {;
-                counter2 += 100000;
+                counter2 += 5;
             }
             else
             {
@@ -139,7 +139,7 @@ ISR(TIMER0_COMPA_vect)
         buttonPressFlags.handleShortButtonPress = 1;
     }
 
-    if(counterLongButtonPress >= 500)
+    if(counterLongButtonPress >= 700)
     {
         counterLongButtonPress = 0;
         buttonPressFlags.handleLongButtonPress = 1;
