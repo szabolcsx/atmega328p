@@ -1,8 +1,0 @@
-{
-	"execPath": "avr-gcc",
-	"gccDefaultCFlags": "-I.  -DF_CPU=8000000UL -g -mmcu=atmega8 -Os -fpack-struct -fshort-enums -funsigned-bitfields -funsigned-char -Wall -Wstrict-prototypes -Wa,-ahlms=",
-	"gccDefaultCppFlags": "-fno-exceptions -Wa,-ahlms=",
-	"gccErrorLimit": 15,
-	"gccIncludePaths": ".",
-	"gccSuppressWarnings": false
-}

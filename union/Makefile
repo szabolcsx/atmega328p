@@ -10,15 +10,15 @@ MCU=atmega328p
 HEXFORMAT=ihex
 
 AVRDUDE_MCU=m328p
-AVRDUDE_PROGRAMMERID=ponyser
-AVRDUDE_PORT=/dev/ttyS0
+AVRDUDE_PROGRAMMERID=usbasp
+AVRDUDE_PORT=usb
 
 
 AVRDUDE_LFUSE=E2
 AVRDUDE_HFUSE=D9
-AVRDUDE_EFUSE=07
+AVRDUDE_EFUSE=FF
 
-PROJECT=union
+PROJECT=lcd2
 F_CPU=8000000UL
 
 OPTLEVEL=s
@@ -45,7 +45,7 @@ ASMFLAGS =-I. $(INC) -mmcu=$(MCU)        \
 	-Wa,-gstabs,-ahlms=$(firstword   \
 	$(<:.S=.lst) $(<.s=.lst))
 
-LDFLAGS=-Wl,-Map,$(TRG).map -mmcu=$(MCU) \
+LDFLAGS=-Wl,-Map,$(TARGET).map -mmcu=$(MCU) \
 	-lm $(LIBS)
 
 
@@ -76,15 +76,15 @@ LST=$(filter %.lst, $(OBJDEPS:.o=.lst))
 
 .PHONY: upload clean stats
 
-all: linter $(TARGET)
+all: $(TARGET)
 
 disasm: $(DUMPTRG) stats
 
 stats: $(TARGET)
 	$(OBJDUMP) -h $(TARGET)
-	$(SIZE) $(TARGET)
+	$(SIZE) -C -d --mcu=$(MCU) $(TARGET)
 
-hex: linter $(HEXTARGET)
+hex: $(HEXTARGET)
 
 $(DUMPTRG): $(TARGET)
 	$(OBJDUMP) -S  $< > $@
@@ -131,7 +131,7 @@ $(TARGET): $(OBJDEPS)
 		-O $(HEXFORMAT) $< $@
 
 clean:
-	$(REMOVE) *.o *.elf *.hex *.eep *.lst *.s
+	$(REMOVE) *.o *.elf *.hex *.eep *.lst *.s *.map *.out
 
 linter:
 	@echo "{" > .gcc-flags.json
