@@ -1,10 +1,11 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include "lcd2.h"
+#include "uart.h"
 
 lcdHandle_t lcdHandle = {
-    &PORTD, 0, // D4
-    &PORTD, 1, // D5
+    &PORTD, 6, // D4
+    &PORTD, 7, // D5
     &PORTD, 2, // D6
     &PORTD, 3, // D7
     &PORTD, 4, // RS
@@ -19,8 +20,13 @@ int main(void)
         LCD_DISPLAY_ON,
         LCD_INCREMENT);
 
+    uartInit(BAUD_PS(9600));
+    uartEnableTx();
+
     lcdwStringAt(&lcdHandle, 1, 1, "Hello world.");
     lcdInitBargraph(&lcdHandle);
+
+    uartwString("Hello world!\n");
 
     while(1)
     {
