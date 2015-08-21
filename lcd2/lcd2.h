@@ -24,6 +24,13 @@ typedef struct
     uint8_t PEN;
 } lcdHandle_t;
 
+typedef struct
+{
+    unsigned long int level;
+    unsigned long int maxLevel;
+    unsigned char size;
+} lcdBargraphDescriptor_t;
+
 enum
 {
     LCD_CLEAR_DISPLAY           = 0b00000001,
@@ -102,8 +109,6 @@ void lcdInitBargraph(lcdHandle_t* handle);
 void lcdPrintBargraphAt(lcdHandle_t* handle,
     unsigned char row,
     unsigned char column,
-    unsigned long int level,
-    unsigned long int maxLevel,
-    unsigned char size);
+    lcdBargraphDescriptor_t* descriptor);
 
 #endif /* __LCD_H__ */

@@ -12,6 +12,12 @@ lcdHandle_t lcdHandle = {
     &PORTD, 5  // EN
 };
 
+lcdBargraphDescriptor_t lcdBargraphDescriptor = {
+    0,
+    100,
+    16
+};
+
 int main(void)
 {
     DDRD = 0xFF;
@@ -30,13 +36,24 @@ int main(void)
 
     while(1)
     {
-        lcdPrintBargraphAt(&lcdHandle, 2, 1, 54, 100, 16);
+
+        lcdPrintBargraphAt(&lcdHandle, 2, 1, &lcdBargraphDescriptor);
         /*
         _delay_ms(1000);
         lcdwCmd(&lcdHandle, LCD_DISPLAY_OFF);
         _delay_ms(1000);
         lcdwCmd(&lcdHandle, LCD_DISPLAY_ON);
         */
+
+
+        lcdBargraphDescriptor.level += 1;
+
+        if(lcdBargraphDescriptor.level >= lcdBargraphDescriptor.maxLevel)
+        {
+            lcdBargraphDescriptor.level = 0;
+        }
+
+        _delay_ms(1);
     }
 
     return 0;

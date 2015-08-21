@@ -287,9 +287,7 @@ void lcdInitBargraph(lcdHandle_t* handle)
 void lcdPrintBargraphAt(lcdHandle_t* handle,
     unsigned char row,
     unsigned char column,
-    unsigned long int level,
-    unsigned long int maxLevel,
-    unsigned char size)
+    lcdBargraphDescriptor_t* descriptor)
 {
     lcdAdvance(handle, row, column);
 
@@ -297,17 +295,17 @@ void lcdPrintBargraphAt(lcdHandle_t* handle,
     lcdwChar(handle, 0x06);
     size -= 2;
 #endif /* LCD_BARGRAPH_BEGIN_END */
-    if(level >= maxLevel)
+    if(descriptor->level >= descriptor->maxLevel)
     {
-        lcdFill(handle, 0x00, size);
+        lcdFill(handle, 0x00, descriptor->size);
     }
     else
     {
-        unsigned long int length = level * size * 5 / maxLevel;
+        unsigned long int length = descriptor->level * descriptor->size * 5 / descriptor->maxLevel;
         unsigned char lastChar = length % 5;
 
         lcdFill(handle, 0x00, length / 5);
-        length = size - length / 5;
+        length = descriptor->size - length / 5;
         if(lastChar > 0)
         {
             length--;
