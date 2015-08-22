@@ -84,3 +84,30 @@ const char* uartrString(void)
 
 	return rxstr;
 }
+
+void uartwLong(long int data)
+{
+    if(data < 0)
+    {
+        uartwChar('-');
+        data = -data;
+    }
+
+    uartwULong(data);
+}
+
+void uartwULong(unsigned long int data)
+{
+    char buffer[10];
+	int size = 0;
+
+	do
+	{
+		buffer[size] = data % 10;
+		data /= 10;
+		size++;
+	} while (data > 0);
+
+	for(size--; size >= 0; size--)
+		uartwChar(buffer[size] + 48);
+}

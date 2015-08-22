@@ -47,13 +47,16 @@ int main(void)
 
 
         lcdBargraphDescriptor.level += 1;
+        uartwULong(lcdBargraphDescriptor.level);
+        uartwLong(-lcdBargraphDescriptor.level);
+        uartwChar('\n');
 
         if(lcdBargraphDescriptor.level >= lcdBargraphDescriptor.maxLevel)
         {
             lcdBargraphDescriptor.level = 0;
         }
 
-        _delay_ms(1);
+        _delay_ms(100);
     }
 
     return 0;

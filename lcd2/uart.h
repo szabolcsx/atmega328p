@@ -19,5 +19,7 @@ void uartwChar(uint8_t data);
 uint8_t uartrChar(void);
 void uartwString(const char* str);
 const char* uartrString(void);
+void uartwLong(long int data);
+void uartwULong(unsigned long int data);
 
 #endif /* __UART_H__ */
